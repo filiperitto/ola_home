@@ -1,0 +1,303 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ | Ritto Edit */
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+div,
+p,
+a,
+section,
+span,
+img,
+svg,
+canvas{
+    @include transitions(200ms);
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font-size: 16px;
+    font-family: $font-avenir;
+    background: #FAFAFA;
+    color: $gray;
+}
+
+.wrap{
+    width: 100%;
+    max-width: 1360px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 30px;
+    @include respond-to-max(700){
+        padding: 0 20px;
+    }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+.desktop-view-flex{
+    display: none;
+    @include respond-to-min(750){
+        display: flex;
+    }
+}
+.desktop-view{
+    display: none;
+    @include respond-to-min(750){
+        display: block;
+    }
+}
+.mobile-view{
+    display: block;
+    @include respond-to-min(750){
+        display: none;
+    }
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+//	Headings
+
+a{
+    text-decoration: none;
+}
+    
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6{
+    color: #000;
+    margin: 0;
+    font-weight: bold;
+}
+  
+
+.gigantic{
+    font-size: 110px;
+    line-height: 1.09;
+    letter-spacing: -2px;
+}
+
+.huge, h1{
+    font-size: 3.8em;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.large, h2{
+    font-size: 2.2em;
+    line-height: 1.14;
+    @include respond-to-max(700){
+        font-size: 1.5em;
+    }
+}
+
+.bigger, h3{
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.big, h4{
+    font-size: 1.3em;
+    line-height: 1.4;
+    @include respond-to-max(700){
+        font-size: 1em;
+    }
+}
+
+.small, small{
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+
+// Basic Text Style
+
+p{
+    color: $gray;
+    margin: 0 0 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+em{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold;
+}
+
+hr{
+    border: solid #ddd;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 10px 0 30px;
+    height: 0;
+}
+
+//form
+
+input,
+textarea,
+button{
+    box-sizing: border-box;
+    outline: none;
+    transition: all 300ms ease-in-out;
+}

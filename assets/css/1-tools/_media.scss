@@ -1,0 +1,86 @@
+// Custom Mixins
+@mixin transitions($trans) {
+  -moz-transition: all $trans ease-in-out;
+  -webkit-transition: all $trans ease-in-out;
+  transition: all $trans ease-in-out;
+}
+@mixin clear() {
+  &:after,
+  &:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+@mixin linkTextOffscreen() {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  text-align: start;
+}
+@mixin hoverActiveFocus($property, $value) {
+  &:active,
+  &:focus,
+  &:hover {
+    #{$property}: $value;
+  }
+}
+@mixin respond-to-max($point) {
+   @media only screen and (max-width: $point+px){
+    @content;
+  }
+}
+@mixin respond-to-max-h($point) {
+   @media only screen and (max-height: $point+px){
+    @content;
+  }
+}
+@mixin respond-between($point1, $point2) {
+   @media only screen and (min-width: $point1+px) and (max-width: $point2+px){
+    @content;
+  }
+}
+@mixin respond-to-min($point) {
+   @media only screen and (min-width: $point+px){
+    @content;
+  }
+}
+@mixin respond-to-min-h($point) {
+   @media only screen and (min-height: $point+px){
+    @content;
+  }
+}
+
+@mixin respond-to-retina() {
+   @media only screen and (-webkit-min-device-pixel-ratio: 2){
+    @content;
+  }
+}
+@mixin bottom-line($width: 35, $height: 2, $color: $theme_color) {
+  &:after {
+    width: $width + px;
+    height: $height + px;
+    background: $color;
+    display: block;
+    content: "";
+    @content;
+  }
+}
+@mixin icon-font() {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
