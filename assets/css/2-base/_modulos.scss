@@ -412,7 +412,7 @@
     }
 }
 
-.modulo-canais{
+.modulo-canais-comp{
     .wrapper-canais{
         width: 100%;
         overflow-y: hidden;
@@ -430,6 +430,7 @@
                 width: 100%;
                 max-width: 78px;
                 @include respond-to-min(750){
+                    max-width: 166px;
                     margin-right: 20px;
                 }
                 .thumb-wrapper{
@@ -440,6 +441,10 @@
                     position: relative;
                     flex-shrink: 0;
                     display: flex;
+                    @include respond-to-min(750){
+                        width: 166px;
+                        height: 166px;
+                    }
                     img{
                         position: absolute;
                         width: 100%;
@@ -454,6 +459,9 @@
                     justify-content: space-between;
                     .text-wrapper{
                         width: 60px;
+                        @include respond-to-min(750){
+                            width: 100%;
+                        }
                         p{
                             width: 100%;
                             font-size: 13px;
@@ -467,6 +475,100 @@
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 2;
                             margin-bottom: 5px;
+                            @include respond-to-min(750){
+                                font-size: 15px;
+                            }
+                        }
+                        span{
+                            background: $pink;
+                            color: $white;
+                            font-size: 8px;
+                            font-weight: 500;
+                            padding: 3px 6px;
+                            border-radius: 20px;
+                            text-transform: uppercase;
+                            display: block;
+                            width: max-content;
+                        }
+                    }
+    
+                    button{
+                        background: transparent;
+                        border: none;
+                        display: flex;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modulo-canais-mini{
+    .wrapper-canais{
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li{
+                margin: 0;
+                padding: 0;
+                margin-right: 10px;
+                width: 50%;
+                display: flex;
+                @include respond-to-min(750){
+                }
+                .thumb-wrapper{
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    position: relative;
+                    flex-shrink: 0;
+                    display: flex;
+                    @include respond-to-min(750){
+                        width: 166px;
+                        height: 166px;
+                    }
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+                .footer-canal{
+                    display: flex;
+                    width: 100%;
+                    padding-top: 8px;
+                    justify-content: space-between;
+                    .text-wrapper{
+                        width: 60px;
+                        @include respond-to-min(750){
+                            width: 100%;
+                        }
+                        p{
+                            width: 100%;
+                            font-size: 13px;
+                            height: 30px;
+                            font-weight: 500;
+                            line-height: 16px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: normal;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            margin-bottom: 5px;
+                            @include respond-to-min(750){
+                                font-size: 15px;
+                            }
                         }
                         span{
                             background: $pink;
