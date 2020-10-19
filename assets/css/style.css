@@ -970,6 +970,12 @@ header .component-box .topbar-action .menu-button {
   }
 }
 
+@media only screen and (max-height: 700px) {
+  .sidebar.scrollhere {
+    overflow-y: scroll;
+  }
+}
+
 .sidebar nav {
   width: 100%;
   height: 100%;
@@ -1167,6 +1173,54 @@ header .component-box .topbar-action .menu-button {
 
 .sidebar .widget-box .btn-box {
   width: 100%;
+}
+
+/* Track */
+.scrollhere,
+.scrollola {
+  scrollbar-color: #cacaca #F4F4F4;
+  scrollbar-width: thin;
+  /* Handle */
+  /* Handle on hover */
+}
+
+.scrollhere::-webkit-scrollbar-track,
+.scrollola::-webkit-scrollbar-track {
+  background: #EEE3F6;
+  border-radius: 5px;
+}
+
+.scrollhere::-webkit-scrollbar,
+.scrollola::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  scroll-behavior: smooth;
+}
+
+.scrollhere::-webkit-scrollbar-track,
+.scrollola::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+.scrollhere::-webkit-scrollbar-track:hover,
+.scrollola::-webkit-scrollbar-track:hover {
+  background: #F4F4F4;
+  border-radius: 5px;
+}
+
+.scrollhere::-webkit-scrollbar-thumb,
+.scrollola::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scrollhere::-webkit-scrollbar-thumb:hover,
+.scrollola::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .content-container {
@@ -1390,12 +1444,12 @@ header .component-box .topbar-action .menu-button {
   width: 56px;
 }
 
-#originais .wrapper-originais {
+.modulo-originais .wrapper-originais {
   width: 100%;
   height: auto;
 }
 
-#originais .wrapper-originais ul {
+.modulo-originais .wrapper-originais ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1406,23 +1460,23 @@ header .component-box .topbar-action .menu-button {
   overflow-x: scroll;
 }
 
-#originais .wrapper-originais ul li {
+.modulo-originais .wrapper-originais ul li {
   margin: 0;
   padding: 20px 0;
   margin-right: 10px;
 }
 
 @media only screen and (min-width: 750px) {
-  #originais .wrapper-originais ul li {
+  .modulo-originais .wrapper-originais ul li {
     margin-right: 20px;
   }
 }
 
-#originais .wrapper-originais ul li a {
+.modulo-originais .wrapper-originais ul li a {
   display: block;
 }
 
-#originais .wrapper-originais ul li a .thumb-container {
+.modulo-originais .wrapper-originais ul li a .thumb-container {
   width: 122px;
   height: 208px;
   border-radius: 5px;
@@ -1431,13 +1485,13 @@ header .component-box .topbar-action .menu-button {
 }
 
 @media only screen and (min-width: 750px) {
-  #originais .wrapper-originais ul li a .thumb-container {
+  .modulo-originais .wrapper-originais ul li a .thumb-container {
     width: 166px;
     height: 332px;
   }
 }
 
-#originais .wrapper-originais ul li a .thumb-container img {
+.modulo-originais .wrapper-originais ul li a .thumb-container img {
   width: 100%;
   left: 50%;
   position: absolute;
