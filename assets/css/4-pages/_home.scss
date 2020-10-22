@@ -1,1 +1,20 @@
 
+
+#novos-canais{
+    display: flex;
+    flex-direction: column;
+    @include respond-to-min(1000){
+        flex-direction: row;
+    }
+}
+#banners{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    @include respond-to-min(900){
+        padding: 0 30px;
+    }
+    @include respond-to-min(1300){
+        flex-wrap: inherit;
+    }
+}

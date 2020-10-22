@@ -1,3 +1,20 @@
+.btn{
+    font-size: 13px;
+    font-weight: 900;
+    color: $white;
+    background: $blue;
+    padding: 11px 15px;
+    border-radius: 27px;
+    border: 1px solid $blue;
+    &:hover{
+        background: #0D3789;
+        border: 1px solid $blue;
+    }
+    &:active{
+        border: 0;
+        transform: scale(.96)
+    }
+}
 // Header Section ::::
 header {
     width: 100%;
@@ -6,7 +23,7 @@ header {
     padding: 0 15px;
     z-index: 99;
     @include transitions(400ms);
-    background: $white;
+    background: #202020;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +38,25 @@ header {
         display: flex;
         flex: 1 0 auto;
         @include respond-to-min(750){
-            padding-right: 100px;
+            margin-right: 100px;
+        }
+        
+        svg{
+            path{
+                &:nth-child(13),
+                &:nth-child(14),
+                &:nth-child(15),
+                &:nth-child(16),
+                &:nth-child(17),
+                &:nth-child(18),
+                &:nth-child(19),
+                &:nth-child(20),
+                &:nth-child(21),
+                &:nth-child(22),
+                &:nth-child(23){
+                    fill: #fff;
+                }
+            }
         }
     }
     .search{
@@ -89,6 +124,15 @@ header {
                     margin: 0;
                     padding: 0;
                     margin-left: 5px;
+                    color: #fff;
+                }
+            }
+            
+            svg{
+                path,
+                ellipse,
+                rect{
+                    fill: #fff;
                 }
             }
             .notification-icon{
@@ -97,12 +141,6 @@ header {
                 }
             }
             .btn{
-                font-size: 13px;
-                font-weight: 900;
-                color: $white;
-                background: $blue;
-                padding: 11px 15px;
-                border-radius: 27px;
             }
             .wrapper-profile{
                 width: 21px;
@@ -155,7 +193,7 @@ header {
     bottom: 0px;
     left: 0px;
     z-index: 98;
-    background: $white;
+    background: #202020;
     transition: all 0s;
     @include respond-to-min(750){
         width: 186px;
@@ -212,39 +250,55 @@ header {
                     height: 100%;
                     display: block;
                     &.active{
-                        background: #f4f4f4;
-                        svg{
-                            path{
-                                fill: #E52321;
+                        background: #2b2b2b;
+                        .wrappe-menu{
+                            svg{
+                                path{
+                                    fill: #E52321;
+                                }
+                            }
+                            span{
+                                color: #fff;
                             }
                         }
                     }
                     &.disabled{
                         cursor: inherit;
-                        svg{
-                            path{
-                                fill: #dbdbdb;
-                            }
-                        }
                         .wrappe-menu{
+                            svg{
+                                path{
+                                    fill: #5b5b5b;
+                                }
+                            }
                             span{
-                                color: #dbdbdb;
+                                color: #5b5b5b;
                             }
                         }
                         &:hover{
-                            background: #fff;
-                            svg{
-                                path{
-                                    fill: #dbdbdb;
+                            background: #202020;
+                            
+                            .wrappe-menu{
+                                svg{
+                                    path{
+                                        fill: #5b5b5b;
+                                    }
+                                }
+                                span{
+                                    color: #5b5b5b;
                                 }
                             }
                         }
                     }
                     &:hover{
-                        background: #e2e2e2;
-                        svg{
-                            path{
-                                fill: #E52321;
+                        background: #4d4d4d;
+                        .wrappe-menu{
+                            svg{
+                                path{
+                                    fill: #E52321;
+                                }
+                            }
+                            span{
+                                color: #fff;
                             }
                         }
                     }
@@ -272,9 +326,12 @@ header {
                                 width: 20px;
                                 margin-right: 10px;
                             }
+                            path{
+                                fill: #a4a4a4
+                            }
                         }
                         span{
-                            color: $gray;
+                            color: #A4A4A4;
                             font-size: 11px;
                             @include respond-to-min(750){
                                 font-size: 15px;
@@ -287,10 +344,83 @@ header {
             hr{
                 width: 100%;
                 margin: 0;
-                border-color: #DBDBDB;
+                border-color: #4c4c4c;
             }
         }
     }
+    .light-mode-cta{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        @include respond-to-min(750){
+            height: auto;
+        }
+        &.active{
+            .slider{
+                background: cornflowerblue !important;
+                .icon{
+                    right: 0;
+                }
+            }
+        }
+        hr{
+            margin: 0;
+        }
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: pointer;
+            &:hover{
+                background: #e2e2e2;
+                svg{
+                    path{
+                        fill: #E52321;
+                    }
+                }
+            }
+            .wrappe-menu{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                @include respond-to-min(750){
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 12px 20px;
+                }
+                .slider{
+                    height: 16px;
+                    width: 30px;
+                    margin-right: 10px;
+                    background: #ccc;
+                    border-radius: 10px;
+                    position: relative;
+                    .icon{
+                        width: 12px;
+                        height: 12px;
+                        background: #fff;
+                        margin: 2px;
+                        border-radius: 12px;
+                        position: absolute;
+                    }
+                }
+                span{
+                    color: $gray;
+                    font-size: 11px;
+                    @include respond-to-min(750){
+                        font-size: 15px;
+                    }
+                }
+
+            }
+        }
+    }
+    
     .widget-box{
         padding: 20px;
         flex-direction: column;
@@ -314,11 +444,11 @@ header {
     }
 }
 
-  /* Track */
+/* Track */
 .scrollhere,
 .scrollola{
     
-    scrollbar-color: #cacaca #F4F4F4;
+    scrollbar-color: #373737 #202020;
     scrollbar-width: thin;
     &::-webkit-scrollbar-track {
         background: #EEE3F6;
@@ -334,22 +464,23 @@ header {
         border-radius: 5px;
     }
     &::-webkit-scrollbar-track:hover {
-        background: #F4F4F4;
+        background: #202020;
         border-radius: 5px;
     }
     /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: #dbdbdb;
+        background: #373737;
         border-radius: 5px;
         cursor: pointer;
     }
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-        background: #cacaca;
+        background: #373737;
         border-radius: 5px;
         cursor: pointer;
     }
 }
+
 
   
 

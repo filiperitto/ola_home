@@ -1,0 +1,234 @@
+.light-mode{
+    background: #FAFAFA;
+    p{
+        color: #606060;
+    }
+    header{
+        background: $white;
+        .logo{
+        
+            svg{
+                path{
+                    &:nth-child(13),
+                    &:nth-child(14),
+                    &:nth-child(15),
+                    &:nth-child(16),
+                    &:nth-child(17),
+                    &:nth-child(18),
+                    &:nth-child(19),
+                    &:nth-child(20),
+                    &:nth-child(21),
+                    &:nth-child(22),
+                    &:nth-child(23){
+                        fill: #606060;
+                    }
+                }
+            }
+        }
+        .component-box{
+            .topbar-action{
+                .agregar-canal,
+                .criar-canal{
+                    span{
+                        color: #606060;
+                    }
+                } 
+                
+                svg{
+                    path,
+                    ellipse,
+                    rect{
+                        fill: #606060;
+                    }
+                }
+            }
+        }
+    }
+    .sidebar{
+        background: $white;
+        nav{
+            ul{
+                li{
+                    a{
+                        &.active{
+                            background: #f4f4f4;
+                            .wrappe-menu{
+                                svg{
+                                    path{
+                                        fill: #E52321;
+                                    }
+                                }
+                                span{
+                                    color: #606060;
+                                }
+
+                            }
+                        }
+                        &.disabled{
+                            cursor: inherit;
+                            .wrappe-menu{
+                                span{
+                                    color: #dbdbdb;
+                                }
+                                svg{
+                                    path{
+                                        fill: #dbdbdb;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                background: #fff;
+                                .wrappe-menu{
+                                    span{
+                                        color: #dbdbdb;
+                                    }
+                                    svg{
+                                        path{
+                                            fill: #dbdbdb;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            background: #E2E2E2;
+                            .wrappe-menu{
+                                svg{
+                                    path{
+                                        fill: #E52321;
+                                    }
+                                }
+                                span{
+                                    color: #606060;
+                                }
+                            }
+                        }
+                        .wrappe-menu{
+                            span{
+                                color: #606060;
+                            }
+                            svg{
+                                path{
+                                    fill: #606060
+                                }
+                            }
+                        }
+                    }
+                }
+                hr{
+                    border-color: #DBDBDB;
+                }
+            }
+        }
+        hr{
+            border-color: #4c4c4c;
+        }
+        
+    }
+    #ola-stories{
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+        //background: #181818;
+        @include respond-to-min(750){
+            border: none;
+            box-shadow: none;
+        }
+        .timeline{
+            ul{
+                li{
+                    .twrapper{
+                        .cta-ola{
+                            .username{
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modulo-hero{
+        .transition-canvas{
+            @include linearGradientTopBottom(rgba(#FAFAFA, 0), #FAFAFA)
+        }
+    }
+
+    /* Track */
+    
+.scrollhere,
+.scrollola{
+    
+    scrollbar-color: #cacaca #F4F4F4;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar-track {
+        background: #EEE3F6;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+        scroll-behavior: smooth;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track:hover {
+        background: #F4F4F4;
+        border-radius: 5px;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #dbdbdb;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #cacaca;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+    .content-container{
+        section{
+            .module-title{
+                h3{
+                    padding: 20px 0 5px;
+                    color: #000;
+                }
+                p{
+                    color: #606060;
+                }
+            }
+            p{
+                color: #606060;
+            }
+        }
+        h5{
+            color: #000;
+        }
+        .menu-button{
+            svg{
+                rect{
+                    fill: #606060;
+                }
+            }
+        }
+        .modulo-miniplayer{
+            .wrapper-miniplayer{
+                ul{
+                    li{
+                        .episode-card{
+                            .player-cont{
+                                .epi-name{
+                                    color: #313131;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
