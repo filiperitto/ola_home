@@ -1,20 +1,78 @@
 
 
-#novos-canais{
-    display: flex;
-    flex-direction: column;
-    @include respond-to-min(1000){
-        flex-direction: row;
+.home-deslogado{
+    .content-container{
+    
+        section{
+            &:nth-child(2){
+                margin-top: -80px;
+                @include respond-to-min(750){
+                    margin-top: -150px;
+                }
+            }
+        }
     }
+    #aclamados{
+        display: flex;
+        flex-direction: column;
+        @include respond-to-min(1000){
+            flex-direction: row;
+        }
+    }
+    #banners{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to-min(900){
+            padding: 0 30px;
+        }
+        @include respond-to-min(1300){
+            flex-wrap: inherit;
+        }
+    }
+    
+    #canais-alta{
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to-min(900){
+            //padding: 0 30px;
+        }
+        @include respond-to-min(1300){
+            flex-wrap: inherit;
+        }
+    }
+
 }
-#banners{
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    @include respond-to-min(900){
-        padding: 0 30px;
+body,
+.home-logado{
+    #aclamados{
+        display: flex;
+        flex-direction: column;
+        @include respond-to-min(1000){
+            flex-direction: row;
+        }
     }
-    @include respond-to-min(1300){
-        flex-wrap: inherit;
+    #banners{
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to-min(900){
+            padding: 0 30px;
+        }
+        @include respond-to-min(1300){
+            flex-wrap: inherit;
+        }
     }
+    
+    #novos-canais{
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to-min(900){
+            //padding: 0 30px;
+        }
+        @include respond-to-min(1300){
+            flex-wrap: inherit;
+        }
+    }
+
 }

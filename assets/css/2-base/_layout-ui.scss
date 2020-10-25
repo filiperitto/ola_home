@@ -150,6 +150,8 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background: url(../img/placeholder-profile-black.png) no-repeat top center;
+                background-size: cover;
                 @include respond-to-min(750){
                     width: 35px;
                     height: 35px;
@@ -232,7 +234,7 @@ header {
                 margin: 0;
                 padding: 0;
                 font-size: 16px;
-                color: $gray;
+                color: #A4A4A4;
                 font-weight: 600;
                 padding: 10px 20px 0;
                 text-align: left;

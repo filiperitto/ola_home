@@ -41,6 +41,11 @@
                         fill: #606060;
                     }
                 }
+                
+                .wrapper-profile{
+                    background: url(../img/placeholder-profile-light.png) no-repeat top center;
+                    background-size: cover;
+                }
             }
         }
     }
@@ -115,6 +120,9 @@
                         }
                     }
                 }
+                h5{
+                    color: $gray;
+                }
                 hr{
                     border-color: #DBDBDB;
                 }
@@ -154,41 +162,41 @@
 
     /* Track */
     
-.scrollhere,
-.scrollola{
-    
-    scrollbar-color: #cacaca #F4F4F4;
-    scrollbar-width: thin;
-    &::-webkit-scrollbar-track {
-        background: #EEE3F6;
-        border-radius: 5px;
+    .scrollhere,
+    .scrollola{
+        
+        scrollbar-color: #cacaca #F4F4F4;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar-track {
+            background: #EEE3F6;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+            scroll-behavior: smooth;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar-track:hover {
+            background: #F4F4F4;
+            border-radius: 5px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #dbdbdb;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #cacaca;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     }
-    &::-webkit-scrollbar {
-        width: 9px;
-        height: 9px;
-        scroll-behavior: smooth;
-    }
-    &::-webkit-scrollbar-track {
-        background: transparent;
-        border-radius: 5px;
-    }
-    &::-webkit-scrollbar-track:hover {
-        background: #F4F4F4;
-        border-radius: 5px;
-    }
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #dbdbdb;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #cacaca;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-}
 
     .content-container{
         section{
@@ -199,6 +207,11 @@
                 }
                 p{
                     color: #606060;
+                }
+                a{
+                    span{
+                        color: #313131;
+                    }
                 }
             }
             p{
