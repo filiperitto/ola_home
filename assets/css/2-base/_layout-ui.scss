@@ -152,6 +152,7 @@ header {
                 justify-content: center;
                 background: url(../img/placeholder-profile-black.png) no-repeat top center;
                 background-size: cover;
+                cursor: pointer;
                 @include respond-to-min(750){
                     width: 35px;
                     height: 35px;
@@ -174,6 +175,37 @@ header {
                 padding: 0 5px;
                 background: transparent;
                 border: none;
+            }
+            .dropmenu{
+                width: 85px;
+                height: auto;
+                position: absolute;
+                top: 62px;
+                right: 0;
+                box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+                border-radius: 0 0 5px 5px;
+                overflow: hidden;
+                display: none;
+                @include respond-to-min(750){
+                    top: 69px;
+                }
+                &.open{
+                    display: block;
+                }
+                ul{
+                    background: #202020;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    li{
+                        a{
+                            color: #fff;
+                            padding: 10px;
+                            display: block;
+                        }
+
+                    }
+                }
             }
         }
     }

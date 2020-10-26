@@ -9,13 +9,30 @@
         preventmultitouchscrolling: true
     }); 
  }*/
+ $(document).ready(function() {
+ 
+    setTimeout(function(){
+        $('.preloader').addClass('loaded');
+    }, 1000);
+ 
+});
+
 $(document).ready(function () {
 
 
-
+    /*=== light-mode Switch ===*/
     $('.light-mode-cta').click(function () {
         $(this).toggleClass('active');
         $('body').toggleClass('light-mode');
+    });
+
+    $('.dropcta').click(function () {
+        $('.dropmenu').toggleClass('open');
+    });
+
+    /*=== Footer Player Switch ===*/
+    $('.cta-player').click(function () {
+        $('.footer-player').toggleClass('open');
     });
 
     $('.originais-carousel').owlCarousel({
