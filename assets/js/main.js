@@ -33,6 +33,22 @@ $(document).ready(function () {
     /*=== Footer Player Switch ===*/
     $('.cta-player').click(function () {
         $('.footer-player').toggleClass('open');
+        $('.content-container').toggleClass('player-open');
+    });
+
+    $('.cta-button-playlist-header').click(function () {
+        $('.fila-sidebar').toggleClass('grow');
+        $('.nowplaying').toggleClass('shrink');
+    });
+    
+    $('.cta-big-player').click(function () {
+        $('.nowplaying').toggleClass('open');
+        $('.fila-sidebar').toggleClass('open');
+    });
+
+    $('.cta-close-nowplaying').click(function () {
+        $('.nowplaying').toggleClass('open');
+        $('.fila-sidebar').toggleClass('open');
     });
 
     $('.originais-carousel').owlCarousel({

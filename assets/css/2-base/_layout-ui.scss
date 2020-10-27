@@ -84,7 +84,7 @@ header {
                 font-size: 13px;
                 font-weight: normal;
                 border-radius: 27px;
-                padding: 10px 10px 10px 30px;
+                padding: 11px 10px 9px 30px;
                 border-bottom: 2px solid $white;
                 &:focus{
 
@@ -287,7 +287,8 @@ header {
                         background: #2b2b2b;
                         .wrappe-menu{
                             svg{
-                                path{
+                                path,
+                                ellipse{
                                     fill: #E52321;
                                 }
                             }
@@ -327,7 +328,8 @@ header {
                         background: #4d4d4d;
                         .wrappe-menu{
                             svg{
-                                path{
+                                path,
+                                ellipse{
                                     fill: #E52321;
                                 }
                             }
@@ -360,7 +362,8 @@ header {
                                 width: 20px;
                                 margin-right: 10px;
                             }
-                            path{
+                            path,
+                            ellipse{
                                 fill: #a4a4a4
                             }
                         }

@@ -300,3 +300,8 @@ button{
     outline: none;
     transition: all 300ms ease-in-out;
 }
+button{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}

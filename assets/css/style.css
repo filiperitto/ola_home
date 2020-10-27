@@ -859,6 +859,12 @@ button {
   transition: all 300ms ease-in-out;
 }
 
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
 .btn {
   font-size: 13px;
   font-weight: 900;
@@ -973,7 +979,7 @@ header .search form input {
   font-size: 13px;
   font-weight: normal;
   border-radius: 27px;
-  padding: 10px 10px 10px 30px;
+  padding: 11px 10px 9px 30px;
   border-bottom: 2px solid #ffffff;
 }
 
@@ -1256,7 +1262,8 @@ header .component-box .topbar-action .dropmenu ul li a {
   background: #2b2b2b;
 }
 
-.sidebar nav ul li a.active .wrappe-menu svg path {
+.sidebar nav ul li a.active .wrappe-menu svg path,
+.sidebar nav ul li a.active .wrappe-menu svg ellipse {
   fill: #E52321;
 }
 
@@ -1292,7 +1299,8 @@ header .component-box .topbar-action .dropmenu ul li a {
   background: #4d4d4d;
 }
 
-.sidebar nav ul li a:hover .wrappe-menu svg path {
+.sidebar nav ul li a:hover .wrappe-menu svg path,
+.sidebar nav ul li a:hover .wrappe-menu svg ellipse {
   fill: #E52321;
 }
 
@@ -1349,7 +1357,8 @@ header .component-box .topbar-action .dropmenu ul li a {
   }
 }
 
-.sidebar nav ul li a .wrappe-menu svg path {
+.sidebar nav ul li a .wrappe-menu svg path,
+.sidebar nav ul li a .wrappe-menu svg ellipse {
   fill: #a4a4a4;
 }
 
@@ -1548,6 +1557,10 @@ header .component-box .topbar-action .dropmenu ul li a {
   cursor: pointer;
 }
 
+body {
+  overflow: hidden;
+}
+
 .preloader {
   width: 100%;
   height: 100%;
@@ -1563,6 +1576,7 @@ header .component-box .topbar-action .dropmenu ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .preloader.loaded {
@@ -1868,15 +1882,27 @@ header .component-box .topbar-action .dropmenu ul li a {
 
 .content-container {
   width: 100%;
-  height: auto;
+  height: calc(100vh - 122px);
   max-width: 1920px;
   margin: auto;
   position: relative;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 750px) {
   .content-container {
     padding-left: 186px;
+    height: calc(100vh - 69px);
+  }
+}
+
+.content-container.player-open {
+  height: calc(100vh - 176px);
+}
+
+@media only screen and (min-width: 750px) {
+  .content-container.player-open {
+    height: calc(100vh - 158px);
   }
 }
 
@@ -2334,8 +2360,8 @@ header .component-box .topbar-action .dropmenu ul li a {
 
 .modulo-originais .wrapper-originais ul li a .thumb-container {
   width: 91px;
-  padding-bottom: 206%;
-  border-radius: 5px;
+  padding-bottom: 200%;
+  border-radius: 6px;
   overflow: hidden;
   position: relative;
 }
@@ -2562,6 +2588,7 @@ header .component-box .topbar-action .dropmenu ul li a {
 .modulo-episodios .wrapper-episodios ul li .footer-episodio button {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modulo-miniplayer .wrapper-miniplayer {
@@ -2817,6 +2844,7 @@ header .component-box .topbar-action .dropmenu ul li a {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 100%;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 960px) {
@@ -3443,6 +3471,7 @@ header .component-box .topbar-action .dropmenu ul li a {
 }
 
 .modulo-list-canais .wrapper-canais ul li .button-wrapper button {
+  cursor: pointer;
   background: transparent;
   border: none;
   display: -webkit-box;
@@ -4043,7 +4072,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   padding: 0 10px 0 0;
   background: #2E2E2E;
   position: fixed;
-  bottom: 0;
+  bottom: -30px;
   left: 0;
   z-index: 97;
   -webkit-transition: all .2s ease-in-out;
@@ -4065,6 +4094,22 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 @media only screen and (min-width: 750px) {
   .footer-player.open {
     bottom: 0;
+  }
+}
+
+.footer-player .cta-big-player {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media only screen and (min-width: 750px) {
+  .footer-player .cta-big-player {
+    display: none;
   }
 }
 
@@ -4424,6 +4469,529 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   padding: 0;
   cursor: pointer;
   margin-left: 15px;
+}
+
+.nowplaying {
+  width: 100%;
+  height: 100%;
+  background: #2e2e2e;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 46px;
+}
+
+@media only screen and (min-width: 750px) {
+  .nowplaying {
+    display: none;
+  }
+}
+
+.nowplaying.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nowplaying.shrink .header {
+  display: none;
+}
+
+.nowplaying.shrink .player-box {
+  width: 100%;
+  height: 53px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+
+.nowplaying.shrink .player-box .thumb-epi {
+  width: 53px;
+  height: 53px;
+  border-radius: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.nowplaying.shrink .player-box .info-box .episode-name {
+  font-size: 14px;
+}
+
+.nowplaying.shrink .player-box .info-box .pod-name {
+  font-size: 12px;
+}
+
+.nowplaying.shrink .player-box .players-controls {
+  width: auto;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons {
+  margin: 0;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .player-prev-10-button,
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .player-prev-button,
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .player-next-30-button,
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .player-next-button {
+  display: none;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .play {
+  width: 34px;
+  height: 34px;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .play svg {
+  width: 34px;
+  height: 34px;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .play svg path {
+  width: 34px;
+  height: 34px;
+}
+
+.nowplaying.shrink .player-box .players-controls .player-controls__buttons .exit {
+  display: inline;
+}
+
+.nowplaying.shrink .player-box .players-controls .players-bar-slider {
+  display: none;
+}
+
+.nowplaying .header {
+  padding: 20px 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nowplaying .header .menu-option svg rect {
+  fill: #fff;
+}
+
+.nowplaying .player-box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nowplaying .player-box .thumb-epi {
+  width: 210px;
+  height: 210px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.nowplaying .player-box .thumb-epi img {
+  width: 100%;
+}
+
+.nowplaying .player-box .info-box {
+  width: 100%;
+}
+
+.nowplaying .player-box .info-box .episode-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.nowplaying .player-box .info-box .pod-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #a2a2a2;
+  text-align: center;
+}
+
+.nowplaying .player-box .players-controls {
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .play,
+.nowplaying .player-box .players-controls .player-controls__buttons .exit,
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-10-button,
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-button,
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-30-button,
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-button {
+  max-width: 34px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-button svg {
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-button svg path {
+  fill: #fff;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-10-button {
+  max-width: 34px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-10-button svg {
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-prev-10-button svg path {
+  fill: #fff;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-30-button {
+  max-width: 34px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-30-button svg {
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-30-button svg path {
+  fill: #fff;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-button {
+  max-width: 34px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-button svg {
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .player-next-button svg path {
+  fill: #fff;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .play {
+  max-width: 45px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .play svg {
+  width: 45px;
+  height: 45px;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .play svg path {
+  width: 45px;
+  height: 45px;
+  fill: #fff;
+}
+
+.nowplaying .player-box .players-controls .player-controls__buttons .exit {
+  display: none;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar-time {
+  min-width: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #fff;
+  letter-spacing: normal;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar-time:nth-child(2) {
+  text-align: left;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar-time:nth-child(3) {
+  text-align: right;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar {
+  height: auto;
+  position: relative;
+  width: 100%;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar .progress-bar_bg {
+  width: 100%;
+  height: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2px;
+  background: #5B5B5B;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar .progress-bar_track {
+  width: 30%;
+  height: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 2px 0 0 2px;
+  background: #FFCA00;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.nowplaying .player-box .players-controls .players-bar-slider .progress-bar .progress-bar_handle {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background: #FFCA00;
+  top: -4px;
+  border-radius: 10px;
+  left: 30%;
+  cursor: pointer;
+}
+
+.fila-sidebar {
+  width: 100%;
+  height: calc(100% - 53px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: calc(-100% + 99px);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #181818;
+  z-index: 101;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+@media only screen and (min-width: 750px) {
+  .fila-sidebar {
+    display: none;
+  }
+}
+
+.fila-sidebar.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.fila-sidebar.grow {
+  bottom: 0;
+}
+
+.fila-sidebar.grow .button-playlist-header .arrow-button {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.fila-sidebar .button-playlist-header {
+  width: 100%;
+  min-height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+.fila-sidebar .button-playlist-header .queue-icon {
+  margin-right: 10px;
+}
+
+.fila-sidebar .button-playlist-header .arrow-button {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fila-sidebar .button-playlist-header p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-align: left;
+}
+
+.fila-sidebar .list-epis {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.fila-sidebar .list-epis ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fila-sidebar .list-epis ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid rgba(178, 178, 178, 0.2);
+}
+
+.fila-sidebar .list-epis ul li .thumb-epi {
+  width: 33px;
+  height: 33px;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.fila-sidebar .list-epis ul li .thumb-epi img {
+  width: 100%;
+}
+
+.fila-sidebar .list-epis ul li .text-box {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.fila-sidebar .list-epis ul li .text-box .epi-name {
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-align: left;
+}
+
+.fila-sidebar .list-epis ul li .text-box .pod-name-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 11px;
+}
+
+.fila-sidebar .list-epis ul li .text-box .pod-name-box .podname {
+  font-weight: bold;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-align: left;
+}
+
+.fila-sidebar .list-epis ul li .text-box .pod-name-box .status {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-weight: lighter;
+  color: #a2a2a2;
+}
+
+.fila-sidebar .list-epis ul li .option svg rect {
+  fill: #fff;
 }
 
 /**
