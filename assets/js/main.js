@@ -26,30 +26,54 @@ $(document).ready(function () {
         $('body').toggleClass('light-mode');
     });
 
+    /*=== ContextMenu do Header ===*/
     $('.dropcta').click(function () {
-        $('.dropmenu').toggleClass('open');
+        $('.dropmenu-header').toggleClass('open');
+        $('.inv-modal').toggleClass('open');
     });
 
-    /*=== Footer Player Switch ===*/
+    /*=== Ativador Footer Player Switch ===*/
     $('.cta-player').click(function () {
         $('.footer-player').toggleClass('open');
         $('.content-container').toggleClass('player-open');
+        $('.fila-sidebar').toggleClass('active');
+        $('.nowplaying').toggleClass('active');
     });
 
+    /*=== Ativador do sibar playlist  ===*/
     $('.cta-button-playlist-header').click(function () {
         $('.fila-sidebar').toggleClass('grow');
         $('.nowplaying').toggleClass('shrink');
     });
     
+    /*=== Ativar o playlist e o Nowplayingr ===*/
     $('.cta-big-player').click(function () {
         $('.nowplaying').toggleClass('open');
         $('.fila-sidebar').toggleClass('open');
     });
 
+    /*=== Fechar o playlist e o Nowplaying ===*/
     $('.cta-close-nowplaying').click(function () {
         $('.nowplaying').toggleClass('open');
         $('.fila-sidebar').toggleClass('open');
     });
+
+    /*=== Tabs da playlist ===*/
+    $('.epi-tabs').click(function () {
+        $(this).addClass('active');
+        $('.queue-tabs').removeClass('active');
+        
+        $('.queue-playlist').removeClass('select');
+        $('.epi-playlist').addClass('select');
+    });
+    $('.queue-tabs').click(function () {
+        $(this).addClass('active');
+        $('.epi-tabs').removeClass('active');
+        
+        $('.epi-playlist').removeClass('select');
+        $('.queue-playlist').addClass('select');
+    });
+
 
     $('.originais-carousel').owlCarousel({
         loop: true,

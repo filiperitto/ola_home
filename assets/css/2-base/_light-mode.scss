@@ -1,5 +1,8 @@
 .light-mode{
     background: #FAFAFA;
+    .preloader{
+        background: #fff;
+    }
     p{
         color: #606060;
     }
@@ -45,6 +48,17 @@
                 .wrapper-profile{
                     background: url(../img/placeholder-profile-light.png) no-repeat top center;
                     background-size: cover;
+                }
+            }
+        }
+    }
+    .dropmenu-header{
+        ul{
+            li{
+                a{ 
+                    span{
+                        
+                    }
                 }
             }
         }
@@ -243,5 +257,166 @@
                 }
             }
         }
+    }
+
+    .footer-player{
+        background: #fff; 
+        box-shadow: 0px -5px 19px rgba(#fff, 0.25);
+        .wrapper-player{
+            .contentinfo{
+                .info-box{
+                    .episode-name{
+                        color: #606060;
+                    }
+                } 
+            }
+            .players-controls {
+                .player-controls__buttons{
+                    .player-prev-button,
+                    .player-prev-10-button,
+                    .play,
+                    .player-next-30-button,
+                    .player-next-button,
+                    .exit {
+                        svg {
+                            path{
+                                fill: #606060;
+                            }
+                        }
+                    }     
+                }
+                .players-bar-slider{
+                    .progress-bar-time{
+                        color: #606060;
+                    }
+                    .progress-bar{
+                        .progress-bar_bg{
+                            opacity: 0.25;
+                        }
+                    } 
+                }
+            }
+        }
+        svg {
+            path{
+                fill: #606060;
+            }
+        }
+    }
+    .nowplaying{
+        background: #fff;
+        svg{
+            path,
+            rect{
+                fill: #606060;
+            }
+        }
+        .header{
+            .menu-option{
+                svg{
+                    path,
+                    rect{
+                        fill: #606060;
+                    }
+                }
+            }
+        } 
+        .player-box{
+            .info-box{
+                .episode-name{
+                    color: #606060;
+                }
+            } 
+            
+            .players-controls {
+                .player-controls__buttons{
+                    .player-prev-button,
+                    .player-prev-10-button,
+                    .play,
+                    .player-next-30-button,
+                    .player-next-button,
+                    .exit {
+                        svg {
+                            path{
+                                fill: #606060;
+                            }
+                        }
+                        &.disabled{
+                            cursor: default;
+                            opacity: 0.25;
+                        }
+                    }     
+                }
+                .players-bar-slider{
+                    .progress-bar-time{
+                        color: #606060;
+                    }
+                    .progress-bar{
+                        .progress-bar_bg{
+                            opacity: 0.25;
+                        }
+                    } 
+                }
+            }
+        } 
+    }
+    
+    .fila-sidebar{
+        background: #f2f2f2;
+        svg{
+            path,
+            rect{
+                fill: #606060
+            }
+        }
+        .tabs-playlist{
+            .epi-tabs,
+            .queue-tabs{
+                border-bottom: 2px solid rgba(#434343, 0.25);
+                &.active{
+                    span{
+                        color: #606060;
+                    }
+                } 
+            }
+        } 
+        .list-epis{
+            ul{
+                h3{
+                    color: #606060;
+                }
+                li{
+                    border-color: rgba(#606060, 0.25);
+                    .text-box{
+                        .epi-name{
+                            color: #606060;
+                        }
+                        span{
+                            svg{
+                                path{
+                                    fill: #fff;
+                                }
+                            }
+                        }
+                        .pod-name-box{
+                            color: #a2a2a2;
+                            .podname{
+                                @include respond-to-min(750){
+                                    color: #a2a2a2;
+                                }
+                            }
+                        }
+                    } 
+                    .option{
+                        svg{
+                            path,
+                            rect{
+                                fill: #606060
+                            }
+                        }
+                    }
+                }
+            }
+        } 
     }
 }

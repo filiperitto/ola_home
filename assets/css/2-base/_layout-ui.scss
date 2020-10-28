@@ -176,40 +176,86 @@ header {
                 background: transparent;
                 border: none;
             }
-            .dropmenu{
-                width: 85px;
-                height: auto;
-                position: absolute;
-                top: 62px;
-                right: 0;
-                box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
-                border-radius: 0 0 5px 5px;
-                overflow: hidden;
-                display: none;
-                @include respond-to-min(750){
-                    top: 69px;
-                }
-                &.open{
-                    display: block;
-                }
-                ul{
-                    background: #202020;
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                    li{
-                        a{
-                            color: #fff;
-                            padding: 10px;
-                            display: block;
-                        }
-
-                    }
-                }
-            }
         }
     }
 }
+
+.dropmenu-header{
+    width: 193px;
+    height: auto;
+    position: absolute;
+    top: 62px;
+    right: 17px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    border: 1px solid #5b5b5b;
+    @include respond-to-min(750){
+        top: 69px;
+        right: 41px;
+    }
+    &.open{
+        display: block;
+    }
+    ul{
+        background: #202020;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            border-bottom: 1px solid #5b5b5b;
+            &:last-child{
+                border-bottom: none;
+            }
+            a{
+                padding: 12px;
+                display: block;
+                svg{
+                    margin-right: 7px;
+                    path{
+                        fill: #a5a5a5 !important;
+                    }
+                }
+                span{
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+            &.deslog{
+                a{
+                    svg{
+                        path{
+                            fill: #E52321 !important;
+                        }
+                    }
+                    span{
+                        color: #E52321;
+                    }
+                }
+            }
+
+        }
+    }
+    .inv-modal{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        display: none;
+        &.open{
+            display: block;
+        }
+    }
+}
+.inv-modal{
+
+}
+
 .main{
     width: 100%;
     padding: 62px 0;
@@ -298,7 +344,7 @@ header {
                         }
                     }
                     &.disabled{
-                        cursor: inherit;
+                        cursor: default;
                         .wrappe-menu{
                             svg{
                                 path{

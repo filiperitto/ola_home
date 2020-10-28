@@ -12,7 +12,7 @@ body{
     align-items: center;
 
     //Temporario \/
-    display: none;
+    //display: none;
     &.loaded{
         transition: all 1.5s ease-in-out;
         transform: translate(-100%, 0);
@@ -1875,10 +1875,12 @@ section{
     left: 0;
     z-index: 97;
     transition: all .2s ease-in-out;
+    
+    box-shadow: 0px -5px 19px rgba(0, 0, 0, 0.25);
     @include respond-to-min(750){
         bottom: -88px;
         height: 88px;
-        z-index: 99;
+        z-index: 102;
     }
     &.open{
         bottom: 60px;
@@ -1938,6 +1940,7 @@ section{
                 .pod-name{
                     font-size: 12px;
                     font-weight: bold;
+                    color: #A2A2A2;
                 }
             }
         }
@@ -1966,6 +1969,10 @@ section{
                     @include respond-to-min(750){
                         display: inline;
                         margin: 0 15px !important;
+                    }
+                    &.disabled{
+                        opacity: 0.25;
+                        cursor: default;
                     }
                 }
                 .player-prev-button{
@@ -2149,12 +2156,15 @@ section{
     left: 0;
     transform: translateY(100%);
     z-index: 100;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 46px;
     @include respond-to-min(750){
-        display: none;
+        display: none !important;
+    }
+    &.active{
+        display: flex;
     }
     &.open{
         transform: translateY(0);
@@ -2409,21 +2419,63 @@ section{
     transform: translateY(100%);
     background: #181818;
     z-index: 101;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     transition: all .3s ease-in-out;
     @include respond-to-min(750){
         display: none;
+        left:auto;
+        right: -321px;
+        top: 0;
+        transform: translateY(0);
+        bottom: auto;
+        width: 321px;
+        height: 100%;
+        z-index: 101;
+        background: #2E2E2E;
+    }
+    &.active{
+        display: flex;
     }
     &.open{
         transform: translateY(0);
     }
     &.grow{
         bottom: 0;
+        @include respond-to-min(750){
+            transform: translateY(0);
+            right: 0;
+            height: calc(100% - 88px);
+        }
         .button-playlist-header{
             .arrow-button{
                 transform: rotate(0);
+            }
+        }
+    }
+    .tabs-playlist{
+        display: none;
+        @include respond-to-min(750){
+            width: 100%;
+            display: flex;
+        }
+        .epi-tabs,
+        .queue-tabs{
+            width: 50%;
+            cursor: pointer;
+            padding: 20px 30px;
+            text-align: center;
+            border-bottom: 2px solid #434343;
+            span{
+                text-transform: uppercase;
+                color: #989898;
+            }
+            &.active{
+                border-bottom: 2px solid #FF005A;
+                span{
+                    color: #fff;
+                }
             }
         }
     }
@@ -2434,6 +2486,9 @@ section{
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
+        @include respond-to-min(750){
+            display: none;
+        }
         .queue-icon{
             margin-right: 10px;
         }
@@ -2456,20 +2511,71 @@ section{
     .list-epis{
         overflow: hidden;
         overflow-y: scroll;
+        &.epi-playlist{
+            display: none;
+        }
+        &.epi-playlist,
+        &.queue-playlist{
+            @include respond-to-min(750){
+                display: none;
+            }
+        }
+        &.select{
+            @include respond-to-min(750){
+                display: block;
+            }
+        }
         ul{
             list-style: none;
             margin: 0;
             padding: 0;
+            h3{
+                font-size: 14px;
+                font-weight: normal;
+                padding: 15px 45px 0;
+                display: none;
+                align-items: center;
+                @include respond-to-min(750){
+                    display: flex;
+                }
+                svg{
+                    margin-right: 10px;
+                    path{
+
+                    }
+                }
+            }
             li{
                 display: flex;
                 padding: 15px;
                 border-top: 1px solid rgba(#b2b2b2, 0.2);
+                @include respond-to-min(750){
+                    padding: 15px 45px;
+                    border-top: none;
+                }
+                &:nth-child(4){
+                    @include respond-to-min(750){
+                        padding-top: 0;
+                    }
+                }
+                &.aseguir-epi{
+                    display: none;
+                    border-bottom: 1px solid #434343;
+                    padding: 0px 45px 30px;
+                    @include respond-to-min(750){
+                        display: flex;
+                    }
+                }
                 .thumb-epi{
                     width: 33px;
                     height: 33px;
                     overflow: hidden;
                     
                     flex-shrink: 0;
+                    @include respond-to-min(750){
+                        width: 77px;
+                        height: 77px;
+                    }
                     img{
                         width: 100%;
                     }
@@ -2479,6 +2585,9 @@ section{
                     display: flex;
                     flex-direction: column;
                     width: 100%;
+                    @include respond-to-min(750){
+                        justify-content: space-between;
+                    }
                     .epi-name{
                         font-size:14px;
                         color: #fff;
@@ -2491,6 +2600,25 @@ section{
                         -webkit-box-orient: vertical;
                         -webkit-line-clamp: 1;
                         text-align: left;
+                        @include respond-to-min(750){
+                            -webkit-line-clamp: 2;
+                            font-size:13px;
+                        }
+                    }
+                    
+                    span{
+                        background: $pink;
+                        color: $white;
+                        font-size: 8px;
+                        font-weight: 600;
+                        padding: 3px 6px;
+                        border-radius: 20px;
+                        text-transform: uppercase;
+                        display: none;
+                        width: max-content;
+                        @include respond-to-min(750){
+                            display: block;
+                        }
                     }
                     .pod-name-box{
                         width: 100%;
@@ -2506,11 +2634,19 @@ section{
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 1;
                             text-align: left;
+                            @include respond-to-min(750){
+                                font-size: 12px;
+                                color: #f2f2f2;
+                                font-weight: normal;
+                            }
                         }
                         .status{
                             flex-shrink: 0;
                             font-weight: lighter;
                             color: #a2a2a2;
+                            @include respond-to-min(750){
+                                display: none;
+                            }
                         }
                     }
 
