@@ -1,5 +1,89 @@
 .light-mode{
     background: #FAFAFA;
+    &.hero{
+        header{
+            .logo{
+                svg{
+                    path{
+                        &:nth-child(13),
+                        &:nth-child(14),
+                        &:nth-child(15),
+                        &:nth-child(16),
+                        &:nth-child(17),
+                        &:nth-child(18),
+                        &:nth-child(19),
+                        &:nth-child(20),
+                        &:nth-child(21),
+                        &:nth-child(22),
+                        &:nth-child(23){
+                            fill: #fff;
+                            @include respond-to-min(750){
+                                fill: #606060;
+                            }
+                        }
+                    }
+                }
+            }
+            background: transparent;
+            .component-box{
+                .topbar-action{
+                    .agregar-canal,
+                    .criar-canal{
+                        span{
+                            color: #fff;
+                        }
+                    } 
+                    
+                    svg{
+                        path,
+                        ellipse,
+                        rect{
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+            &.fixed-top{
+                .logo{
+                    svg{
+                        path{
+                            &:nth-child(13),
+                            &:nth-child(14),
+                            &:nth-child(15),
+                            &:nth-child(16),
+                            &:nth-child(17),
+                            &:nth-child(18),
+                            &:nth-child(19),
+                            &:nth-child(20),
+                            &:nth-child(21),
+                            &:nth-child(22),
+                            &:nth-child(23){
+                                fill: #606060;
+                            }
+                        }
+                    }
+                }
+                .component-box{
+                    .topbar-action{
+                        .agregar-canal,
+                        .criar-canal{
+                            span{
+                                color: #606060;
+                            }
+                        } 
+                        
+                        svg{
+                            path,
+                            ellipse,
+                            rect{
+                                fill: #606060;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .preloader{
         background: #fff;
     }
@@ -8,6 +92,9 @@
     }
     header{
         background: $white;
+        &.fixed-top{
+            background: #ffffff !important;
+        }
         .logo{
         
             svg{
@@ -53,11 +140,23 @@
         }
     }
     .dropmenu-header{
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+        border: 1px solid #ddd;
         ul{
+            background: #fff;
             li{
+                border-bottom: 1px solid #ddd;
                 a{ 
+                    &:hover{
+                        background: #e2e2e2;
+                    }
+                    svg{
+                        path{
+                            fill: #606060 !important;
+                        }
+                    }
                     span{
-                        
+                        color: #606060;
                     }
                 }
             }
@@ -173,9 +272,73 @@
             @include linearGradientTopBottom(rgba(#FAFAFA, 0), #FAFAFA)
         }
     }
+    
+    /*== Componentes ==*/
+    .menu-button-wrap{
+        .menu-button{
+            background: rgba(#dbdbdb, 0.3);
+        }
+    }
+    .context-menu-list{
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+        border: 1px solid #ddd;
+        ul{
+            background: #fff;
+            li{
+                border-bottom: 1px solid #ddd;
+                a{
+                    &:hover{
+                        background: #e2e2e2;
+                    }
+                    .icon-mono{
+                        path{
+                            fill: #606060 !important;
+                        }
+                    }
+                    span{
+                        color: #606060;
+                    }
+                }
+    
+            }
+        }
+        .inv-modal{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            display: none;
+            &.open{
+                display: block;
+            }
+        }
+    }
+    .owl-carousel{
+        .owl-nav{
+            button{
+                &.owl-prev,
+                &.owl-next{
+                    &.disabled{
+                        display: none;
+                    }
+                    div{
+                        background: #fff;
+                        box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
+                        svg{
+                            path{
+                                fill: #030303;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     /* Track */
-    
     .scrollhere,
     .scrollola{
         
@@ -266,7 +429,15 @@
             .contentinfo{
                 .info-box{
                     .episode-name{
-                        color: #606060;
+                        color: #030303;
+                        a{
+                            color: #030303;
+                        }
+                    }
+                    .pod-name{
+                        a{
+                            color: #606060;
+                        }
                     }
                 } 
             }
@@ -305,6 +476,9 @@
     }
     .nowplaying{
         background: #fff;
+        &.shrink{
+            background: #fafafa;
+        }
         svg{
             path,
             rect{
@@ -324,6 +498,9 @@
         .player-box{
             .info-box{
                 .episode-name{
+                    color: #030303;
+                }
+                .pod-name{
                     color: #606060;
                 }
             } 
@@ -363,6 +540,9 @@
     
     .fila-sidebar{
         background: #f2f2f2;
+        &.grow{
+            background: #ffffff;
+        }
         svg{
             path,
             rect{
@@ -373,9 +553,10 @@
             .epi-tabs,
             .queue-tabs{
                 border-bottom: 2px solid rgba(#434343, 0.25);
+                color: #606060;
                 &.active{
                     span{
-                        color: #606060;
+                        color: #030303;
                     }
                 } 
             }
@@ -383,13 +564,15 @@
         .list-epis{
             ul{
                 h3{
-                    color: #606060;
+                    color: #030303;
                 }
                 li{
-                    border-color: rgba(#606060, 0.25);
+                    &.aseguir-epi{
+                        border-color: #dbdbdb;
+                    }
                     .text-box{
                         .epi-name{
-                            color: #606060;
+                            color: #030303;
                         }
                         span{
                             svg{
@@ -399,16 +582,19 @@
                             }
                         }
                         .pod-name-box{
-                            color: #a2a2a2;
+                            color: #606060;
                             .podname{
+                                color: #a2a2a2;
                                 @include respond-to-min(750){
-                                    color: #a2a2a2;
+                                    color: #606060;
                                 }
                             }
                         }
                     } 
-                    .option{
+                    .menu-button{
+                        background: rgba(#dbdbdb, 0.3);
                         svg{
+                            
                             path,
                             rect{
                                 fill: #606060
@@ -418,5 +604,40 @@
                 }
             }
         } 
+    }
+}
+body{
+    &.light-mode{
+        scrollbar-color: #cacaca #F4F4F4;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar-track {
+            background: #EEE3F6;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar {
+            width: 9px;
+            height: 9px;
+            scroll-behavior: smooth;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar-track:hover {
+            background: #F4F4F4;
+            border-radius: 5px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #dbdbdb;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #cacaca;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     }
 }

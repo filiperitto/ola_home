@@ -66,7 +66,7 @@ textarea {
 
 body {
     font-size: 16px;
-    font-family: $font-avenir;
+    font-family: $font-lato;
     background: #181818;
     color: $gray;
 }
@@ -86,7 +86,9 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
+.overhidden{
+    overflow: hidden !important;
+}
 .hidden {
     display: none !important;
     visibility: hidden;
@@ -223,6 +225,7 @@ h1, h2, h3, h4, h5, h6{
     color: #f2f2f2;
     margin: 0;
     font-weight: bold;
+    font-weight: 900;
 }
   
 

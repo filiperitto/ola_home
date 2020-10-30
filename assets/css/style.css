@@ -1,4 +1,5 @@
 @import url(../fonts/avenir/stylesheet.css);
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -349,7 +350,48 @@ template {
 
 .light-mode {
   background: #FAFAFA;
+  /*== Componentes ==*/
   /* Track */
+}
+
+.light-mode.hero header {
+  background: transparent;
+}
+
+.light-mode.hero header .logo svg path:nth-child(13), .light-mode.hero header .logo svg path:nth-child(14), .light-mode.hero header .logo svg path:nth-child(15), .light-mode.hero header .logo svg path:nth-child(16), .light-mode.hero header .logo svg path:nth-child(17), .light-mode.hero header .logo svg path:nth-child(18), .light-mode.hero header .logo svg path:nth-child(19), .light-mode.hero header .logo svg path:nth-child(20), .light-mode.hero header .logo svg path:nth-child(21), .light-mode.hero header .logo svg path:nth-child(22), .light-mode.hero header .logo svg path:nth-child(23) {
+  fill: #fff;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.hero header .logo svg path:nth-child(13), .light-mode.hero header .logo svg path:nth-child(14), .light-mode.hero header .logo svg path:nth-child(15), .light-mode.hero header .logo svg path:nth-child(16), .light-mode.hero header .logo svg path:nth-child(17), .light-mode.hero header .logo svg path:nth-child(18), .light-mode.hero header .logo svg path:nth-child(19), .light-mode.hero header .logo svg path:nth-child(20), .light-mode.hero header .logo svg path:nth-child(21), .light-mode.hero header .logo svg path:nth-child(22), .light-mode.hero header .logo svg path:nth-child(23) {
+    fill: #606060;
+  }
+}
+
+.light-mode.hero header .component-box .topbar-action .agregar-canal span,
+.light-mode.hero header .component-box .topbar-action .criar-canal span {
+  color: #fff;
+}
+
+.light-mode.hero header .component-box .topbar-action svg path,
+.light-mode.hero header .component-box .topbar-action svg ellipse,
+.light-mode.hero header .component-box .topbar-action svg rect {
+  fill: #fff;
+}
+
+.light-mode.hero header.fixed-top .logo svg path:nth-child(13), .light-mode.hero header.fixed-top .logo svg path:nth-child(14), .light-mode.hero header.fixed-top .logo svg path:nth-child(15), .light-mode.hero header.fixed-top .logo svg path:nth-child(16), .light-mode.hero header.fixed-top .logo svg path:nth-child(17), .light-mode.hero header.fixed-top .logo svg path:nth-child(18), .light-mode.hero header.fixed-top .logo svg path:nth-child(19), .light-mode.hero header.fixed-top .logo svg path:nth-child(20), .light-mode.hero header.fixed-top .logo svg path:nth-child(21), .light-mode.hero header.fixed-top .logo svg path:nth-child(22), .light-mode.hero header.fixed-top .logo svg path:nth-child(23) {
+  fill: #606060;
+}
+
+.light-mode.hero header.fixed-top .component-box .topbar-action .agregar-canal span,
+.light-mode.hero header.fixed-top .component-box .topbar-action .criar-canal span {
+  color: #606060;
+}
+
+.light-mode.hero header.fixed-top .component-box .topbar-action svg path,
+.light-mode.hero header.fixed-top .component-box .topbar-action svg ellipse,
+.light-mode.hero header.fixed-top .component-box .topbar-action svg rect {
+  fill: #606060;
 }
 
 .light-mode .preloader {
@@ -362,6 +404,10 @@ template {
 
 .light-mode header {
   background: #ffffff;
+}
+
+.light-mode header.fixed-top {
+  background: #ffffff !important;
 }
 
 .light-mode header .logo svg path:nth-child(13), .light-mode header .logo svg path:nth-child(14), .light-mode header .logo svg path:nth-child(15), .light-mode header .logo svg path:nth-child(16), .light-mode header .logo svg path:nth-child(17), .light-mode header .logo svg path:nth-child(18), .light-mode header .logo svg path:nth-child(19), .light-mode header .logo svg path:nth-child(20), .light-mode header .logo svg path:nth-child(21), .light-mode header .logo svg path:nth-child(22), .light-mode header .logo svg path:nth-child(23) {
@@ -382,6 +428,32 @@ template {
 .light-mode header .component-box .topbar-action .wrapper-profile {
   background: url(../img/placeholder-profile-light.png) no-repeat top center;
   background-size: cover;
+}
+
+.light-mode .dropmenu-header {
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}
+
+.light-mode .dropmenu-header ul {
+  background: #fff;
+}
+
+.light-mode .dropmenu-header ul li {
+  border-bottom: 1px solid #ddd;
+}
+
+.light-mode .dropmenu-header ul li a:hover {
+  background: #e2e2e2;
+}
+
+.light-mode .dropmenu-header ul li a svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .dropmenu-header ul li a span {
+  color: #606060;
 }
 
 .light-mode .sidebar {
@@ -479,6 +551,65 @@ template {
   background: linear-gradient(to bottom, rgba(250, 250, 250, 0) 0%, #FAFAFA 100%);
 }
 
+.light-mode .menu-button-wrap .menu-button {
+  background: rgba(219, 219, 219, 0.3);
+}
+
+.light-mode .context-menu-list {
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}
+
+.light-mode .context-menu-list ul {
+  background: #fff;
+}
+
+.light-mode .context-menu-list ul li {
+  border-bottom: 1px solid #ddd;
+}
+
+.light-mode .context-menu-list ul li a:hover {
+  background: #e2e2e2;
+}
+
+.light-mode .context-menu-list ul li a .icon-mono path {
+  fill: #606060 !important;
+}
+
+.light-mode .context-menu-list ul li a span {
+  color: #606060;
+}
+
+.light-mode .context-menu-list .inv-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: none;
+}
+
+.light-mode .context-menu-list .inv-modal.open {
+  display: block;
+}
+
+.light-mode .owl-carousel .owl-nav button.owl-prev.disabled, .light-mode .owl-carousel .owl-nav button.owl-next.disabled {
+  display: none;
+}
+
+.light-mode .owl-carousel .owl-nav button.owl-prev div, .light-mode .owl-carousel .owl-nav button.owl-next div {
+  background: #fff;
+  -webkit-box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
+          box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
+}
+
+.light-mode .owl-carousel .owl-nav button.owl-prev div svg path, .light-mode .owl-carousel .owl-nav button.owl-next div svg path {
+  fill: #030303;
+}
+
 .light-mode .scrollhere,
 .light-mode .scrollola {
   scrollbar-color: #cacaca #F4F4F4;
@@ -562,6 +693,14 @@ template {
 }
 
 .light-mode .footer-player .wrapper-player .contentinfo .info-box .episode-name {
+  color: #030303;
+}
+
+.light-mode .footer-player .wrapper-player .contentinfo .info-box .episode-name a {
+  color: #030303;
+}
+
+.light-mode .footer-player .wrapper-player .contentinfo .info-box .pod-name a {
   color: #606060;
 }
 
@@ -590,6 +729,10 @@ template {
   background: #fff;
 }
 
+.light-mode .nowplaying.shrink {
+  background: #fafafa;
+}
+
 .light-mode .nowplaying svg path,
 .light-mode .nowplaying svg rect {
   fill: #606060;
@@ -601,6 +744,10 @@ template {
 }
 
 .light-mode .nowplaying .player-box .info-box .episode-name {
+  color: #030303;
+}
+
+.light-mode .nowplaying .player-box .info-box .pod-name {
   color: #606060;
 }
 
@@ -635,6 +782,10 @@ template {
   background: #f2f2f2;
 }
 
+.light-mode .fila-sidebar.grow {
+  background: #ffffff;
+}
+
 .light-mode .fila-sidebar svg path,
 .light-mode .fila-sidebar svg rect {
   fill: #606060;
@@ -643,23 +794,24 @@ template {
 .light-mode .fila-sidebar .tabs-playlist .epi-tabs,
 .light-mode .fila-sidebar .tabs-playlist .queue-tabs {
   border-bottom: 2px solid rgba(67, 67, 67, 0.25);
+  color: #606060;
 }
 
 .light-mode .fila-sidebar .tabs-playlist .epi-tabs.active span,
 .light-mode .fila-sidebar .tabs-playlist .queue-tabs.active span {
-  color: #606060;
+  color: #030303;
 }
 
 .light-mode .fila-sidebar .list-epis ul h3 {
-  color: #606060;
+  color: #030303;
 }
 
-.light-mode .fila-sidebar .list-epis ul li {
-  border-color: rgba(96, 96, 96, 0.25);
+.light-mode .fila-sidebar .list-epis ul li.aseguir-epi {
+  border-color: #dbdbdb;
 }
 
 .light-mode .fila-sidebar .list-epis ul li .text-box .epi-name {
-  color: #606060;
+  color: #030303;
 }
 
 .light-mode .fila-sidebar .list-epis ul li .text-box span svg path {
@@ -667,18 +819,66 @@ template {
 }
 
 .light-mode .fila-sidebar .list-epis ul li .text-box .pod-name-box {
+  color: #606060;
+}
+
+.light-mode .fila-sidebar .list-epis ul li .text-box .pod-name-box .podname {
   color: #a2a2a2;
 }
 
 @media only screen and (min-width: 750px) {
   .light-mode .fila-sidebar .list-epis ul li .text-box .pod-name-box .podname {
-    color: #a2a2a2;
+    color: #606060;
   }
 }
 
-.light-mode .fila-sidebar .list-epis ul li .option svg path,
-.light-mode .fila-sidebar .list-epis ul li .option svg rect {
+.light-mode .fila-sidebar .list-epis ul li .menu-button {
+  background: rgba(219, 219, 219, 0.3);
+}
+
+.light-mode .fila-sidebar .list-epis ul li .menu-button svg path,
+.light-mode .fila-sidebar .list-epis ul li .menu-button svg rect {
   fill: #606060;
+}
+
+body.light-mode {
+  scrollbar-color: #cacaca #F4F4F4;
+  scrollbar-width: thin;
+  /* Handle */
+  /* Handle on hover */
+}
+
+body.light-mode::-webkit-scrollbar-track {
+  background: #EEE3F6;
+  border-radius: 5px;
+}
+
+body.light-mode::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  scroll-behavior: smooth;
+}
+
+body.light-mode::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+body.light-mode::-webkit-scrollbar-track:hover {
+  background: #F4F4F4;
+  border-radius: 5px;
+}
+
+body.light-mode::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.light-mode::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ | Ritto Edit */
@@ -748,7 +948,7 @@ textarea {
    ========================================================================== */
 body {
   font-size: 16px;
-  font-family: "Avenir", sans-serif;
+  font-family: "Lato", sans-serif;
   background: #181818;
   color: #606060;
 }
@@ -770,6 +970,10 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.overhidden {
+  overflow: hidden !important;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -909,6 +1113,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #f2f2f2;
   margin: 0;
   font-weight: bold;
+  font-weight: 900;
 }
 
 .gigantic {
@@ -995,25 +1200,8 @@ button {
   border: none;
 }
 
-.btn {
-  font-size: 13px;
-  font-weight: 900;
-  color: #ffffff;
-  background: #214EE3;
-  padding: 11px 15px;
-  border-radius: 27px;
-  border: 1px solid #214EE3;
-}
-
-.btn:hover {
-  background: #0D3789;
-  border: 1px solid #214EE3;
-}
-
-.btn:active {
-  border: 0;
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+body {
+  overflow: hidden;
 }
 
 header {
@@ -1022,6 +1210,7 @@ header {
   position: fixed;
   padding: 0 15px;
   z-index: 99;
+  top: 0;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
   background: #202020;
@@ -1109,7 +1298,7 @@ header .search form input {
   font-size: 13px;
   font-weight: normal;
   border-radius: 27px;
-  padding: 11px 10px 9px 30px;
+  padding: 12px 10px 7px 30px;
   border-bottom: 2px solid #ffffff;
 }
 
@@ -1175,6 +1364,8 @@ header .component-box .topbar-action .criar-canal span {
   padding: 0;
   margin-left: 5px;
   color: #fff;
+  font-weight: 700;
+  padding-top: 2px;
 }
 
 header .component-box .topbar-action svg path,
@@ -1320,6 +1511,32 @@ header .component-box .topbar-action .menu-button {
 
 .dropmenu-header .inv-modal.open {
   display: block;
+}
+
+.hero {
+  overflow: auto;
+}
+
+.hero header {
+  background: transparent;
+}
+
+.hero header.fixed-top {
+  background: #202020;
+}
+
+.hero .main {
+  padding-top: 0;
+}
+
+.hero .content-container {
+  height: auto;
+  overflow: inherit;
+}
+
+.hero .content-container.player-open {
+  height: auto;
+  padding-bottom: 80px;
 }
 
 .main {
@@ -1541,6 +1758,8 @@ header .component-box .topbar-action .menu-button {
 .sidebar nav ul li a .wrappe-menu span {
   color: #A4A4A4;
   font-size: 11px;
+  padding-top: 2px;
+  font-weight: normal;
 }
 
 @media only screen and (min-width: 750px) {
@@ -1686,6 +1905,7 @@ header .component-box .topbar-action .menu-button {
 }
 
 /* Track */
+body,
 .scrollhere,
 .scrollola {
   scrollbar-color: #373737 #202020;
@@ -1694,12 +1914,14 @@ header .component-box .topbar-action .menu-button {
   /* Handle on hover */
 }
 
+body::-webkit-scrollbar-track,
 .scrollhere::-webkit-scrollbar-track,
 .scrollola::-webkit-scrollbar-track {
   background: #EEE3F6;
   border-radius: 5px;
 }
 
+body::-webkit-scrollbar,
 .scrollhere::-webkit-scrollbar,
 .scrollola::-webkit-scrollbar {
   width: 9px;
@@ -1707,18 +1929,21 @@ header .component-box .topbar-action .menu-button {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar-track,
 .scrollhere::-webkit-scrollbar-track,
 .scrollola::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 5px;
 }
 
+body::-webkit-scrollbar-track:hover,
 .scrollhere::-webkit-scrollbar-track:hover,
 .scrollola::-webkit-scrollbar-track:hover {
   background: #202020;
   border-radius: 5px;
 }
 
+body::-webkit-scrollbar-thumb,
 .scrollhere::-webkit-scrollbar-thumb,
 .scrollola::-webkit-scrollbar-thumb {
   background: #373737;
@@ -1726,6 +1951,7 @@ header .component-box .topbar-action .menu-button {
   cursor: pointer;
 }
 
+body::-webkit-scrollbar-thumb:hover,
 .scrollhere::-webkit-scrollbar-thumb:hover,
 .scrollola::-webkit-scrollbar-thumb:hover {
   background: #373737;
@@ -1733,8 +1959,25 @@ header .component-box .topbar-action .menu-button {
   cursor: pointer;
 }
 
-body {
-  overflow: hidden;
+.btn {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #214EE3;
+  padding: 11px 15px 9px;
+  border-radius: 27px;
+  border: 1px solid #214EE3;
+}
+
+.btn:hover {
+  background: #0D3789;
+  border: 1px solid #214EE3;
+}
+
+.btn:active {
+  border: 0;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
 }
 
 .preloader {
@@ -2367,7 +2610,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 750px) {
@@ -2395,8 +2638,8 @@ body {
 }
 
 .modulo-hero .wrapper-hero .epi-card .thumb-wrap {
-  width: 163px;
-  height: 163px;
+  width: 136px;
+  height: 136px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
@@ -2404,6 +2647,13 @@ body {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 400px) {
+  .modulo-hero .wrapper-hero .epi-card .thumb-wrap {
+    width: 156px;
+    height: 156px;
+  }
 }
 
 .modulo-hero .wrapper-hero .epi-card .thumb-wrap img {
@@ -2760,12 +3010,6 @@ body {
   }
 }
 
-.modulo-episodios .wrapper-episodios ul li .footer-episodio button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .modulo-miniplayer .wrapper-miniplayer {
   width: 100%;
   padding-bottom: 20px;
@@ -2810,6 +3054,7 @@ body {
       flex-shrink: 0;
   margin-right: 10px;
   border-radius: 6px;
+  cursor: pointer;
   overflow: hidden;
   position: relative;
 }
@@ -3119,24 +3364,14 @@ body {
   background: #FF005A;
   color: #ffffff;
   font-size: 8px;
-  font-weight: 500;
-  padding: 3px 6px;
+  font-weight: bold;
+  padding: 3px 6px 1px;
   border-radius: 20px;
   text-transform: uppercase;
   display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-.modulo-canais-comp .wrapper-canais ul li .footer-canal button {
-  background: transparent;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .modulo-canais-mini .wrapper-canais {
@@ -3389,8 +3624,8 @@ body {
   background: #FF005A;
   color: #ffffff;
   font-size: 8px;
-  font-weight: 500;
-  padding: 3px 6px;
+  font-weight: bold;
+  padding: 3px 6px 1px;
   border-radius: 20px;
   text-transform: uppercase;
   display: block;
@@ -3398,12 +3633,6 @@ body {
   width: -moz-max-content;
   width: max-content;
   margin-top: 8px;
-}
-
-.modulo-canais-mini .wrapper-canais ul li .header-title .menu-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 .modulo-list-canais .wrapper-canais {
@@ -3441,6 +3670,7 @@ body {
           justify-content: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 1180px;
 }
 
 @media only screen and (min-width: 440px) {
@@ -3458,6 +3688,18 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .modulo-list-canais .wrapper-canais ul {
+    width: 848px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .modulo-list-canais .wrapper-canais ul {
+    width: 1180px;
   }
 }
 
@@ -3585,6 +3827,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  height: 100%;
 }
 
 @media only screen and (min-width: 750px) {
@@ -3628,8 +3871,8 @@ body {
   background: #FF005A;
   color: #ffffff;
   font-size: 8px;
-  font-weight: 500;
-  padding: 3px 6px;
+  font-weight: bold;
+  padding: 3px 6px 1px;
   border-radius: 20px;
   text-transform: uppercase;
   display: block;
@@ -3878,6 +4121,108 @@ body {
   color: #36128B;
 }
 
+/*=== Components ===*/
+.menu-button-wrap {
+  height: 100%;
+}
+
+.menu-button-wrap.open .dropmenu-epicard {
+  display: block;
+}
+
+.menu-button-wrap.open .inv-modal-menu {
+  display: block;
+}
+
+.menu-button-wrap .menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 12px;
+  height: 27px;
+  background: rgba(49, 49, 49, 0.3);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.context-menu-list {
+  width: 193px;
+  height: auto;
+  position: absolute;
+  top: 62px;
+  right: 17px;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+  display: none;
+  border: 1px solid #5b5b5b;
+  padding: 0;
+}
+
+.context-menu-list ul {
+  background: #202020;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100% !important;
+}
+
+.context-menu-list ul li {
+  border-bottom: 1px solid #5b5b5b;
+}
+
+.context-menu-list ul li:last-child {
+  border-bottom: none;
+}
+
+.context-menu-list ul li a {
+  padding: 12px;
+  display: block;
+}
+
+.context-menu-list ul li a:hover {
+  background: #4d4d4d;
+}
+
+.context-menu-list ul li a svg,
+.context-menu-list ul li a img {
+  margin-right: 7px;
+}
+
+.context-menu-list ul li a .icon-mono path {
+  fill: #a5a5a5 !important;
+}
+
+.context-menu-list ul li a span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.context-menu-list ul li.deslog a svg path {
+  fill: #E52321 !important;
+}
+
+.context-menu-list ul li.deslog a span {
+  color: #E52321;
+}
+
+.context-menu-list .inv-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  display: none;
+}
+
+.context-menu-list .inv-modal.open {
+  display: block;
+}
+
 /***** widget *****/
 section .baixe-agora-widget {
   width: 100%;
@@ -4009,7 +4354,7 @@ section .big-service-widget .widget-box .btn-box a {
   display: block;
   font-size: 13px;
   background: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   color: #000;
   border-radius: 22px;
 }
@@ -4052,6 +4397,12 @@ section .small-service-widget {
           justify-content: space-between;
 }
 
+@media only screen and (min-width: 750px) {
+  section .small-service-widget {
+    padding: 0 40px;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   section .small-service-widget {
     padding: 0 0 0 10px;
@@ -4071,7 +4422,7 @@ section .small-service-widget {
 }
 
 section .small-service-widget .widget-box {
-  width: 50%;
+  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -4079,7 +4430,13 @@ section .small-service-widget .widget-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10px;
+  padding: 0 10px 10px;
+}
+
+@media only screen and (min-width: 420px) {
+  section .small-service-widget .widget-box {
+    width: 50%;
+  }
 }
 
 section .small-service-widget .widget-box .wrap-box {
@@ -4132,7 +4489,7 @@ section .small-service-widget .widget-box .btn-box a {
   display: block;
   font-size: 13px;
   background: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px 10px;
   color: #000;
   border-radius: 22px;
 }
@@ -4188,6 +4545,20 @@ section .small-service-widget .widget-box.style3 .btn-box {
 section .small-service-widget .widget-box.style3 .btn-box a {
   background: #FFB44A;
   color: #6426E0;
+  margin-top: 80px;
+}
+
+@media only screen and (min-width: 420px) {
+  section .small-service-widget .widget-box.style3 .btn-box a {
+    margin-top: 0;
+  }
+}
+
+.owl-carousel {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .owl-carousel .owl-stage {
@@ -4201,8 +4572,15 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 }
 
 .owl-carousel .owl-nav {
+  display: none;
   overflow: hidden;
   height: 0px;
+}
+
+@media only screen and (min-width: 750px) {
+  .owl-carousel .owl-nav {
+    display: block;
+  }
 }
 
 .owl-carousel .owl-nav button {
@@ -4275,19 +4653,18 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 }
 
 .footer-player .cta-big-player {
-  width: 30px;
-  height: auto;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
+  /*width: 30px;
+        height: auto;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        svg{
 
-@media only screen and (min-width: 750px) {
-  .footer-player .cta-big-player {
-    display: none;
-  }
+        }
+        @include respond-to-min(750){
+            display: none;
+        }*/
 }
 
 .footer-player .wrapper-player {
@@ -4350,10 +4727,26 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   color: #fff;
 }
 
+.footer-player .wrapper-player .contentinfo .info-box .episode-name a {
+  color: #fff;
+}
+
+.footer-player .wrapper-player .contentinfo .info-box .episode-name a:hover {
+  text-decoration: underline;
+}
+
 .footer-player .wrapper-player .contentinfo .info-box .pod-name {
   font-size: 12px;
   font-weight: bold;
   color: #A2A2A2;
+}
+
+.footer-player .wrapper-player .contentinfo .info-box .pod-name a {
+  color: #A2A2A2;
+}
+
+.footer-player .wrapper-player .contentinfo .info-box .pod-name a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 750px) {
@@ -4723,10 +5116,14 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .nowplaying.shrink .player-box .info-box .episode-name {
   font-size: 14px;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .nowplaying.shrink .player-box .info-box .pod-name {
   font-size: 12px;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .nowplaying.shrink .player-box .players-controls {
@@ -5234,7 +5631,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .fila-sidebar .list-epis ul li.aseguir-epi {
   display: none;
-  border-bottom: 1px solid #434343;
+  border-bottom: 2px solid #434343;
   padding: 0px 45px 30px;
 }
 
@@ -5347,6 +5744,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   text-align: left;
+  padding-right: 10px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -5370,8 +5768,12 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   }
 }
 
-.fila-sidebar .list-epis ul li .option svg rect {
-  fill: #fff;
+.fila-sidebar .list-epis ul li .menu-button {
+  background: rgba(37, 37, 37, 0.3);
+}
+
+.fila-sidebar .list-epis ul li .menu-button svg rect {
+  fill: #c4c4c4;
 }
 
 /**

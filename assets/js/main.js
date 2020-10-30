@@ -1,19 +1,43 @@
-/*if ($(window).width() > 750) {
-    $(".scrollhere").niceScroll({
-        cursorcolor: "#ccc",
-        preventmultitouchscrolling: true
-    });  
 
-    $(".scrollola").niceScroll({
-        cursorcolor: "#ccc",
-        preventmultitouchscrolling: true
-    }); 
- }*/
+$(function(){
+    $.contextMenu({
+        selector: '.cta-menu-epi', 
+        trigger: 'left',
+        items: $.contextMenu.fromMenu($('#contextMenu-episode')),        
+    });
+    $('.context-menu-list').css({ top: y + 50, left: x })
+});
+
+$(function(){
+    $.contextMenu({
+        selector: '.cta-share', 
+        trigger: 'left',
+        items: $.contextMenu.fromMenu($('#contextMenu-share')),        
+    });
+    $('.context-menu-list').css({ top: y + 50, left: x })
+});
+
  $(document).ready(function() {
  
+    
+    // MAIN MENU ANIMATION
+    // Menu change
+    $(this).scrollTop(0); // importante <--
+    var nav = $('header');
+
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 10) {
+            nav.addClass("fixed-top");
+        } else {
+            nav.removeClass("fixed-top");
+        }
+    });
+ 
+    // Preloader
     setTimeout(function(){
         $('.preloader').addClass('loaded');
-    }, 1000);
+    }, 2000);
  
 });
 
@@ -51,12 +75,24 @@ $(document).ready(function () {
         $('.nowplaying').toggleClass('open');
         $('.fila-sidebar').toggleClass('open');
     });
+    /*=== fix para o mobile  ===*/
+    if ($(window).width() < 750) {
+        $('.cta-big-player').click(function () {
+            $('body').toggleClass('overhidden');
+        }); 
+     }
 
     /*=== Fechar o playlist e o Nowplaying ===*/
     $('.cta-close-nowplaying').click(function () {
         $('.nowplaying').toggleClass('open');
         $('.fila-sidebar').toggleClass('open');
     });
+    /*=== fix para o mobile  ===*/
+    if ($(window).width() < 750) {
+        $('.cta-close-nowplaying').click(function () {
+            $('body').toggleClass('overhidden');
+        }); 
+     }
 
     /*=== Tabs da playlist ===*/
     $('.epi-tabs').click(function () {
@@ -73,6 +109,14 @@ $(document).ready(function () {
         $('.epi-playlist').removeClass('select');
         $('.queue-playlist').addClass('select');
     });
+    
+    /*=== Interação do menu ===
+    $('.cta-menu-epi').click(function () {
+        $(this).toggleClass('open');
+    });
+    $('.inv-modal-menu').click(function () {
+        $(this).removeClass('open');
+    });*/
 
 
     $('.originais-carousel').owlCarousel({
