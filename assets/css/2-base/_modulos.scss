@@ -10,7 +10,7 @@
     align-items: center;
 
     //Temporario \/
-    //display: none;
+    display: none;
     &.loaded{
         transition: all 1.5s ease-in-out;
         transform: translate(-100%, 0);
@@ -1510,8 +1510,8 @@
 .modulo-generos{
     .wrappe-generos{
         width: 100%;
-        overflow-y: hidden;
-        overflow-x: scroll;
+        //overflow-y: hidden;
+        //overflow-x: scroll;
         //padding-bottom: 20px;
         ul{
             margin: 0;
@@ -1520,62 +1520,74 @@
             flex-wrap: wrap;
             list-style: none;
             @include respond-to-min(900){
-                flex-wrap: nowrap;
+                //flex-wrap: nowrap;
+            }
+            &.owl-carousel{
+                .owl-nav{
+                    button{
+                        &.owl-prev,
+                        &.owl-next{
+                            div{
+                                top: 28%;
+                            }
+                        }
+                    }
+                }
             }
             li{
-                width: 33%;
+                //width: 33%;
+
+                width: 100%;
+                //width: 140px;
                 height: auto;
                 padding: 6px;
                 .genero-card{
                     background: #ccc;
                     text-align: center;
                     padding: 15px 0;
-                    border-radius: 5px;
+                    padding: 3px;
+                    border-radius: 100px;
                     @include respond-to-min(750){
-                        padding: 20px 0;
+                        padding: 3px;
                     }
                     &:hover{
                         opacity: 0.85;
+                        span{
+                            width: auto;
+                            background: transparent;
+                        }
                     }
                     span{
+                        border-radius: 100px;
+                        width: 100%;
+                        display: block;
+                        padding: 15px 0;
+                        background: #202020;
                         font-weight: 600;
+                        color: #ffffff;
+                        transition: all 0 ease-in-out;
                     }
 
                     &.style1{
-                        background: #D3124F;
-                        span{
-                            color: #FFCA00;
-                        }
+                        background: linear-gradient(135deg, #F9ABAB 0%, #FE6463 52.6%, #E01210 100%);
                     }
                     &.style2{
-                        background: #FFCA00;
-                        span{
-                            color: #D3124F;
-                        }
+                        background: linear-gradient(321.91deg, #D82220 2.78%, #E8623A 67.92%, #FF933E 134.43%);
                     }
                     &.style3{
-                        background: #65B32E;
-                        span{
-                            color: #033281;
-                        }
+                        background: linear-gradient(135deg, #FFC700 0%, #ED9E28 53.13%, #E57321 98.44%);
                     }
                     &.style4{
-                        background: #B981FF;
-                        span{
-                            color: #033281;
-                        }
+                        background: linear-gradient(135deg, #FFC700 0%, #ED9E28 53.13%, #E57321 98.44%);
                     }
                     &.style5{
-                        background: #033281;
-                        span{
-                            color: #F91A5D;
-                        }
+                        background: linear-gradient(135deg, #72DFFF 0%, #12596F 100%);
                     }
                     &.style6{
-                        background: #FF6D00;
-                        span{
-                            color: #36128B;
-                        }
+                        background: linear-gradient(135deg, #A98BFF 0%, #5E4696 100%);
+                    }
+                    &.style7{
+                        background: linear-gradient(135deg, #F7C8FF 0%, #B683DE 49.48%, #7D47C0 100%);
                     }
                 }
             }
@@ -1925,6 +1937,9 @@ section{
 
 .owl-carousel{
     flex-direction: column;
+    .owl-stage-outer{
+        width: 100%;
+    }
     .owl-item{
         //padding-right: 10px;
     }

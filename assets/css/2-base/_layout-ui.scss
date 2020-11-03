@@ -64,6 +64,14 @@ header {
         }
         form{
             max-width: 350px;
+            position: relative;
+            button{
+                position: absolute;
+                top: 6px;
+                left: 4px;
+                right: auto;
+                transition: all .4s ease-in-out;
+            }
             input{
                 width: 100%;
                 background: #f2f2f2;
@@ -71,11 +79,15 @@ header {
                 font-size: 13px;
                 font-weight: normal;
                 border-radius: 27px;
-                padding: 12px 10px 7px 30px;
-                border-bottom: 2px solid $white;
+                padding: 12px 20px 9px 40px;
+                //border-bottom: 2px solid $white;
+                transition: all .4s ease-in-out;
                 &:focus{
-
-                    border-bottom: 2px solid $blue;
+                    padding: 12px 40px 9px 20px;
+                    & ~ button{
+                        left: calc(100% - 35px);
+                        right: auto;
+                    }
                 }
             }
         }

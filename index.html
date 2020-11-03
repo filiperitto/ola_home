@@ -43,6 +43,22 @@
     <link rel="preload" href="assets/js/main.js" as="script">
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Script para gerar searchbox na pesquisa do google https://developers.google.com/search/docs/guides/sd-policies#nesting
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://www.example.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://query.example.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+    </script> -->
+    
+    <style>.range-slider input {display:none}</style>
       
 </head>
 
@@ -198,6 +214,11 @@
             <div class="search-wrapper">
                 <form>
                     <input type="text" placeholder="Buscar">
+                    <button>
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.678 16.5554C19.3465 14.7971 20.3654 12.4502 20.3654 9.87263C20.3654 4.42013 15.8064 0 10.1827 0C4.55895 0 0 4.42013 0 9.87263C0 15.3251 4.55895 19.7453 10.1827 19.7453C12.3311 19.7453 14.324 19.1002 15.9668 17.999L17.6993 19.6787C18.1411 20.1071 18.8575 20.1071 19.2993 19.6787C19.7412 19.2503 19.7412 18.5557 19.2993 18.1273L17.678 16.5554ZM10.1827 17.5514C5.8087 17.5514 2.26286 14.1135 2.26286 9.87268C2.26286 5.63184 5.8087 2.19396 10.1827 2.19396C14.5567 2.19396 18.1026 5.63184 18.1026 9.87268C18.1026 14.1135 14.5567 17.5514 10.1827 17.5514Z" fill="#4B4B4A"/>
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -2077,40 +2098,66 @@
 
             <section id="generos" class="modulo-generos">
                 <div class="module-title">
-                    <h3>Generos (Temporario)</h3>
+                    <h3>Generos</h3>
                 </div>
 
-                <div class="wrappe-generos scrollhere">
-                    <ul>
-                        <li>
-                            <div class="genero-card style1">
-                                <span>Conhecimento</span>
-                            </div>
+                <div class="wrappe-generos">
+                    <ul class="owl-carousel genero-carousel">
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style1">
+                                    <span>Cotidiano</span>
+                                </div>
+                            </a>
                         </li>
-                        <li>
-                            <div class="genero-card style2">
-                                <span>Humor</span>
-                            </div>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style2">
+                                    <span>Conhecimento</span>
+                                </div>
+                            </a>
                         </li>
-                        <li>
-                            <div class="genero-card style3">
-                                <span>Esportes</span>
-                            </div>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style3">
+                                    <span>Variedades</span>
+                                </div>
+                            </a>
                         </li>
-                        <li>
-                            <div class="genero-card style4">
-                                <span>Mercado</span>
-                            </div>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style4">
+                                    <span>Humor</span>
+                                </div>
+                            </a>
                         </li>
-                        <li>
-                            <div class="genero-card style5">
-                                <span>Mercado</span>
-                            </div>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style5">
+                                    <span>Familia</span>
+                                </div>
+                            </a>
                         </li>
-                        <li>
-                            <div class="genero-card style6">
-                                <span>Variedades</span>
-                            </div>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style6">
+                                    <span>Historia</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style7">
+                                    <span>Lifestyle</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style3">
+                                    <span>Lifestyle</span>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -2495,7 +2542,7 @@
 
                     <div class="widget-box style2">
                         <div class="wrap-box">
-                            <p>A qualidade do seu comercial Lorem ipsum</p>
+                            <p>Sua jornada de criador de conteúdo começa agora!</p>
                             <div class="btn-box">
                                 <a href="javascript:void(0)">Vamos lá</a>
                             </div>
@@ -2603,6 +2650,7 @@
                     </div>
 
                     <div class="players-bar-slider">
+                        
                         <div class="progress-bar-time">1:09</div>
                         <div class="progress-bar">
                             <div class="progress-bar_bg"></div>
@@ -2615,14 +2663,16 @@
 
                 <div class="extra-controls">
                     <div class="wrapper-extra-controls">
-                        <button class="volume-bar">
-                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M10.4604 0.0595008C10.2516 -0.0400992 10.0056 -0.0136992 9.8256 0.131501L3.9888 4.8007H1.2C0.5388 4.8007 0 5.3395 0 6.0007V10.8007C0 11.4631 0.5388 12.0007 1.2 12.0007H3.9888L9.8244 16.6699C9.9336 16.7563 10.0668 16.8007 10.2 16.8007C10.2888 16.8007 10.3776 16.7803 10.4604 16.7407C10.668 16.6411 10.8 16.4311 10.8 16.2007V0.600701C10.8 0.370301 10.668 0.160301 10.4604 0.0595008ZM13.8372 4.15753C13.6008 3.92473 13.2216 3.92833 12.9888 4.16233C12.756 4.39873 12.7584 4.77793 12.9936 5.01193C13.9008 5.90713 14.4 7.11073 14.4 8.40073C14.4 9.69073 13.9008 10.8943 12.9936 11.7895C12.7584 12.0211 12.756 12.4015 12.9888 12.6379C13.1064 12.7567 13.2612 12.8155 13.4148 12.8155C13.5672 12.8155 13.7196 12.7579 13.8372 12.6415C14.9748 11.5219 15.6 10.0147 15.6 8.40073C15.6 6.78673 14.9748 5.27953 13.8372 4.15753ZM14.6808 2.4703C14.9148 2.2351 15.294 2.2327 15.5304 2.4667C17.124 4.0459 18 6.1531 18 8.4007C18 10.6483 17.124 12.7555 15.5304 14.3335C15.4128 14.4499 15.2592 14.5075 15.1068 14.5075C14.9532 14.5075 14.7996 14.4487 14.6808 14.3311C14.448 14.0959 14.4504 13.7155 14.6844 13.4815C16.0488 12.1291 16.8 10.3255 16.8 8.4007C16.8 6.4759 16.0488 4.6711 14.6844 3.3187C14.4504 3.0859 14.448 2.7055 14.6808 2.4703Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
+                        <div id="volume-id">
+                            <button class="volume-bar">
+                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.4604 0.0595008C10.2516 -0.0400992 10.0056 -0.0136992 9.8256 0.131501L3.9888 4.8007H1.2C0.5388 4.8007 0 5.3395 0 6.0007V10.8007C0 11.4631 0.5388 12.0007 1.2 12.0007H3.9888L9.8244 16.6699C9.9336 16.7563 10.0668 16.8007 10.2 16.8007C10.2888 16.8007 10.3776 16.7803 10.4604 16.7407C10.668 16.6411 10.8 16.4311 10.8 16.2007V0.600701C10.8 0.370301 10.668 0.160301 10.4604 0.0595008ZM13.8372 4.15753C13.6008 3.92473 13.2216 3.92833 12.9888 4.16233C12.756 4.39873 12.7584 4.77793 12.9936 5.01193C13.9008 5.90713 14.4 7.11073 14.4 8.40073C14.4 9.69073 13.9008 10.8943 12.9936 11.7895C12.7584 12.0211 12.756 12.4015 12.9888 12.6379C13.1064 12.7567 13.2612 12.8155 13.4148 12.8155C13.5672 12.8155 13.7196 12.7579 13.8372 12.6415C14.9748 11.5219 15.6 10.0147 15.6 8.40073C15.6 6.78673 14.9748 5.27953 13.8372 4.15753ZM14.6808 2.4703C14.9148 2.2351 15.294 2.2327 15.5304 2.4667C17.124 4.0459 18 6.1531 18 8.4007C18 10.6483 17.124 12.7555 15.5304 14.3335C15.4128 14.4499 15.2592 14.5075 15.1068 14.5075C14.9532 14.5075 14.7996 14.4487 14.6808 14.3311C14.448 14.0959 14.4504 13.7155 14.6844 13.4815C16.0488 12.1291 16.8 10.3255 16.8 8.4007C16.8 6.4759 16.0488 4.6711 14.6844 3.3187C14.4504 3.0859 14.448 2.7055 14.6808 2.4703Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
                         <button class="share-button cta-share">
                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -3741,6 +3791,7 @@
     <!-- <script src="assets/js/swiper.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script> <!-- https://swisnl.github.io/jQuery-contextMenu/ -->
+
 
     <script src="assets/js/lazysizes.min.js" async=""></script>
     <script src="assets/js/owl.carousel.js"></script>

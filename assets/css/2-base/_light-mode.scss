@@ -272,6 +272,81 @@
             @include linearGradientTopBottom(rgba(#FAFAFA, 0), #FAFAFA)
         }
     }
+    .modulo-generos{
+        .wrappe-generos{
+            ul{
+                li{
+                    .genero-card{
+                        
+                        &:hover{
+                            span{
+                                color: #fff;
+                            }
+                        }
+                        span{
+                            background: #fff;
+                            color: #606060;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modulo-list-canais{
+        .wrapper-canais{
+            ul{
+                li{
+                    .title-canal{
+                        .text-wrapper{
+                            p{
+                                color: #030303;
+                            }
+                            span{
+                                background: $pink;
+                                color: $white;
+                                font-size: 8px;
+                                font-weight: bold;
+                                padding: 3px 6px 1px;
+                                border-radius: 20px;
+                                text-transform: uppercase;
+                                display: block;
+                                width: max-content;
+                            }
+                        }
+                    }
+                    .button-wrapper{
+                        height: 100%;
+                        flex: 0 0 auto;
+                        button{
+                            cursor: pointer;
+                            background: transparent;
+                            border: none;
+                            display: flex;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modulo-canais-comp{
+        .wrapper-canais{
+            ul{
+                li{
+                    .footer-canal{
+                        .text-wrapper{
+                            p{
+                                color: #030303;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     /*== Componentes ==*/
     .menu-button-wrap{
