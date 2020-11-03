@@ -65,12 +65,22 @@ header {
         form{
             max-width: 350px;
             position: relative;
-            button{
+            overflow: hidden;
+            border-radius: 20px;
+            .search-btn{
                 position: absolute;
                 top: 6px;
                 left: 4px;
                 right: auto;
-                transition: all .4s ease-in-out;
+            }
+            .close-search{
+                position: absolute;
+                top: 4px;
+                left: auto;
+                right: -20px;
+                transition: all .2s ease-in-out;
+                opacity: 0;
+                z-index: -2;
             }
             input{
                 width: 100%;
@@ -83,10 +93,11 @@ header {
                 //border-bottom: 2px solid $white;
                 transition: all .4s ease-in-out;
                 &:focus{
-                    padding: 12px 40px 9px 20px;
-                    & ~ button{
-                        left: calc(100% - 35px);
-                        right: auto;
+                    & ~ .close-search{
+                        display: block;
+                        right: 0;
+                        opacity: 1;
+                        z-index: 1;
                     }
                 }
             }
@@ -304,9 +315,16 @@ header {
         bottom: auto;
         padding-top: 69px;
     }
-    &.scrollhere{
-        @include respond-to-max-h(700){
+    &.player-open{
+        @include respond-to-min(750){
+            padding-bottom: 90px;
+        }
+    }
+    .scrollhere{
+        height: 100%;
+        @include respond-to-max-h(750){
             overflow-y: scroll;
+            height: 100%;
         }
         @include respond-to-max(749){
             // Temporário
@@ -403,6 +421,7 @@ header {
                                 path,
                                 ellipse{
                                     fill: #E52321;
+                                    fill: #fff;
                                 }
                             }
                             span{
@@ -550,7 +569,20 @@ header {
         }
         .btn-box{
             width: 100%;
-
+            display: flex;
+            a{
+                width: 50%;
+                display: block;
+                &:first-child{
+                    padding-right: 2px;
+                }
+                &:last-child{
+                    padding-left: 2px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -598,12 +630,12 @@ body,
     font-weight: 700;
     color: $white;
     background: $blue;
-    padding: 11px 15px 9px;
+    padding: 10px 15px 10px;
     border-radius: 27px;
-    border: 1px solid $blue;
+    border: 2px solid $blue;
     &:hover{
         background: #0D3789;
-        border: 1px solid $blue;
+        border: 2px solid $blue;
     }
     &:active{
         border: 0;

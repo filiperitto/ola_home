@@ -59,6 +59,7 @@ $(document).ready(function () {
     $('.cta-player').click(function () {
         $('.footer-player').toggleClass('open');
         $('.content-container').toggleClass('player-open');
+        $('.sidebar').toggleClass('player-open');
         $('.fila-sidebar').toggleClass('active');
         $('.nowplaying').toggleClass('active');
     });
@@ -222,7 +223,8 @@ $(document).ready(function () {
         //autoWidth: true,
         responsive: {
             0: {
-                items: 2
+                items: 2,
+                autoWidth: true,
             },
             500: {
                 items: 3
