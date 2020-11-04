@@ -1249,7 +1249,7 @@
             display: flex;
             justify-content: flex-start;
             flex-wrap: wrap;
-            width: 1180px;
+            //width: 1180px;
 
             width: 100%;
             
@@ -1279,15 +1279,29 @@
                 padding: 0;
                 margin-right: 20px;
                 max-width: 188px;
-                width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+
+                
+                width: 100%;
+                max-width: inherit;
+                margin: 0;
+                padding: 0 10px 10px;
+                @include respond-to-min(400){
+                    //max-width: 259px;
+                    
+                    justify-content: space-between;
+                    width: 50%;
+                    margin: 0;
+                    padding: 0 0 10px 10px;
+                }
                 @include respond-to-min(750){
                     //max-width: 259px;
                     
                     
                     max-width: inherit;
+                    justify-content: flex-start;
                     width: 50%;
                     margin: 0;
                     padding: 0 10px 10px;
@@ -1380,11 +1394,14 @@
                     width: 100%;
                     max-width: 100px;
                     justify-content: space-between;
-                    flex: 1 0 auto;
+                    flex: 0 1 auto;
                     height: 100%;
+
+                    max-width: inherit;
+                    width: inherit;
                     @include respond-to-min(750){
-                        max-width: 140px;
-                        margin-right: 20px;
+                        //max-width: 140px;
+                        //margin-right: 20px;
 
                         max-width: inherit;
                         width: inherit;
@@ -1398,6 +1415,9 @@
                     @include respond-to-min(1000){
                         margin-right: 10px;
                         margin-left: 10px;
+                    }
+                    @include respond-to-min(1402){
+                        flex: 1 0 auto;
                     }
                     .text-wrapper{
                         width: 100%;
@@ -2888,6 +2908,7 @@ section{
     z-index: 102;
     background: #181818;
     padding: 10px;
+    
     display: none;
     @include respond-to-min(750){
         width: 400px;
@@ -2904,6 +2925,192 @@ section{
             height: 100%;
             background: #5b5b5b;
             border-radius: 5px;
+        }
+    }
+    
+    .header{
+        padding: 20px 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu-option{
+            svg{
+                rect{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    .body-stories{
+        width: 100%;
+        height: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include respond-to-min(750){
+            height: auto;
+        }
+        .thumb-epi{
+            width: 210px;
+            height: 210px;
+            border-radius: 16px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .info-box{
+            width: 100%;
+            .episode-name{
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+            }
+            .pod-name{
+                font-size: 16px;
+                font-weight: bold;
+                color: #a2a2a2;
+                text-align: center;
+            }
+        }
+        
+        .players-controls{
+            width: 100%;
+            .player-controls__buttons{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                .play,
+                .exit,
+                .player-prev-10-button,
+                .player-prev-button,
+                .player-next-30-button,
+                .player-next-button{
+                    background: transparent;
+                    border: none;
+                    padding: 0;
+                    margin: 0 10px;
+                }
+                .player-prev-button{
+                    max-width: 34px;
+                    svg{
+                        width: 100%;
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+                .player-prev-10-button{
+                    max-width: 34px;
+                    svg{
+                        width: 100%;
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+                .player-next-30-button{
+                    max-width: 34px;
+                    svg{
+                        width: 100%;
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+                .player-next-button{
+                    max-width: 34px;
+                    svg{
+                        width: 100%;
+                        path{
+                            fill: #fff;
+                        }
+                    }
+                }
+                .play{
+                    max-width: 45px;
+                    svg{
+                        width: 45px;
+                        height: 45px;
+                        path{
+                            width: 45px;
+                            height: 45px;
+                            fill: #fff;
+                        }
+                    }
+                }
+                .exit{
+                    display: none;
+                }
+            }
+            .players-bar-slider{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0 15px;
+                .progress-bar-time{
+                    min-width: 40px;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: bold;
+                    line-height: 16px;
+                    color: #fff;
+                    letter-spacing: normal;
+                    text-transform: none;
+                    margin-top: 10px;
+                    &:nth-child(2){
+                        text-align: left;
+                    }
+                    &:nth-child(3){
+                        text-align: right;
+                    }
+                }
+                .progress-bar{
+                    height: auto;
+                    position: relative;
+                    width: 100%;
+                    .progress-bar_bg{
+                        width: 100%;
+                        height: 4px;
+                        display: flex;
+                        border-radius: 2px;
+                        background: #5B5B5B;
+                        position: absolute;
+                        left: 0;
+                        z-index: 0;
+                    }
+                    .progress-bar_track{
+                        width: 30%;
+                        height: 4px;
+                        display: flex;
+                        border-radius: 2px 0 0 2px;
+                        background: #FFCA00;
+                        position: absolute;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    .progress-bar_handle{
+                        width: 12px;
+                        height: 12px;
+                        position: absolute;
+                        background: #FFCA00;
+                        top: -4px;
+                        border-radius: 10px;
+                        left: 30%;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }
