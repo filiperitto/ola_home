@@ -2207,15 +2207,17 @@ header .component-box .topbar-action .menu-button {
 }
 
 /* Track */
+html,
 body,
 .scrollhere,
 .scrollola {
-  scrollbar-color: #373737 #202020;
+  scrollbar-color: #373737 transparent;
   scrollbar-width: thin;
   /* Handle */
   /* Handle on hover */
 }
 
+html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
 .scrollhere::-webkit-scrollbar-track,
 .scrollola::-webkit-scrollbar-track {
@@ -2223,6 +2225,7 @@ body::-webkit-scrollbar-track,
   border-radius: 5px;
 }
 
+html::-webkit-scrollbar,
 body::-webkit-scrollbar,
 .scrollhere::-webkit-scrollbar,
 .scrollola::-webkit-scrollbar {
@@ -2231,6 +2234,7 @@ body::-webkit-scrollbar,
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
 .scrollhere::-webkit-scrollbar-track,
 .scrollola::-webkit-scrollbar-track {
@@ -2238,6 +2242,7 @@ body::-webkit-scrollbar-track,
   border-radius: 5px;
 }
 
+html::-webkit-scrollbar-track:hover,
 body::-webkit-scrollbar-track:hover,
 .scrollhere::-webkit-scrollbar-track:hover,
 .scrollola::-webkit-scrollbar-track:hover {
@@ -2245,6 +2250,7 @@ body::-webkit-scrollbar-track:hover,
   border-radius: 5px;
 }
 
+html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb,
 .scrollhere::-webkit-scrollbar-thumb,
 .scrollola::-webkit-scrollbar-thumb {
@@ -2253,6 +2259,7 @@ body::-webkit-scrollbar-thumb,
   cursor: pointer;
 }
 
+html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover,
 .scrollhere::-webkit-scrollbar-thumb:hover,
 .scrollola::-webkit-scrollbar-thumb:hover {
@@ -3535,8 +3542,6 @@ section .module-title a span {
 
 .modulo-canais-comp .wrapper-canais {
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: scroll;
   padding-bottom: 20px;
 }
 
@@ -3978,8 +3983,6 @@ section .module-title a span {
 
 .modulo-list-canais .wrapper-canais .wrap {
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: scroll;
   padding: 0;
 }
 
@@ -4934,6 +4937,12 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 @media only screen and (min-width: 420px) {
   section .small-service-widget .widget-box.style3 .btn-box a {
     margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .glider {
+    overflow: hidden;
   }
 }
 

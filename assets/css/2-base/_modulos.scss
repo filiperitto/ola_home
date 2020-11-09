@@ -919,8 +919,8 @@ section{
 .modulo-canais-comp{
     .wrapper-canais{
         width: 100%;
-        overflow-y: hidden;
-        overflow-x: scroll;
+        //overflow-y: hidden;
+        //overflow-x: scroll;
         padding-bottom: 20px;
         ul{
             list-style: none;
@@ -1255,8 +1255,8 @@ section{
         }
         .wrap{
             width: 100%;
-            overflow-y: hidden;
-            overflow-x: scroll;
+            //overflow-y: hidden;
+            //overflow-x: scroll;
             padding: 0;
 
         }
@@ -2013,6 +2013,11 @@ section{
     }
 }
 
+.glider{
+    @include respond-to-min(750){
+        overflow: hidden;
+    }
+}
 .glider-slide{
     min-width: inherit;
 }

@@ -588,11 +588,12 @@ header {
 }
 
 /* Track */
+html,
 body,
 .scrollhere,
 .scrollola{
     
-    scrollbar-color: #373737 #202020;
+    scrollbar-color: #373737 transparent;
     scrollbar-width: thin;
     &::-webkit-scrollbar-track {
         background: #EEE3F6;
