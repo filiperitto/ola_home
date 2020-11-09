@@ -1,244 +1,364 @@
+//Header Fixed
+(function () {
 
-$(function(){
-    $.contextMenu({
-        selector: '.cta-menu-epi', 
-        trigger: 'left',
-        items: $.contextMenu.fromMenu($('#contextMenu-episode')),        
-    });
-    $('.context-menu-list').css({ top: y + 50, left: x });
-});
+    var headerScroll = getId('header-main'),
+        scrollHeight = 10,
+        classHeader = 'fixed-top';
 
-$(function(){
-    $.contextMenu({
-        selector: '.cta-share', 
-        trigger: 'left',
-        items: $.contextMenu.fromMenu($('#contextMenu-share')),  
-        top: y + 50, 
-        left: x       
-    });
-    $('.context-menu-list').css({ top: y + 50, left: x });
-});
+    //SCROLL
+    window.addEventListener("scroll", scrollOn);
 
- $(document).ready(function() {
- 
-    
-    // MAIN MENU ANIMATION
-    // Menu change
-    $(this).scrollTop(0); // importante <--
-    var nav = $('header');
+    function scrollOn() {
+        animatedScroll(headerScroll, classHeader, scrollHeight);
+    }
 
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 10) {
-            nav.addClass("fixed-top");
+    //Função que on scroll muda o comportamento do elemento
+    function animatedScroll(element, classN, height) {
+        y = pageYOffset; //resgata do objeto window o valor pageYOffset e guarda na variável
+        if (y > height) {
+            element.className = classN;
         } else {
-            nav.removeClass("fixed-top");
+            element.className = '';
         }
-    });
- 
-    // Preloader
-    setTimeout(function(){
-        $('.preloader').addClass('loaded');
-    }, 2000);
- 
+    }
+
+    // Função toggle adiciona ou tira a class do elemento
+    function toggle(element, classe) {
+        element.className = element.className ? '' : classe;
+    }
+
+    //Função que retorna o id do elemento
+    function getId(id) {
+        return document.getElementById(id);
+    }
+
+
+})();
+//------------------------ Header
+
+
+
+
+// Get a reference to the splash dialog
+var splash = document.querySelector(".preloader");
+
+// When the window is loaded....
+window.addEventListener("load", function () {
+
+    // Check to see if the cookie indicates a first-time visit
+    if (document.cookie.indexOf("visited=true") === -1) {
+
+        // Reveal the splash (remember: splash is hidden by default by CSS)
+        splash.classList.remove("loaded");
+
+        // .5 seconds later, hide the splash
+        setTimeout(function () {
+            splash.classList.add("loaded");
+
+            // >> Set cookie to visited here <<
+        }, 2000);
+    }
 });
+//------------------------ Splash 
 
-$(function () {
 
-    /*=== light-mode Switch ===*/
-    $('.light-mode-cta').click(function () {
-        $(this).toggleClass('active');
-        $('body').toggleClass('light-mode');
-    });
 
-    /*=== ContextMenu do Header ===*/
-    $('.dropcta').click(function () {
-        $('.dropmenu-header').toggleClass('open');
-        $('.inv-modal').toggleClass('open');
-    });
+function light_modeToggle() {
+    this.classList.toggle('active');
+    document.body.classList.toggle('light-mode');
+}
+document.querySelector('.light-mode-cta').addEventListener('click', light_modeToggle);
+//------------------------ Toggle Light-mode
 
-    /*=== Ativador Footer Player Switch ===*/
-    $('.cta-player').click(function () {
-        $('.footer-player').toggleClass('open');
-        $('.content-container').toggleClass('player-open');
-        $('.sidebar').toggleClass('player-open');
-        $('.fila-sidebar').toggleClass('active');
-        $('.nowplaying').toggleClass('active');
-    });
 
-    /*=== Ativador do sibar playlist  ===*/
-    $('.cta-button-playlist-header').click(function () {
-        $('.fila-sidebar').toggleClass('grow');
-        $('.nowplaying').toggleClass('shrink');
-    });
+
+function menuheaderToggle() {
+    document.getElementById('dropmenu-header').classList.toggle('open');
+    document.getElementById('inv-moda').classList.toggle('open');
+}
+// Select all the elements with example class.
+var menuHeader = document.querySelectorAll('.dropcta');
+// Loop through the elements.
+for (var i = 0; i < menuHeader.length; i++) {
+// Add the class margin to the individual elements.
+menuHeader[i].addEventListener('click', menuheaderToggle);
+}
+//------------------------ Toggle Menu Header
+
+
+
+function footerPlayerToggle() {
+    document.getElementById("footer-player").classList.toggle('open');
+    document.getElementById("content-container").classList.toggle('player-open');
+    document.getElementById("sidebar").classList.toggle('player-open');
+    document.getElementById("fila-sidebar").classList.toggle('active');
+    document.getElementById("nowplaying").classList.toggle('active');
+}
+// Select all the elements with example class.
+var playerSwitch = document.querySelectorAll('.cta-player');
+// Loop through the elements.
+for (var i = 0; i < playerSwitch.length; i++) {
+// Add the class margin to the individual elements.
+playerSwitch[i].addEventListener('click', footerPlayerToggle);
+}
+//------------------------ Footer Player Switch
+
+
+
+function PlaylistToggle() {
+    document.getElementById("fila-sidebar").classList.toggle('grow');
+    document.getElementById("nowplaying").classList.toggle('shrink');
+    document.getElementById("div-dumie-fila").classList.toggle('open');
+}
+// Select all the elements with example class.
+var playlistSwitch = document.querySelectorAll('.cta-button-playlist-header');
+// Loop through the elements.
+for (var i = 0; i < playlistSwitch.length; i++) {
+// Add the class margin to the individual elements.
+playlistSwitch[i].addEventListener('click', PlaylistToggle);
+}
+//------------------------ playlist Switch
+
+
+
+function PlaylistNowplayingToggle() {
+    document.getElementById("nowplaying").classList.toggle('open');
+    document.getElementById("fila-sidebar").classList.toggle('open');
+}
+// Select all the elements with example class.
+var playlistNpSwitch = document.querySelectorAll('.cta-big-player');
+// Loop through the elements.
+for (var i = 0; i < playlistNpSwitch.length; i++) {
+// Add the class margin to the individual elements.
+playlistNpSwitch[i].addEventListener('click', PlaylistNowplayingToggle);
+}
+//------------------------ Ativar o playlist e o Nowplayingr
+
+
+
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if (viewportWidth < 750) {
+	function fixPlaylistNowplayingToggle() {
+        document.getElementById("body").classList.toggle('overhidden');
+    }
+    // Select all the elements with example class.
+    var fixplaylistNpSwitch = document.querySelectorAll('.cta-big-player');
+    // Loop through the elements.
+    for (var i = 0; i < fixplaylistNpSwitch.length; i++) {
+    // Add the class margin to the individual elements.
+    fixplaylistNpSwitch[i].addEventListener('click', fixPlaylistNowplayingToggle);
+    }
     
-    /*=== Ativar o playlist e o Nowplayingr ===*/
-    $('.cta-big-player').click(function () {
-        $('.nowplaying').toggleClass('open');
-        $('.fila-sidebar').toggleClass('open');
-    });
-    /*=== fix para o mobile  ===*/
-    if ($(window).width() < 750) {
-        $('.cta-big-player').click(function () {
-            $('body').toggleClass('overhidden');
-        }); 
-     }
-
-    /*=== Fechar o playlist e o Nowplaying ===*/
-    $('.cta-close-nowplaying').click(function () {
-        $('.nowplaying').toggleClass('open');
-        $('.fila-sidebar').toggleClass('open');
-    });
-    /*=== fix para o mobile  ===*/
-    if ($(window).width() < 750) {
-        $('.cta-close-nowplaying').click(function () {
-            $('body').toggleClass('overhidden');
-        }); 
-     }
-
-    /*=== Tabs da playlist ===*/
-    $('.epi-tabs').click(function () {
-        $(this).addClass('active');
-        $('.queue-tabs').removeClass('active');
-        
-        $('.queue-playlist').removeClass('select');
-        $('.epi-playlist').addClass('select');
-    });
-    $('.queue-tabs').click(function () {
-        $(this).addClass('active');
-        $('.epi-tabs').removeClass('active');
-        
-        $('.epi-playlist').removeClass('select');
-        $('.queue-playlist').addClass('select');
-    });
+	function fixclosePlaylistNowplayingToggle() {
+        document.getElementById("body").classList.toggle('overhidden');
+    }
+    // Select all the elements with example class.
+    var fixcloseplaylistNpSwitch = document.querySelectorAll('.cta-close-nowplaying');
+    // Loop through the elements.
+    for (var i = 0; i < fixcloseplaylistNpSwitch.length; i++) {
+    // Add the class margin to the individual elements.
+    fixcloseplaylistNpSwitch[i].addEventListener('click', fixclosePlaylistNowplayingToggle);
+    }
+} 
+//------------------------ fix body scroll para mobile
 
 
 
+function closePlaylistNowplayingToggle() {
+    document.getElementById("nowplaying").classList.toggle('open');
+    document.getElementById("fila-sidebar").classList.toggle('open');
+}
+// Select all the elements with example class.
+var closeplaylistNpSwitch = document.querySelectorAll('.cta-close-nowplaying');
+// Loop through the elements.
+for (var i = 0; i < closeplaylistNpSwitch.length; i++) {
+// Add the class margin to the individual elements.
+closeplaylistNpSwitch[i].addEventListener('click', closePlaylistNowplayingToggle);
+}
+//------------------------ Fechar o playlist e o Nowplaying
+
+
+
+function PlaylistTabsepiToggle() {
+    this.classList.toggle('active');
+    document.getElementById('queue-tabs').classList.toggle('active');
+    document.getElementById('queue-playlist').classList.toggle('select');
+    document.getElementById('epi-playlist').classList.toggle('select');
+}
+// Select all the elements with example class.
+var playlistTabsepiSwitch = document.querySelectorAll('.epi-tabs');
+// Loop through the elements.
+for (var i = 0; i < playlistTabsepiSwitch.length; i++) {
+// Add the class margin to the individual elements.
+playlistTabsepiSwitch[i].addEventListener('click', PlaylistTabsepiToggle);
+}
+//------------------------ Tabs switch da playlist
+
+
+
+function PlaylistTabsqueueToggle() {
+    this.classList.toggle('active');
+    document.getElementById('epi-tabs').classList.toggle('active');
+    document.getElementById('queue-playlist').classList.toggle('select');
+    document.getElementById('epi-playlist').classList.toggle('select');
+}
+// Select all the elements with example class.
+var playlistTabsqueueSwitch = document.querySelectorAll('.queue-tabs');
+// Loop through the elements.
+for (var i = 0; i < playlistTabsqueueSwitch.length; i++) {
+// Add the class margin to the individual elements.
+playlistTabsqueueSwitch[i].addEventListener('click', PlaylistTabsqueueToggle);
+}
+//------------------------ Tabs switch da playlist
+
+
+
+
+function AloStoriesToggle() {
+    document.getElementById('storie-box').classList.toggle('open');
+}
+// Select all the elements with example class.
+var AloStoriesSwitch = document.querySelectorAll('.cta-ola-stories');
+// Loop through the elements.
+for (var i = 0; i < AloStoriesSwitch.length; i++) {
+// Add the class margin to the individual elements.
+AloStoriesSwitch[i].addEventListener('click', AloStoriesToggle);
+}
+//------------------------ Stories Alo
+
+
+
+
+new Glider(document.querySelector('.epi-glider'), {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    duration: 2,
+    arrows: {
+        prev: '.prev-epi',
+        next: '.next-epi'
+    },
+    responsive: [{
+        breakpoint: 750,
+        settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 'auto',
+            slidesToScroll: 1,
+            itemWidth: 150
+        }
+    }]
 });
+//------------------------ Slider Episode Module 
 
-    new Glider(document.querySelector('.epi-glider'), {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: {
-          prev: '.prev-epi',
-          next: '.next-epi'
-        },
-        responsive: [
-          {
-            breakpoint: 750,
-            settings: {
-              // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 'auto',
-              slidesToScroll: 1,
-              itemWidth: 150
-            }
-          }
-        ]
-      });
 
-    new Glider(document.querySelector('.originais-glider'), {
-        slidesToShow: 'auto',
-        slidesToScroll: 1,
-        arrows: {
+
+new Glider(document.querySelector('.originais-glider'), {
+    slidesToShow: 'auto',
+    slidesToScroll: 1,
+    duration: 2,
+    arrows: {
         prev: '.prev-ori',
         next: '.next-ori'
-        },
-        responsive: [
-        {
+    },
+    responsive: [{
             breakpoint: 350,
             settings: {
-            itemWidth: 107
+                itemWidth: 107
             }
         },
         {
             breakpoint: 425,
             settings: {
-            itemWidth: 129
+                itemWidth: 129
             }
         },
         {
             breakpoint: 450,
             settings: {
-            itemWidth: 101
+                itemWidth: 101
             }
         },
         {
             breakpoint: 750,
             settings: {
-            itemWidth: 166
+                itemWidth: 166
             }
         }
-        ]
-    });
+    ]
+});
+//------------------------ Slider Originais Module
 
-    new Glider(document.querySelector('.genero-glider'), {
-        slidesToShow: 2.5,
-        slidesToScroll: 1,
-        arrows: {
-          prev: '.prev-gen',
-          next: '.next-gen'
+
+
+new Glider(document.querySelector('.genero-glider'), {
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    duration: 2,
+    arrows: {
+        prev: '.prev-gen',
+        next: '.next-gen'
+    },
+    responsive: [
+        {
+            breakpoint: 360,
+            settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 2.5,
+                slidesToScroll: 1
+            }
         },
-        responsive: [
-          {
+        {
+            breakpoint: 500,
+            settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 3.5,
+                slidesToScroll: 1
+            }
+        },
+        {
             breakpoint: 750,
             settings: {
-              // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 3,
-              slidesToScroll: 1
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 3,
+                slidesToScroll: 1
             }
-          },
-          {
+        },
+        {
             breakpoint: 1200,
             settings: {
-              // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 4,
-              slidesToScroll: 1
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 4,
+                slidesToScroll: 1
             }
-          },
-          {
+        },
+        {
             breakpoint: 1350,
             settings: {
-              // Set to `auto` and provide item width to adjust to viewport
-              slidesToShow: 7,
-              slidesToScroll: 1
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 7,
+                slidesToScroll: 1
             }
-          }
-        ]
-      });
-/*
-  var swiper = new Swiper('.swiper-container', {
-    // Default parameters
-    slidesPerView: 9,
-    spaceBetween: 30,
-    loop: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
+        }
+    ]
 });
+//------------------------ Slider Genero Module
 
-var swiper = new Swiper('.swiper-container', {
-    //init: false,
-    breakpoints: {
-        10: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-        1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-        },
-        1100: {
-            slidesPerView: 8,
-            spaceBetween: 20,
-        },
-    }
+
+$(function () {
+    $.contextMenu({
+        selector: '.cta-menu-epi',
+        trigger: 'left',
+        items: $.contextMenu.fromMenu($('#contextMenu-episode')),
+    });
 });
-
-*/
+$(function () {
+    $.contextMenu({
+        selector: '.cta-share',
+        trigger: 'left',
+        items: $.contextMenu.fromMenu($('#contextMenu-share')),
+    });
+    $('.context-menu-list').css({
+        top: y + 50,
+        left: x
+    });
+});
+//------------------------ Header

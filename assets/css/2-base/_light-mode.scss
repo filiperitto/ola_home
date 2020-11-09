@@ -1,5 +1,13 @@
 .light-mode{
     background: #FAFAFA;
+    section{
+        
+        .module-title{
+            h2{
+                color: #030303;
+            }
+        }
+    }
     &.hero{
         header{
             .logo{
@@ -412,6 +420,16 @@
             }
         }
     }
+    .glider-next, 
+    .glider-prev{
+        background: #fff;
+        box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
+        svg{
+            path{
+                fill: #030303;
+            }
+        }
+    }
 
     /* Track */
     .scrollhere,
@@ -618,6 +636,14 @@
         &.grow{
             background: #ffffff;
         }
+        .header-fila{
+            .wrapp-header{
+            }
+            span{
+                color: #030303;
+                font-weight: 600;
+            }
+        }
         svg{
             path,
             rect{
@@ -679,6 +705,28 @@
                 }
             }
         } 
+    }
+
+    //Blog
+    .blog-loop{
+    
+        .loop{
+    
+            article{
+                .wrap-post{
+                    background: #f4f4f4;
+                    .content-box{
+                        .title{
+                            a{
+                                color: #606060;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    
     }
 }
 body{

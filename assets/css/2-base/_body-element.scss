@@ -229,37 +229,37 @@ h1, h2, h3, h4, h5, h6{
 }
   
 
-.gigantic{
-    font-size: 110px;
+.h-hero{
+    font-size: 42px;
     line-height: 1.09;
     letter-spacing: -2px;
 }
 
-.huge, h1{
-    font-size: 3.8em;
+h1{
+    font-size: 38px;
     line-height: 1.05;
     letter-spacing: -1px;
 }
 
-.large, h2{
-    font-size: 2.2em;
+h2{
+    font-size: 30px;
     line-height: 1.14;
-    @include respond-to-max(700){
-        font-size: 1.5em;
-    }
+    font-weight: 700;
 }
 
-.bigger, h3{
-    font-size: 20px;
+h3{
+    font-size: 22px;
     margin-bottom: 12px;
+    font-weight: 700;
 }
 
-.big, h4{
-    font-size: 1.3em;
+h4{
+    font-size:18px;
     line-height: 1.4;
-    @include respond-to-max(700){
-        font-size: 1em;
-    }
+}
+
+h5{
+    font-style: 16px;
 }
 
 .small, small{
@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6{
 p{
     color: #fff;
     margin: 0 0 0 0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.4;
     font-weight: 500;
 }

@@ -61,7 +61,7 @@
       
 </head>
 
-<body class="home-deslogado hero">
+<body id="body" class="home-deslogado hero">
     <div class="preloader">
         <div class="canvas">
             <div class="path1-box">
@@ -135,7 +135,7 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header>
+    <header id="header-main">
         <div class="logo">
             <svg width="98" height="25" viewBox="0 0 98 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -272,7 +272,7 @@
                         <rect y="14" width="4" height="4" rx="2" fill="#606060" />
                     </svg>
                 </button>
-                <div class="dropmenu-header">
+                <div id="dropmenu-header" class="dropmenu-header">
                     <ul>
                         <li>
                             <a href="home_logado.html">
@@ -286,7 +286,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="inv-modal dropcta"></div>
+                    <div id="inv-moda" class="inv-modal dropcta"></div>
                 </div>
 
             </div>
@@ -294,7 +294,7 @@
         </div>
     </header>
     <div class="main">
-        <aside class="sidebar">
+        <aside id="sidebar" class="sidebar">
             <div class="scrollhere">
             <nav>
                 <ul>
@@ -363,6 +363,22 @@
                                 <span>Descubra</span>
                             </div>
                         </a>
+                    </li>
+                    <li class="desktop-view">
+                        <a href="blog.html">
+                            <div class="wrappe-menu">
+                                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.0445 0C14.2208 0.0455097 14.394 0.102303 14.5631 0.17003C14.9281 0.315993 15.2392 0.570965 15.454 0.90019C15.6688 1.22941 15.7769 1.61687 15.7635 2.00976C15.7771 3.9668 15.7635 5.92045 15.7635 7.88089C15.7635 7.9183 15.7635 7.95741 15.7516 8.00672C15.3132 7.91646 14.8574 7.97075 14.4526 8.16144V2.64397H1.32113C1.32113 2.69838 1.31093 2.75789 1.31093 2.814C1.31093 6.43337 1.31093 10.0527 1.31093 13.6721C1.31093 14.2009 1.56088 14.4509 2.08457 14.4509H8.54571C8.41989 14.8793 8.30087 15.301 8.17335 15.704C8.16032 15.7222 8.14327 15.7372 8.12352 15.7479C8.10377 15.7585 8.08184 15.7644 8.05943 15.7652C7.8894 15.7652 7.71937 15.7652 7.54934 15.7652C5.71981 15.7652 3.89086 15.7652 2.06246 15.7652C1.62722 15.7835 1.1981 15.6576 0.841757 15.4071C0.48541 15.1565 0.221782 14.7952 0.0918163 14.3794C0.0578102 14.2689 0.0306054 14.1567 0 14.0394C0 9.93599 0 5.8326 0 1.72921C0.0128714 1.70113 0.0236689 1.67215 0.0323057 1.64249C0.0826572 1.32288 0.213046 1.0212 0.411337 0.765537C0.609628 0.50987 0.869376 0.308521 1.16641 0.180232C1.35143 0.107418 1.54116 0.047203 1.73431 0L14.0445 0Z" fill="#A5A5A5"/>
+                                    <path d="M13.2972 10.9348L15.3783 12.999C15.346 13.0347 15.3086 13.0755 15.2712 13.1129C14.251 14.1331 13.2263 15.1533 12.1971 16.1734C12.1187 16.2512 12.0232 16.3094 11.9182 16.3435C11.1922 16.5645 10.4628 16.777 9.73165 16.9862C9.64802 17.0124 9.55912 17.0171 9.4732 16.9998C9.43872 16.9897 9.4066 16.9728 9.37867 16.9502C9.35075 16.9276 9.32758 16.8997 9.3105 16.868C9.29343 16.8364 9.28279 16.8017 9.2792 16.766C9.2756 16.7302 9.27913 16.6941 9.28957 16.6597C9.51627 15.8663 9.74695 15.079 9.98159 14.298C10.0019 14.2404 10.0357 14.1885 10.0802 14.1467C11.1412 13.0778 12.2022 12.0145 13.2632 10.9569C13.2729 10.9474 13.2845 10.9399 13.2972 10.9348V10.9348ZM11.7176 15.7841C11.6564 15.4593 11.5986 15.1482 11.5357 14.8404C11.5307 14.8203 11.5213 14.8016 11.508 14.7856C11.4948 14.7697 11.4781 14.7571 11.4592 14.7486C11.148 14.6789 10.8334 14.616 10.5138 14.5514C10.3982 14.9458 10.2978 15.3267 10.1737 15.6991C10.1523 15.7653 10.1517 15.8366 10.1721 15.9032C10.1925 15.9698 10.2328 16.0285 10.2876 16.0714C10.3263 16.1142 10.3787 16.1423 10.4358 16.1506C10.4929 16.159 10.5511 16.1472 10.6005 16.1173L11.7176 15.7841Z" fill="#A5A5A5"/>
+                                    <path d="M12.4714 7.89214V9.18096H3.28979V7.89214H12.4714Z" fill="#A5A5A5"/>
+                                    <path d="M12.4697 5.27049V6.56102H3.28809V5.27049H12.4697Z" fill="#A5A5A5"/>
+                                    <path d="M11.8559 10.5235C11.2489 10.9502 10.6657 11.3736 10.0638 11.7783C9.99645 11.8124 9.92154 11.8288 9.84613 11.8259C7.71849 11.8259 5.59084 11.8259 3.4632 11.8259C3.40879 11.8259 3.35438 11.8259 3.28467 11.8123V10.5235H11.8559Z" fill="#A5A5A5"/>
+                                    <path d="M16.0085 12.2428L14.043 10.3028C14.3337 9.99332 14.6058 9.67026 14.9152 9.39141C15.0351 9.29726 15.185 9.2497 15.3372 9.25751C15.4894 9.26533 15.6337 9.32799 15.7433 9.43392C16.1139 9.78418 16.4761 10.1446 16.8247 10.517C16.9375 10.642 16.9999 10.8043 16.9999 10.9727C16.9999 11.141 16.9375 11.3034 16.8247 11.4284C16.7888 11.4711 16.7508 11.512 16.7107 11.5508L16.0085 12.2428Z" fill="#A5A5A5"/>
+                                </svg>   
+                                <span>Blog</span>
+                            </div>
+                        </a>
+
                     </li>
                     <li class="mobile-view">
                         <a href="#">
@@ -454,7 +470,7 @@
                 </div>
             </div>
 
-            <div class="light-mode-cta">
+            <div class="light-mode-cta light_mode_cta">
                 <hr>
                 <a>
                     <div class="wrappe-menu">
@@ -469,7 +485,7 @@
 
         </aside>
 
-        <div class="content-container scrollhere">
+        <div id="content-container" class="content-container scrollhere">
             <section id="hero" class="modulo-hero">
                 <div class="wrapper-hero">
 
@@ -488,7 +504,7 @@
                             <img alt="" data-src="assets/img/epi-thumb10.jpg" class="lazyload">
                         </div>
                         <div class="wrapper-text">
-                            <h3>Lorem Ipsum</h3>
+                            <h2>Lorem Ipsum</h2>
                             <p class="intro-text">Ria muito nessa segunda parte do bate-papo sobre explora</p>
                             <span class="time">xxx play - 1 dia</span>
                         </div>
@@ -2172,8 +2188,22 @@
                         </li>
                         <li class="item">
                             <a href="javascript:void(0)">
-                                <div class="genero-card style3">
-                                    <span>Lifestyle</span>
+                                <div class="genero-card style8">
+                                    <span>Mercado</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style9">
+                                    <span>Esporte</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:void(0)">
+                                <div class="genero-card style10">
+                                    <span>Tecnologia</span>
                                 </div>
                             </a>
                         </li>
@@ -2601,7 +2631,7 @@
             </section>
         </div>
 
-        <footer class="footer-player">
+        <footer id="footer-player" class="footer-player">
             <!-- <button class="cta-big-player">
                 <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -2742,7 +2772,7 @@
             </div>
         </footer>
 
-        <section class="nowplaying">
+        <section id="nowplaying" class="nowplaying">
 
             <div class="header">
                 <div class="close-nowplaying cta-close-nowplaying">
@@ -2849,12 +2879,19 @@
 
         </section>
 
-        <aside class="fila-sidebar">
+        <aside id="fila-sidebar" class="fila-sidebar">
+            <div class="header-fila">
+                <div class="wrapp-header">
+                    <span>Lista de Reprodução</span>
+    
+                    <span class="close cta-button-playlist-header">Fechar</span>
+                </div>
+            </div>
             <div class="tabs-playlist">
-                <div class="epi-tabs">
+                <div id="epi-tabs" class="epi-tabs">
                     <span>Episodios</span>
                 </div>
-                <div class="queue-tabs active">
+                <div id="queue-tabs" class="queue-tabs active">
                     <span>Playlist</span>
                 </div>
             </div>
@@ -2876,7 +2913,7 @@
                     </svg>
                 </div>
             </button>
-            <div class="list-epis epi-playlist scrollhere">
+            <div id="epi-playlist" class="list-epis epi-playlist scrollhere">
                 <ul>
                     <li>
                         <div class="thumb-epi">
@@ -3271,7 +3308,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="list-epis queue-playlist scrollhere select">
+            <div id="queue-playlist" class="list-epis queue-playlist scrollhere select">
                 <ul>
                     <h3>
                         <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -3713,6 +3750,7 @@
                 </ul>
             </div>
         </aside>
+        <div id="div-dumie-fila" class="div-dumie-fila cta-button-playlist-header"></div>
     </div>
 
 
@@ -3825,7 +3863,8 @@
 
     
     <script src="assets/js/lazysizes.min.js" async=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.js"></script>    
     <script src="assets/js/main.js"></script>
 </body>
 
