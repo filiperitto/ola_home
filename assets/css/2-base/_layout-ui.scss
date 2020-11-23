@@ -141,6 +141,8 @@ header {
             }
             
             svg{
+                width: auto;
+                height: 24px;
                 path,
                 ellipse,
                 rect{
@@ -155,8 +157,8 @@ header {
             .btn{
             }
             .wrapper-profile{
-                width: 21px;
-                height: 21px;
+                width: 24px;
+                height: 24px;
                 overflow: hidden;
                 border-radius: 20px;
                 display: flex;

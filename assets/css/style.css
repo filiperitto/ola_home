@@ -1638,6 +1638,11 @@ header .component-box .topbar-action .criar-canal span {
   padding-top: 2px;
 }
 
+header .component-box .topbar-action svg {
+  width: auto;
+  height: 24px;
+}
+
 header .component-box .topbar-action svg path,
 header .component-box .topbar-action svg ellipse,
 header .component-box .topbar-action svg rect {
@@ -1651,8 +1656,8 @@ header .component-box .topbar-action svg rect {
 }
 
 header .component-box .topbar-action .wrapper-profile {
-  width: 21px;
-  height: 21px;
+  width: 24px;
+  height: 24px;
   overflow: hidden;
   border-radius: 20px;
   display: -webkit-box;
@@ -2989,6 +2994,7 @@ section .module-title a span {
 .modulo-hero .wrapper-hero .epi-card .thumb-wrap img {
   width: 100%;
   position: absolute;
+  border-radius: 5px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -3147,6 +3153,7 @@ section .module-title a span {
 
 .modulo-originais .wrapper-originais ul li a .thumb-container img {
   width: 100%;
+  border-radius: 6px;
   left: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, 0);
@@ -3237,6 +3244,7 @@ section .module-title a span {
 
 .modulo-episodios .wrapper-episodios ul li .thumb-wrapper img {
   position: absolute;
+  border-radius: 5px;
   width: 100%;
   top: 0;
   left: 50%;
@@ -3290,6 +3298,7 @@ section .module-title a span {
 
 .modulo-episodios .wrapper-episodios ul li .footer-episodio .little-thumb img {
   position: absolute;
+  border-radius: 2px;
   width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -3437,6 +3446,7 @@ section .module-title a span {
 
 .modulo-miniplayer .wrapper-miniplayer ul li .episode-card .thumb img {
   position: absolute;
+  border-radius: 6px;
   width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -3585,7 +3595,7 @@ section .module-title a span {
 
 .modulo-canais-comp .wrapper-canais ul li .thumb-wrapper {
   width: 78px;
-  border-radius: 5px;
+  border-radius: 6px;
   overflow: hidden;
   position: relative;
   -ms-flex-negative: 0;
@@ -3642,6 +3652,7 @@ section .module-title a span {
 
 .modulo-canais-comp .wrapper-canais ul li .thumb-wrapper img {
   position: absolute;
+  border-radius: 6px;
   width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -3913,6 +3924,7 @@ section .module-title a span {
 
 .modulo-canais-mini .wrapper-canais ul li .thumb-img img {
   width: 100%;
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -3948,6 +3960,7 @@ section .module-title a span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  margin: 7px 0 15px;
 }
 
 .modulo-canais-mini .wrapper-canais ul li .header-title .title span {
@@ -3963,6 +3976,10 @@ section .module-title a span {
   width: -moz-max-content;
   width: max-content;
   margin-top: 8px;
+}
+
+.modulo-canais-mini .wrapper-canais ul li .header-title .menu-button {
+  margin-top: 10px;
 }
 
 .modulo-list-canais .wrapper-canais {
@@ -4101,7 +4118,7 @@ section .module-title a span {
 .modulo-list-canais .wrapper-canais ul li .thumb-wrapper {
   width: 56px;
   height: 56px;
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
   position: relative;
   -ms-flex-negative: 0;
@@ -4160,6 +4177,7 @@ section .module-title a span {
 
 .modulo-list-canais .wrapper-canais ul li .thumb-wrapper img {
   position: absolute;
+  border-radius: 5px;
   width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -4371,6 +4389,7 @@ section .module-title a span {
 .modulo-noticias .wrapper-noticias ul li .thumb-img img {
   width: 100%;
   position: absolute;
+  border-radius: 5px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -4471,7 +4490,7 @@ section .module-title a span {
 }
 
 .modulo-generos .wrappe-generos ul li .genero-card.style3 {
-  background: linear-gradient(135deg, #FFC700 0%, #ED9E28 53.13%, #E57321 98.44%);
+  background: linear-gradient(135deg, #FBCC87 0%, #FF730B 56.25%, #B94F00 97.92%);
 }
 
 .modulo-generos .wrappe-generos ul li .genero-card.style4 {
@@ -4714,6 +4733,13 @@ section .big-service-widget .widget-box {
   display: flex;
 }
 
+@media only screen and (min-width: 1300px) {
+  section .big-service-widget .widget-box {
+    padding: 28px 30px;
+    max-height: 154px;
+  }
+}
+
 section .big-service-widget .widget-box .wrap-box {
   width: 60%;
 }
@@ -4844,7 +4870,8 @@ section .small-service-widget .widget-box .wrap-box {
 
 @media only screen and (min-width: 1300px) {
   section .small-service-widget .widget-box .wrap-box {
-    padding: 20px;
+    padding: 21px 20px;
+    max-height: 154px;
   }
 }
 
@@ -4856,9 +4883,9 @@ section .small-service-widget .widget-box h5 {
 section .small-service-widget .widget-box p {
   color: #ffffff;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 18px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 
 section .small-service-widget .widget-box .btn-box {
@@ -5614,6 +5641,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .nowplaying .player-box .thumb-epi img {
   width: 100%;
+  border-radius: 16px;
 }
 
 .nowplaying .player-box .info-box {
@@ -5913,7 +5941,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .fila-sidebar .header-fila span {
   color: #fff;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -6114,6 +6142,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .fila-sidebar .list-epis ul li .thumb-epi img {
   width: 100%;
+  border-radius: 5px;
 }
 
 .fila-sidebar .list-epis ul li .text-box {
@@ -6139,7 +6168,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 .fila-sidebar .list-epis ul li .text-box .epi-name {
   font-size: 14px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   width: 100%;
   display: -webkit-box;
   overflow: hidden;
@@ -6205,7 +6234,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   .fila-sidebar .list-epis ul li .text-box .pod-name-box .podname {
     font-size: 12px;
     color: #f2f2f2;
-    font-weight: normal;
+    font-weight: 600;
   }
 }
 
@@ -6516,6 +6545,7 @@ section .small-service-widget .widget-box.style3 .btn-box a {
 
 .storie-box .stories-ola .header .sub-header .thumb-img img {
   width: 100%;
+  border-radius: 50%;
 }
 
 .storie-box .stories-ola .header .sub-header .text-box {

@@ -471,6 +471,7 @@ section{
                 img{
                     width: 100%;
                     position: absolute;
+                    border-radius: 5px;
                     left: 50%;
                     transform: translate(-50%, 0);
                 }
@@ -594,6 +595,7 @@ section{
                         }
                         img{
                             width: 100%;
+                            border-radius: 6px;
                             left: 50%;
                             position: absolute;
                             transform: translate(-50%, 0);
@@ -679,6 +681,7 @@ section{
 
                     img{
                         position: absolute;
+                        border-radius: 5px;
                         width: 100%;
                         top: 0;
                         left: 50%;
@@ -718,6 +721,7 @@ section{
                         display: flex;
                         img{
                             position: absolute;
+                            border-radius: 2px;
                             width: 100%;
                             left: 50%;
                             transform: translate(-50%, 0);
@@ -828,6 +832,7 @@ section{
                         }
                         img{
                             position: absolute;
+                            border-radius: 6px;
                             width: 100%;
                             left: 50%;
                             transform: translate(-50%, 0);
@@ -951,7 +956,7 @@ section{
                 .thumb-wrapper{
                     width: 78px;
                     //height: 78px;
-                    border-radius: 5px;
+                    border-radius: 6px;
                     overflow: hidden;
                     position: relative;
                     flex-shrink: 0;
@@ -992,6 +997,7 @@ section{
                     }
                     img{
                         position: absolute;
+                        border-radius: 6px;
                         width: 100%;
                         left: 50%;
                         transform: translate(-50%, 0);
@@ -1191,6 +1197,7 @@ section{
                     }
                     img{
                         width: 100%;
+                        border-radius: 5px;
                         position: absolute;
                         top: 0;
                         left: 50%;
@@ -1217,6 +1224,7 @@ section{
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 2;
+                            margin: 7px 0 15px;
                         }
                         span{
                             background: $pink;
@@ -1232,6 +1240,8 @@ section{
                         }
                     }
                     .menu-button{
+                        //display: none;
+                        margin-top: 10px;
                     }
                 }
             }
@@ -1359,7 +1369,7 @@ section{
                 .thumb-wrapper{
                     width: 56px;
                     height: 56px;
-                    border-radius: 2px;
+                    border-radius: 5px;
                     overflow: hidden;
                     position: relative;
                     flex-shrink: 0;
@@ -1402,6 +1412,7 @@ section{
                     }
                     img{
                         position: absolute;
+                        border-radius: 5px;
                         width: 100%;
                         left: 50%;
                         transform: translate(-50%, 0);
@@ -1553,6 +1564,7 @@ section{
                     img{
                         width: 100%;
                         position: absolute;
+                        border-radius: 5px;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
@@ -1640,7 +1652,7 @@ section{
                         background: linear-gradient(321.91deg, #D82220 2.78%, #E8623A 67.92%, #FF933E 134.43%);
                     }
                     &.style3{
-                        background: linear-gradient(135deg, #FFC700 0%, #ED9E28 53.13%, #E57321 98.44%);
+                        background: linear-gradient(135deg, #FBCC87 0%, #FF730B 56.25%, #B94F00 97.92%);;
                     }
                     &.style4{
                         background: linear-gradient(135deg, #FFC700 0%, #ED9E28 53.13%, #E57321 98.44%);
@@ -1835,6 +1847,10 @@ section{
             background: #ccc;
             border-radius: 5px;
             display: flex;
+            @include respond-to-min(1300){
+                padding: 28px 30px;
+                max-height: 154px;
+            }
             .wrap-box{
                 width: 60%;
             }
@@ -1926,7 +1942,8 @@ section{
                 border-radius: 5px;
                 
                 @include respond-to-min(1300){
-                    padding: 20px;
+                    padding: 21px 20px;
+                    max-height: 154px;
                 }
             }
             h5{
@@ -1936,9 +1953,9 @@ section{
             p{
                 color: $white;
                 font-size: 15px;
-                line-height: 20px;
+                line-height: 18px;
                 margin: 0;
-                margin-bottom: 20px;
+                margin-bottom: 7px;
             }
             .btn-box{
                 width: 100%;
@@ -2485,6 +2502,7 @@ section{
             overflow: hidden;
             img{
                 width: 100%;
+                border-radius: 16px;
             }
         }
         .info-box{
@@ -2701,7 +2719,7 @@ section{
         }
         span{
             color: #fff;
-            font-weight: 900;
+            font-weight: 600;
             font-size: 14px;
             &.close{
                 cursor: pointer;
@@ -2840,6 +2858,7 @@ section{
                     }
                     img{
                         width: 100%;
+                        border-radius: 5px;
                     }
                 }
                 .text-box{
@@ -2853,7 +2872,7 @@ section{
                     .epi-name{
                         font-size:14px;
                         color: #fff;
-                        font-weight: bold;
+                        font-weight: 500;
                         width: 100%;
                         display: -webkit-box;
                         overflow: hidden;
@@ -2900,7 +2919,7 @@ section{
                             @include respond-to-min(750){
                                 font-size: 12px;
                                 color: #f2f2f2;
-                                font-weight: normal;
+                                font-weight: 600;
                             }
                         }
                         .status{
@@ -3134,6 +3153,7 @@ section{
                     flex-shrink: 0;
                     img{
                         width: 100%;
+                        border-radius: 50%;
                     }
                 }
                 .text-box{
