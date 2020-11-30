@@ -1,13 +1,13 @@
 .light-mode{
     $text-primary: #030303;
     $text-secondary: #606060;
-
     background: #FAFAFA;
+
     section{
         
         .module-title{
             h2{
-                color: #030303;
+                color: $text-primary;
             }
         }
     }
