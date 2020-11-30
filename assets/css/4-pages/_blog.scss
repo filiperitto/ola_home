@@ -20,9 +20,12 @@
         @include respond-to-min(1000){
             padding-left: 20px;
         }
+        h2{
+            color: $text-primary;
+        }
         p{
             font-size: 18px;
-            color: #fff;
+            color: $text-secondary;
             padding-bottom: 30px;
         }
     }
@@ -73,6 +76,7 @@
             .wrap-post{
                 display: flex;
                 flex-direction: column;
+                height: 100%;
                 width: 100%;
                 background: #202020;
                 overflow: hidden;
@@ -110,7 +114,7 @@
                     .data-tag{
                         width: 100%;
                         color: #4B4B4A;
-                        font-size: 15px;
+                        font-size: 14px;
                         //margin-bottom: 15px;
                         .tag{
                             font-weight: bold;
@@ -131,15 +135,18 @@
                         }
                     }
                     .title{
-                        font-size: 36px;
+                        font-size: 30px;
+                        line-height: 38px;
                         margin: 30px 0;
+                        color: $text-primary;
                         a{
-                            color: #fff;
+                            color: $text-primary;
                         }
                     }
                     .intro{
-                        font-size: 24px;
-                        color: #8E8E8E;
+                        font-size: 18px;
+                        line-height: 26px;
+                        color: $text-secondary;
                         text-overflow: ellipsis;
                         white-space: normal;
                         display: -webkit-box;
@@ -149,7 +156,7 @@
                         height: 99px;
                     }
                     .autor{
-                        font-size: 18px;
+                        font-size: 14px;
                         color: #4B4B4A;
                         margin-top: 15px;
                     }
@@ -207,12 +214,13 @@
                         margin-top: 10px;
                     }
                     .date{
-                        font-size: 14px;
+                        font-size: 15px;
                     }
                 }
                 .content-box{
                     width: 100%;
                     max-width: 1130px;
+                    max-width: 1010px;
                     margin: auto;
                     display: flex;
                     flex-direction: column-reverse;
@@ -242,22 +250,26 @@
                         .headerPost{
                             width: 100%;
                             h1{
-                                font-size: 48px;
+                                font-size: 30px;
                                 margin-bottom: 30px;
                                 font-weight: 600;
+                                text-align: center;
+                                color: $text-primary;
                             }
                             h4{
                                 font-size: 18px;
-                                color: #8E8E8E;
+                                color: $text-secondary;
                                 font-weight: 500;
                                 padding-bottom: 30px;
+                                text-align: center;
                             }
                         }
                         .content-body{
                             p{
-                                font-size: 13px;
+                                font-size: 14px;
                                 line-height: 24px;
                                 margin-bottom: 15px;
+                                color: $text-primary;
                             }
                             blockquote{
                                 font-size: 15px;

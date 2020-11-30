@@ -737,6 +737,22 @@ template {
   color: #606060;
 }
 
+.light-mode .modulo-episodios .wrapper-episodios ul li .text-wrapper {
+  color: #030303;
+}
+
+.light-mode .modulo-episodios .wrapper-episodios ul li .footer-episodio .title p {
+  color: #606060;
+}
+
+.light-mode .modulo-miniplayer .wrapper-miniplayer ul li .episode-card .player-cont .epi-name {
+  color: #030303;
+}
+
+.light-mode .modulo-miniplayer .wrapper-miniplayer ul li .episode-card .player-cont .pod-name p {
+  color: #606060;
+}
+
 .light-mode .modulo-list-canais .wrapper-canais ul li .title-canal .text-wrapper p {
   color: #030303;
 }
@@ -1084,12 +1100,85 @@ template {
   fill: #606060;
 }
 
+.light-mode .blog-loop .module-title h2 {
+  color: #030303;
+}
+
+.light-mode .blog-loop .module-title p {
+  color: #606060;
+}
+
 .light-mode .blog-loop .loop article .wrap-post {
   background: #f4f4f4;
 }
 
+.light-mode .blog-loop .loop article .wrap-post .content-box .title {
+  color: #030303;
+}
+
 .light-mode .blog-loop .loop article .wrap-post .content-box .title a {
+  color: #030303;
+}
+
+.light-mode .blog-loop .loop article .wrap-post .content-box .intro {
   color: #606060;
+}
+
+.light-mode.single-post .header-blog-control {
+  background: #f2f2f2;
+  border-bottom: 1px solid #efefef;
+}
+
+.light-mode.single-post .loop article .wrap-post .author-box .thumb-author {
+  border-color: #f2f2f2;
+  -webkit-box-shadow: 0px 4px 4px rgba(71, 69, 69, 0.25);
+          box-shadow: 0px 4px 4px rgba(71, 69, 69, 0.25);
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .headerPost h1 {
+  color: #030303;
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .headerPost h4 {
+  color: #606060;
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .content-body p {
+  color: #030303;
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .content-body blockquote {
+  color: #606060;
+  background: url(../img/comma-white.png) no-repeat;
+  background-position: center 85%;
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .content-body blockquote::before {
+  background: #d8d8d8;
+}
+
+.light-mode.single-post .loop article .wrap-post .content-box .article-body .content-body blockquote::after {
+  background: #d8d8d8;
+}
+
+.light-mode.single-post .recents-box {
+  background: #f2f2f2;
+}
+
+.light-mode.single-post .recents-box .title {
+  color: #030303;
+}
+
+.light-mode.single-post .recents-box .wrap-post-recent article {
+  background: #fff;
+}
+
+.light-mode.single-post .recents-box .wrap-post-recent article .header-card h5 {
+  color: #606060;
+}
+
+.light-mode.single-post .recents-box .wrap-post-recent article .title-box h4 {
+  color: #030303;
 }
 
 body.light-mode {
@@ -2674,7 +2763,7 @@ section .module-title {
 
 section .module-title h2 {
   padding: 30px 0 5px;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 section .module-title h3 {
@@ -3266,6 +3355,7 @@ section .module-title a span {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   width: 100%;
+  color: #FFFFFF;
 }
 
 .modulo-episodios .wrapper-episodios ul li .footer-episodio {
@@ -3329,6 +3419,7 @@ section .module-title a span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #B2B2B2;
 }
 
 .modulo-episodios .wrapper-episodios ul li .footer-episodio .title span {
@@ -3475,7 +3566,7 @@ section .module-title a span {
   white-space: normal;
   font-weight: 600;
   display: -webkit-box;
-  color: #fff;
+  color: #FFFFFF;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   width: 100%;
@@ -3520,6 +3611,7 @@ section .module-title a span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #B2B2B2;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -6776,9 +6868,13 @@ body #novos-canais,
   }
 }
 
+.blog-loop .module-title h2 {
+  color: #FFFFFF;
+}
+
 .blog-loop .module-title p {
   font-size: 18px;
-  color: #fff;
+  color: #B2B2B2;
   padding-bottom: 30px;
 }
 
@@ -6855,6 +6951,7 @@ body #novos-canais,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
   width: 100%;
   background: #202020;
   overflow: hidden;
@@ -6911,7 +7008,7 @@ body #novos-canais,
 .blog-loop .loop article .wrap-post .content-box .data-tag {
   width: 100%;
   color: #4B4B4A;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .blog-loop .loop article .wrap-post .content-box .data-tag .tag {
@@ -6936,17 +7033,20 @@ body #novos-canais,
 }
 
 .blog-loop .loop article .wrap-post .content-box .title {
-  font-size: 36px;
+  font-size: 30px;
+  line-height: 38px;
   margin: 30px 0;
+  color: #FFFFFF;
 }
 
 .blog-loop .loop article .wrap-post .content-box .title a {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .blog-loop .loop article .wrap-post .content-box .intro {
-  font-size: 24px;
-  color: #8E8E8E;
+  font-size: 18px;
+  line-height: 26px;
+  color: #B2B2B2;
   text-overflow: ellipsis;
   white-space: normal;
   display: -webkit-box;
@@ -6957,7 +7057,7 @@ body #novos-canais,
 }
 
 .blog-loop .loop article .wrap-post .content-box .autor {
-  font-size: 18px;
+  font-size: 14px;
   color: #4B4B4A;
   margin-top: 15px;
 }
@@ -7029,12 +7129,13 @@ body #novos-canais,
 }
 
 .single-post .loop article .wrap-post .author-box .date {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .single-post .loop article .wrap-post .content-box {
   width: 100%;
   max-width: 1130px;
+  max-width: 1010px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7097,22 +7198,26 @@ body #novos-canais,
 }
 
 .single-post .loop article .wrap-post .content-box .article-body .headerPost h1 {
-  font-size: 48px;
+  font-size: 30px;
   margin-bottom: 30px;
   font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .single-post .loop article .wrap-post .content-box .article-body .headerPost h4 {
   font-size: 18px;
-  color: #8E8E8E;
+  color: #B2B2B2;
   font-weight: 500;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .single-post .loop article .wrap-post .content-box .article-body .content-body p {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   margin-bottom: 15px;
+  color: #FFFFFF;
 }
 
 .single-post .loop article .wrap-post .content-box .article-body .content-body blockquote {
