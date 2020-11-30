@@ -99,7 +99,7 @@
                 breakpoint: 360,
                 settings: {
                     // Set to `auto` and provide item width to adjust to viewport
-                    slidesToShow: 2.5,
+                    slidesToShow: 2.2,
                     slidesToScroll: 1
                 }
             },
