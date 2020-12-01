@@ -236,7 +236,7 @@
                     }
                     .container-infos{
                         display: flex;
-                        padding-left: 10px;
+                        padding-left: 20px;
                         @include respond-to-min(750){
                             width: calc(100% - 166px);
                             flex-direction: column;
@@ -329,6 +329,33 @@
                                     &.menu-button-li{
                                         flex-shrink: 0;
                                         display: flex;
+                                    }
+                                    button{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        svg{
+                                            path{
+                                                fill: $text-secondary;
+                                            }
+                                        }
+                                        span{
+                                            transition: none;
+                                            color: $text-secondary;
+                                            font-weight: 700;
+                                            margin-left: 5px;
+                                        }
+                                        &.active,
+                                        &:active{
+                                            svg{
+                                                path{
+                                                    fill: #59A6F8;
+                                                }
+                                            }
+                                            span{
+                                                color: #59A6F8;
+                                            }
+                                        }
                                     }
                                 }
                             }

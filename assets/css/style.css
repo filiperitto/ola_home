@@ -7778,7 +7778,7 @@ body #novos-canais,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -7912,6 +7912,38 @@ body #novos-canais,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg path {
+  fill: #B2B2B2;
+}
+
+.canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button span {
+  -webkit-transition: none;
+  transition: none;
+  color: #B2B2B2;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active svg path, .canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active svg path {
+  fill: #59A6F8;
+}
+
+.canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active span, .canaisPage .tab-painel .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active span {
+  color: #59A6F8;
 }
 
 @media only screen and (min-width: 1000px) {
