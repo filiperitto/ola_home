@@ -633,9 +633,12 @@ body,
     font-weight: 700;
     color: $white;
     background: $blue;
-    padding: 10px 15px 10px;
+    padding: 7px 10px;
     border-radius: 27px;
     border: 2px solid $blue;
+    @include respond-to-min(400){
+        padding: 10px 25px 10px;
+    }
     &:hover{
         background: #0D3789;
         border: 2px solid $blue;
@@ -643,6 +646,12 @@ body,
     &:active{
         border: 0;
         transform: scale(.96)
+    }
+    &.transp{
+        background: transparent;
+        &:hover{
+            background: #0D3789;
+        }
     }
 }
 
