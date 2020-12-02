@@ -1486,7 +1486,7 @@ h4 {
 }
 
 h5 {
-  font-style: 16px;
+  font-size: 16px;
 }
 
 .small, small {
@@ -5067,6 +5067,46 @@ section .small-service-widget .widget-box.style3 .btn-box a {
   }
 }
 
+section .small-service-widget .widget-box.style4 .wrap-box {
+  background: #0942B1;
+}
+
+section .small-service-widget .widget-box.style4 h5 {
+  color: #FFCB00;
+}
+
+section .small-service-widget .widget-box.style4 p {
+  color: #F2F2F2;
+}
+
+section .small-service-widget .widget-box.style4 .btn-box a {
+  width: 100%;
+  text-align: center;
+  background: #00AFE0;
+  font-weight: bold;
+  color: #0942B1;
+}
+
+section .small-service-widget .widget-box.style5 .wrap-box {
+  background: url(../img/bg_podcast2.png) no-repeat center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+section .small-service-widget .widget-box.style5 .btn-box a {
+  width: 100%;
+  text-align: center;
+  background: #FFB44A;
+  font-weight: bold;
+  color: #6426E0;
+}
+
 @media only screen and (min-width: 750px) {
   .glider {
     overflow: hidden;
@@ -7740,6 +7780,16 @@ body #novos-canais,
   color: #FFFFFF;
 }
 
+.canaisPage .tabnavbar ul li.disabled {
+  color: #5B5B5B;
+}
+
+.canaisPage .tabnavbar ul li.disabled:hover {
+  cursor: default;
+  color: #5B5B5B;
+  border-bottom: 2px solid #4c4c4c;
+}
+
 .canaisPage .tab_painel {
   display: none;
   -webkit-animation: fadeEffect 1s;
@@ -8470,6 +8520,8 @@ body #novos-canais,
 
 .canaisPage .tab-playlist .wrapper-miniplayer {
   overflow: hidden;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .canaisPage .tab-playlist .wrapper-miniplayer ul {
@@ -8492,6 +8544,12 @@ body #novos-canais,
   margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card {
+    margin-bottom: 0;
+  }
+}
+
 .canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card .thumb {
   width: 72px;
   height: 72px;
@@ -8508,5 +8566,568 @@ body #novos-canais,
   max-width: 100%;
   width: 100%;
   margin-left: 10px;
+}
+
+.canaisPage .tab-playlist .playlist-epi {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .wrapper-episodios {
+  width: 100%;
+  padding: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios {
+    width: 75%;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -2.5%;
+  margin-right: -2.5%;
+}
+
+@media only screen and (min-width: 500px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul {
+    margin-left: -1%;
+    margin-right: -1%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul {
+    margin-left: -2.5%;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul {
+    margin-left: -1%;
+    margin-right: 0;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item {
+  display: none;
+  max-width: 45%;
+  min-width: 0;
+  margin: 0 2.5% 2.5%;
+  padding: 0;
+}
+
+.canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(1), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(2), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(3), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(4), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(5) {
+  display: block;
+}
+
+@media only screen and (min-width: 500px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item {
+    max-width: 31%;
+    margin: 0 1% 0;
+  }
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(3), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(4) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item {
+    max-width: 45%;
+    min-width: 0;
+    margin: 0 2.5% 0;
+  }
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(3), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(4), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(5) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item {
+    max-width: 23%;
+    margin: 0 1% 0;
+  }
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(3), .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(4) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item {
+    max-width: 18%;
+    margin: 0 1% 0;
+  }
+  .canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item:nth-child(5) {
+    display: block;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .wrapper-episodios ul .item .footer-episodio {
+  max-width: 100%;
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget {
+    width: 25%;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets {
+  width: 105%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-left: -2.5%;
+  margin-right: -2.5%;
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box {
+  width: 45%;
+  padding: 0;
+  margin: 0 2.5% 2.5%;
+}
+
+@media only screen and (min-width: 1300px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box .wrap-box {
+    max-height: initial;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 500px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 h5 {
+    font-size: 21px;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 p {
+  font-size: 13px;
+  margin-bottom: 45px;
+}
+
+@media only screen and (min-width: 500px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 p {
+    font-size: 15px;
+    margin-bottom: 45px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 p {
+    font-size: 15px;
+    margin-bottom: 75px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 p {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 p {
+    margin-bottom: 46px;
+  }
+}
+
+.canaisPage .tab-playlist .playlist-epi .small-service-widget .wrap-widgets .widget-box.style4 .btn-box a {
+  padding: 12px 14px 10px;
+}
+
+.canaisPage .tab-playlist .recomendados {
+  margin-bottom: 20px;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais {
+  width: 100%;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul {
+  width: 105%;
+  margin-left: -2.5%;
+  margin-right: -2.5%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul {
+    width: 102%;
+    margin-left: -1%;
+    margin-right: -1%;
+  }
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 95%;
+  margin: 0 2.5% 2.5%;
+  padding: 0;
+  display: none;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(1), .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(2), .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(3), .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 500px) {
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li {
+    width: 45%;
+    margin: 0 2.5% 2.5%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li {
+    width: 31%;
+    margin: 0 1% 1%;
+  }
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(4) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li {
+    width: 23%;
+    margin: 0 1% 1%;
+  }
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li {
+    width: 18%;
+    margin: 0 1% 1%;
+  }
+  .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li:nth-child(5) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li.original .title-canal .text-wrapper span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper p {
+  height: 30px;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper span {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper .title p {
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.canaisPage .tab-comments .wrap-comments {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-comments .wrap-comments {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-comments .wrap-comments .field-comments {
+    width: 40%;
+  }
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: #FFFFFF;
+  margin-right: 25px;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box {
+  direction: rtl;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg path {
+  fill: #a5a5a5;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg.checked path {
+  fill: #FF005A;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box > svg:hover path,
+.canaisPage .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box > svg:hover ~ svg path {
+  fill: #FF005A;
+  stroke: #CF215E;
+  stroke-width: 0.5px;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments form {
+  width: 100%;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments form textarea {
+  width: 100%;
+  min-height: 202px;
+  background: #202020;
+  border-radius: 10px;
+  color: #5B5B5B;
+  border: none;
+  padding: 16px 12px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-comments .wrap-comments .comments-timeline {
+    width: 60%;
+    padding-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .canaisPage .tab-comments .wrap-comments .comments-timeline {
+    padding-right: 110px;
+  }
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0 20px;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .thumb-img {
+  width: 73px;
+  height: 73px;
+  border-radius: 20px;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .thumb-img img {
+  width: 100%;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .text-cont {
+  width: 100%;
+  padding-left: 20px;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .text-cont h5 {
+  color: #FFFFFF;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .text-cont p {
+  color: #B2B2B2;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box {
+  direction: rtl;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg path {
+  fill: #a5a5a5;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg.checked path {
+  fill: #FF005A;
+}
+
+.canaisPage .tab-comments .wrap-comments .comments-timeline article .text-comment p {
+  color: #B2B2B2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */

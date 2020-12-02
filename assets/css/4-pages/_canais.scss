@@ -227,6 +227,14 @@
                     border-color: #FF005A;
                     color: $text-primary;
                 }
+                &.disabled{
+                    color: #5B5B5B;
+                    &:hover{
+                        cursor: default;
+                        color: #5B5B5B;
+                        border-bottom: 2px solid #4c4c4c;
+                    }
+                }
             }
         }
     }
@@ -705,6 +713,8 @@
     .tab-playlist{
         .wrapper-miniplayer{
             overflow: hidden;
+            padding: 0;
+            margin-bottom: 20px;
             ul{
                 flex-wrap: wrap;
                 @include respond-to-min(1000){
@@ -714,6 +724,9 @@
                     max-width: 100%;
                     .episode-card{
                         margin-bottom: 20px;
+                        @include respond-to-min(1000){
+                            margin-bottom: 0;
+                        }
                         .thumb{
                             width: 72px;
                             height: 72px;
@@ -728,6 +741,419 @@
                             margin-left: 10px;
                         }
                         .menu-button-wrap{
+
+                        }
+                    }
+                }
+            }
+        }
+        .playlist-epi{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            @include respond-to-min(1000){
+                flex-direction: row;
+            }
+            .wrapper-episodios{
+                width: 100%;
+                padding: 0;
+                @include respond-to-min(1000){
+                    width: 50%;
+                }
+                @include respond-to-min(1300){
+                    width: 60%;
+                }
+                @include respond-to-min(1400){
+                    width: 65%;
+                }
+                @include respond-to-min(1600){
+                    width: 75%;
+                }
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-left: -2.5%;
+                    margin-right: -2.5%;
+                    @include respond-to-min(500){
+                        margin-left: -1%;
+                        margin-right: -1%;
+                    }
+                    @include respond-to-min(1000){
+                        margin-left: -2.5%;
+                        margin-right: 0;
+                    }
+                    @include respond-to-min(1300){
+                        margin-left: -1%;
+                        margin-right: 0;
+                    }
+                    .item{
+                        display: none;
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5){
+                            display: block;
+                        }
+                        
+                        max-width: 45%;
+                        min-width: 0;
+                        margin: 0 2.5% 2.5% ;
+                        padding: 0;
+                        @include respond-to-min(500){
+                            max-width: 31%;
+                            margin: 0 1% 0;
+                            &:nth-child(3),
+                            &:nth-child(4){
+                                display: none;
+                            }
+                        }
+                        @include respond-to-min(1000){
+                        
+                            max-width: 45%;
+                            min-width: 0;
+                            margin: 0 2.5% 0;
+                            &:nth-child(3),
+                            &:nth-child(4),
+                            &:nth-child(5){
+                                display: none;
+                            }
+                        }
+                        @include respond-to-min(1200){
+                            max-width: 23%;
+                            margin: 0 1% 0;
+                            &:nth-child(3),
+                            &:nth-child(4){
+                                display: block;
+                            }
+                        }
+                        @include respond-to-min(1600){
+                            max-width: 18%;
+                            margin: 0 1% 0;
+                            &:nth-child(5){
+                                display: block;
+                            }
+                        }
+                        .footer-episodio{
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .small-service-widget{
+                display: block;
+                position: relative;
+                width: 100%;
+                padding: 0;
+                @include respond-to-min(750){
+                    padding: 0;
+                }
+                @include respond-to-min(1000){
+                    width: 50%;
+                }
+                @include respond-to-min(1300){
+                    width: 40%;
+                }
+                @include respond-to-min(1400){
+                    width: 35%;
+                }
+                @include respond-to-min(1600){
+                    width: 25%;
+                }
+                .wrap-widgets{
+                    width: 105%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0;
+                    padding: 0;
+                    margin-left: -2.5%;
+                    margin-right: -2.5%;
+
+                    .widget-box{
+                        //display: block;
+                        width: 45%;
+                        padding: 0;
+                        margin: 0 2.5% 2.5%;
+                        .wrap-box{
+                            @include respond-to-min(1300){
+                                max-height: initial;
+                            }
+                        }
+                        &.style4{
+                            h5{
+                                font-size: 18px;
+                                margin-bottom: 15px;
+                                @include respond-to-min(500){
+                                    font-size: 21px;
+                                }
+                            }
+                            p{
+                                font-size: 13px;
+                                margin-bottom: 45px;
+                                @include respond-to-min(500){
+                                    font-size: 15px;
+                                    margin-bottom: 45px;
+                                }
+                                @include respond-to-min(600){
+                                    font-size: 15px;
+                                    margin-bottom: 75px;
+                                }
+                                @include respond-to-min(1000){
+                                    margin-bottom: 15px;
+                                }
+                                @include respond-to-min(1600){
+                                    margin-bottom: 46px;
+                                }
+                            }
+                            .btn-box{
+                                a{
+                                    padding: 12px 14px 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .recomendados{
+            margin-bottom: 20px;
+            .wrapper-canais{
+                width: 100%;
+                .wrap-epis{
+                    ul{
+                        width: 105%;
+                        margin-left: -2.5%;
+                        margin-right: -2.5%;
+                        @include respond-to-min(1000){    
+                            width: 102%;
+                            margin-left: -1%;
+                            margin-right: -1%;
+                        }
+                        li{    
+                            align-items: flex-start;
+                            width: 95%;
+                            margin: 0 2.5% 2.5%;
+                            padding: 0;
+                            display: none;
+                            &:nth-child(1),
+                            &:nth-child(2),
+                            &:nth-child(3),
+                            &:nth-child(4){
+                                display: flex;
+                            }
+                            @include respond-to-min(500){
+                                width: 45%;
+                                margin: 0 2.5% 2.5%;
+                            }
+                            @include respond-to-min(1000){
+                                width: 31%;
+                                margin: 0 1% 1%;
+                                &:nth-child(4){
+                                    display: none;
+                                }
+                            }
+                            @include respond-to-min(1200){
+                                width: 23%;
+                                margin: 0 1% 1%;
+                                &:nth-child(4){
+                                    display: flex;
+                                }
+                            }
+                            @include respond-to-min(1500){
+                                width: 18%;
+                                margin: 0 1% 1%;
+                                &:nth-child(5){
+                                    display: flex;
+                                }
+                            }
+                            &.original{
+                                
+                                .title-canal{
+                                    .text-wrapper{
+                                        span{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }
+                            .title-canal{
+                                width: 100%;
+                                flex: auto;
+                                .text-wrapper{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    p{
+                                        height: 30px;
+                                    }
+                                    span{
+                                        opacity: 0;
+                                        visibility: hidden;
+                                    }
+                                    .title{
+                                        p{
+                                            height: auto;
+                                            margin: 0;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: normal;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .tab-comments{
+        .wrap-comments{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            @include respond-to-min(1000){
+                flex-direction: row-reverse;
+            }
+            .field-comments{
+                width: 100%;
+                @include respond-to-min(1000){
+                    width: 40%;
+                }
+                .avaliacoes{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    p{
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 800;
+                        line-height: 17px;
+                        letter-spacing: 0px;
+                        text-align: right;
+                        color: $text-primary;
+                        margin-right: 25px;
+                    }
+                    
+                    .svg-box{
+                        direction: rtl;
+                        svg{
+                            display: inline-block;
+                            cursor: pointer;
+                            path{
+                                fill: #a5a5a5;
+                            }
+                            
+                            &.checked{
+                                path{
+                                    fill: #FF005A;
+                                }
+                            }
+                        }
+                        & > svg{
+                            &:hover,
+                            &:hover ~ svg{
+                                path{
+                                    fill: #FF005A;
+                                    stroke: #CF215E;
+                                    stroke-width: 0.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                form{
+                    width: 100%;
+                    textarea{
+                        width: 100%;
+                        min-height: 202px;
+                        background: #202020;
+                        border-radius: 10px;
+                        color: #5B5B5B;
+                        border: none;
+                        padding: 16px 12px;
+                        transition: none;
+                    }
+                }
+            }
+
+            .comments-timeline{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                @include respond-to-min(1000){
+                    width: 60%;
+                    padding-right: 50px;
+                }
+                @include respond-to-min(1200){
+                    padding-right: 110px;
+                }
+                article{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    .header-comment{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 0 20px;
+                        .thumb-img{
+                            width: 73px;
+                            height: 73px;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            flex-shrink: 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .text-cont{
+                            width: 100%;
+                            padding-left: 20px;
+                            h5{
+                                color: $text-primary;
+                            }
+                            p{
+                                color: $text-secondary;
+                            }
+                        }
+                        .avaliacoes{
+                            flex-shrink: 0;
+                            .svg-box{
+                                direction: rtl;
+                                svg{
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    path{
+                                        fill: #a5a5a5;
+                                    }
+                                    
+                                    &.checked{
+                                        path{
+                                            fill: #FF005A;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .text-comment{
+                        p{
+                            color: $text-secondary;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 19px;
+                            letter-spacing: 0px;
+                            text-align: left;
 
                         }
                     }
