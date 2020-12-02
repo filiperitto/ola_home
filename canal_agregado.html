@@ -507,9 +507,9 @@
             </section>
             <section class="tabnavbar scrollhere">
                 <ul>
-                    <li class="tablinks active" onclick="openTab(event, 'episodios_tab')" id="defaultOpen">episodios</li>
+                    <li class="tablinks active" onclick="openTab(event, 'episodios_tab')">episodios</li>
                     <li class="tablinks" onclick="openTab(event, 'sobre_tab')">Sobre</li>
-                    <li class="tablinks" onclick="openTab(event, 'playlist_tab')">playlist</li>
+                    <li class="tablinks" onclick="openTab(event, 'playlist_tab')" id="defaultOpen">playlist</li>
                     <li class="tablinks" onclick="openTab(event, 'alos_tab')">Alos</li>
                     <li class="tablinks" onclick="openTab(event, 'host_tab')">host</li>
                     <li class="tablinks" onclick="openTab(event, 'comentarios_tab')">Comentarios</li>
@@ -519,7 +519,9 @@
             <section id="episodios_tab" class="tab_painel tab-episodes">
                 <div class="last-epi">
                     <div class="epi-card">
-                        <h3>Ultimo Episódio</h3>
+                        <div class="module-title">
+                            <h3>Ultimo Episódio</h3>
+                        </div>
                         <div class="wrap-epi">
                             <div class="thumb-epi">
                                 <img alt="epi-thumb" src="./assets/img/epi1-mamilos.png">
@@ -1539,7 +1541,130 @@
                 </div>
             </section>
             
-            <section id="playlist_tab" class="tab_painel">
+            <section id="playlist_tab" class="tab_painel tab-playlist">
+                
+                <div id='continuar-ouvindo' class="modulo-miniplayer">
+                    <div class="module-title">
+                        <h3>Continue Ouvindo</h3>
+                    </div>
+
+                    <div class="wrapper-miniplayer scrollhere">
+                        <ul>
+                            <li>
+                                <div class="episode-card">
+                                    <div class="thumb cta-player">
+                                        <div class="player">
+                                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <img class="lazyload" alt="" src="assets/img/thumb-mamilos/Rectangle-85.png">
+                                    </div>
+                                    <div class="player-cont">
+                                        <div class="epi-name">Mamilos Cultura #6 - Livro "E foi assim que eu e a escuridão...</div>
+                                        <div class="progress-slider">
+                                            <div class="progress" style="width: 35%;">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="menu-button-wrap cta-menu-epi">
+
+                                        <button class="menu-button">
+                                            <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="episode-card">
+                                    <div class="thumb cta-player">
+                                        <div class="player">
+                                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <img class="lazyload" alt="" src="assets/img/thumb-mamilos/Rectangle-86-1.png">
+                                    </div>
+                                    <div class="player-cont">
+                                        <div class="epi-name">Dá pra educar sem castigar?</div>
+                                        <div class="progress-slider">
+                                            <div class="progress" style="width: 65%;">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="menu-button-wrap cta-menu-epi">
+
+                                        <button class="menu-button">
+                                            <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="episode-card">
+                                    <div class="thumb cta-player">
+                                        <div class="player">
+                                            <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <img class="lazyload" alt="" data-src="assets/img/thumb-miniplayer3.jpg">
+                                    </div>
+                                    <div class="player-cont">
+                                        <div class="epi-name">Mamilos Cultura #5 - Livro Simplesmente Bela: ...</div>
+                                        <div class="progress-slider">
+                                            <div class="progress" style="width: 15%;">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="menu-button-wrap cta-menu-epi">
+
+                                        <button class="menu-button">
+                                            <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+
             </section>
             
             <section id="alos_tab" class="tab_painel">

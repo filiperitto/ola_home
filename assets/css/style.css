@@ -8467,4 +8467,46 @@ body #novos-canais,
   top: 0;
   left: 5px;
 }
+
+.canaisPage .tab-playlist .wrapper-miniplayer {
+  overflow: hidden;
+}
+
+.canaisPage .tab-playlist .wrapper-miniplayer ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-playlist .wrapper-miniplayer ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.canaisPage .tab-playlist .wrapper-miniplayer ul li {
+  max-width: 100%;
+}
+
+.canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card {
+  margin-bottom: 20px;
+}
+
+.canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card .thumb {
+  width: 72px;
+  height: 72px;
+}
+
+@media only screen and (min-width: 1600px) {
+  .canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card .thumb {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.canaisPage .tab-playlist .wrapper-miniplayer ul li .episode-card .player-cont {
+  max-width: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
 /*# sourceMappingURL=style.css.map */
