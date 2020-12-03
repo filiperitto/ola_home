@@ -86,6 +86,43 @@
                     }
 
                 }
+                .host-intro{
+                    display: none;
+                    margin-bottom: 10px;
+                    .host-box{
+                        display: flex;
+                        margin-right: 10px;
+                        .thumb{
+                            width: 35px;
+                            height: 35px;
+                            overflow: hidden;
+                            border-radius: 20px;
+                            flex-shrink: 0;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .text-box{
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            h5,
+                            p{
+                                font-size: 14px;
+                            }
+                            h5{
+                                color: $text-primary;
+                            }
+                            p{
+                                color: $text-secondary;
+                            }
+                        }
+                    }
+                    @include respond-to-min(950){
+                        display: flex;
+                    }
+
+                }
                 .list-actions{
                     width: 100%;
                     ul{

@@ -7600,6 +7600,63 @@ body #novos-canais,
           transform: rotate(180deg);
 }
 
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .thumb {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .thumb img {
+  width: 100%;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 10px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box h5,
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box p {
+  font-size: 14px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box h5 {
+  color: #FFFFFF;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box p {
+  color: #B2B2B2;
+}
+
+@media only screen and (min-width: 950px) {
+  .canaisPage .hero-canal .wrap-hero .container-text .host-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .canaisPage .hero-canal .wrap-hero .container-text .list-actions {
   width: 100%;
 }
