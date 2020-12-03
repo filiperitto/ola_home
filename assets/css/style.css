@@ -1238,16 +1238,6 @@ canvas {
   transition: all 200ms ease-in-out;
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
 hr {
   display: block;
   height: 1px;
@@ -9117,6 +9107,10 @@ body #novos-canais,
   padding: 16px 12px;
   -webkit-transition: none;
   transition: none;
+}
+
+.canaisPage .tab-comments .wrap-comments .field-comments form .btn {
+  margin-top: 15px;
 }
 
 .canaisPage .tab-comments .wrap-comments .comments-timeline {
