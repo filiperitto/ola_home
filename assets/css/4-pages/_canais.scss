@@ -1,6 +1,7 @@
 .canaisPage{
     .hero-canal{
         display: flex;
+        position: relative;
         .wrap-hero{
             width: 100%;
             display: flex;
@@ -43,6 +44,18 @@
                 .infos-container{
                     margin-bottom: 15px;
                     font-size: 14px;
+                    .selo{
+                        background: #FF005A;
+                        color: #ffffff;
+                        font-size: 8px;
+                        font-weight: bold;
+                        padding: 3px 6px 1px;
+                        border-radius: 20px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        width: max-content;
+                        margin-right: 10px;
+                    }
                     .inscritos{
                         color: $text-primary;
                         font-weight: 900;
@@ -249,6 +262,24 @@
                         }
                     }
                 }
+            }
+        }
+        .bg-original{
+            width: 100%;
+            height: 365px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../img/bg-canal-original-mobile.jpg) no-repeat bottom center;
+            background-size: cover;
+            z-index: -1;
+            .mask{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 69.43%, #181818 90.31%);
             }
         }
     }
@@ -1406,6 +1437,14 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    &.original{
+        .wrap-hero{
+            .thumb-container{
+                opacity: 0;
             }
         }
     }
