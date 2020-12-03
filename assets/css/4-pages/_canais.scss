@@ -15,6 +15,9 @@
                 margin: 30px 0 20px;
                 max-width: 210px;
                 width: 100%;
+                @include respond-to-min(1200){
+                    max-width: 265px;
+                }
                 img{
                     width: 100%;
                 }
@@ -24,10 +27,14 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
                 @include respond-to-min(750){
                     align-items: flex-start;
                     padding-left: 20px;
                     margin: 30px 0 0;
+                    min-height: 265px;
+                    justify-content: space-between;
+                    text-align: left;
                 }
                 h2{
                     color: $text-primary;
@@ -78,11 +85,23 @@
                         svg{
                             width: 12px;
                         }
+                        @include respond-to-min(750){
+                            display: none;
+                        }
                         &.active{
                             svg{
                                 transform: rotate(180deg);
                             }
                         }
+                    }
+                    .ver-mais-text-cta{
+                        @include respond-to-max(750){
+                            display: none;
+                        }
+                        text-align: right;
+                        cursor: pointer;
+                        margin: 5px 0;
+                        color: #FF005A;
                     }
 
                 }
@@ -130,6 +149,7 @@
                         margin: 0;
                         padding: 0;
                         list-style: none;
+                        min-height: 42px;
                         --gap-list-actions: 1rem;
                         justify-content: center;
                         @include respond-to-min(750){
@@ -1192,6 +1212,194 @@
                             letter-spacing: 0px;
                             text-align: left;
 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab-alos{
+        .wrap-alos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            --gap-alos: 10px;
+            flex-wrap: wrap;
+            @include respond-to-min(1000){
+                width: calc(100% + 20px);
+                flex-direction: row;
+                margin-left: -20px;
+            }
+            .alos{ 
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0 30px 0;
+                @include respond-to-min(1000){
+                    margin-left: 20px;
+                    width: calc(33.3% - 20px);
+                }
+                .img-container{
+                    margin: 4px 16px 8px 10px;
+                    justify-content: center;
+                    flex: none;
+                    align-self: center;
+                    display: block;
+                    align-items: center;
+                    position: relative;
+                    flex-shrink: 0;
+                    .border-wrap{
+                        position: absolute;
+                        top: -7px;
+                        left: -7px;
+                        width: 79px;
+                        height: 79px;
+                    
+                        border-radius: 50%;
+                        border: 2px solid #E5813F;
+                        @include respond-to-min(1000){
+                            width: 73px;
+                            height: 73px;
+                            top: -6px;
+                            left: -6px;
+                        }
+                        &.gray{
+                            border-color: #4A4A49;
+                        }
+                    }
+                    .img-wrapper{
+                        width: 65px;
+                        height: 65px;
+                        background-color: rgba(var(--b3f,250,250,250),1);
+                        border-radius: 50%;
+                        display: block;
+                        flex: 0 0 auto;
+                        overflow: hidden;
+                        position: relative;
+                        @include respond-to-min(1000){
+                            width: 61px;
+                            height: 61px;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .text-box{
+                    width: 100%;
+                    background: #202020;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    .info{
+                        h5{
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                        }
+                        p{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab-host{
+        .wrap-host{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            @include respond-to-min(750){
+                width: calc(100% + 20px);
+                margin-left: -20px;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .host-box{
+                width: 100%;
+                margin: 20px 0;
+                @include respond-to-min(750){
+                    width: calc(50% - 20px);
+                    margin-left: 20px;
+                }
+                @include respond-to-min(1000){
+                    width: calc(33.3% - 20px);
+                    margin-left: 20px;
+                }
+                @include respond-to-min(1500){
+                    width: calc(25% - 20px);
+                    margin-left: 20px;
+                }
+                .header{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    align-items: center;
+                    .thumb{
+                        flex-shrink: 0;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .text-info{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding-left: 10px;
+                        h5{
+                            font-size: 14px;
+                            font-weight: 800;
+                            margin-bottom: 2px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                    .btn{
+                        flex-shrink: 0;
+                        padding: 2px 16px;
+                    }
+                }
+                .content-info{
+                    width: 100%;
+                    margin-bottom: 25px;
+                    p{
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: $text-secondary;
+                        margin-bottom: 0;
+                    }
+                }
+                .canais-info-footer{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    h5{
+
+                    }
+                    .canais{
+                        width: calc(100% + 10px);
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-left: -10px;
+                        a{
+                            width: 54px;
+                            height: 54px;
+                            border-radius: 5px;
+                            overflow: hidden;
+                            margin-left: 10px;
+                        }
+                        img{
+                            width: 100%;
                         }
                     }
                 }

@@ -2385,8 +2385,8 @@ body::-webkit-scrollbar-thumb:hover,
 
 .btn:active {
   border: 0;
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
 }
 
 .btn.transp {
@@ -7497,6 +7497,12 @@ body #novos-canais,
   width: 100%;
 }
 
+@media only screen and (min-width: 1200px) {
+  .canaisPage .hero-canal .wrap-hero .thumb-container {
+    max-width: 265px;
+  }
+}
+
 .canaisPage .hero-canal .wrap-hero .thumb-container img {
   width: 100%;
 }
@@ -7513,6 +7519,7 @@ body #novos-canais,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 @media only screen and (min-width: 750px) {
@@ -7522,6 +7529,11 @@ body #novos-canais,
             align-items: flex-start;
     padding-left: 20px;
     margin: 30px 0 0;
+    min-height: 265px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
   }
 }
 
@@ -7595,9 +7607,28 @@ body #novos-canais,
   width: 12px;
 }
 
+@media only screen and (min-width: 750px) {
+  .canaisPage .hero-canal .wrap-hero .container-text .intro .ver-mais {
+    display: none;
+  }
+}
+
 .canaisPage .hero-canal .wrap-hero .container-text .intro .ver-mais.active svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .intro .ver-mais-text-cta {
+  text-align: right;
+  cursor: pointer;
+  margin: 5px 0;
+  color: #FF005A;
+}
+
+@media only screen and (max-width: 750px) {
+  .canaisPage .hero-canal .wrap-hero .container-text .intro .ver-mais-text-cta {
+    display: none;
+  }
 }
 
 .canaisPage .hero-canal .wrap-hero .container-text .host-intro {
@@ -7668,6 +7699,7 @@ body #novos-canais,
   margin: 0;
   padding: 0;
   list-style: none;
+  min-height: 42px;
   --gap-list-actions: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -9186,5 +9218,296 @@ body #novos-canais,
   line-height: 19px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.canaisPage .tab-alos .wrap-alos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  --gap-alos: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-alos .wrap-alos {
+    width: calc(100% + 20px);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: -20px;
+  }
+}
+
+.canaisPage .tab-alos .wrap-alos .alos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 30px 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-alos .wrap-alos .alos {
+    margin-left: 20px;
+    width: calc(33.3% - 20px);
+  }
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .img-container {
+  margin: 4px 16px 8px 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .img-container .border-wrap {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+  border: 2px solid #E5813F;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-alos .wrap-alos .alos .img-container .border-wrap {
+    width: 73px;
+    height: 73px;
+    top: -6px;
+    left: -6px;
+  }
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .img-container .border-wrap.gray {
+  border-color: #4A4A49;
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .img-container .img-wrapper {
+  width: 65px;
+  height: 65px;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  border-radius: 50%;
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-alos .wrap-alos .alos .img-container .img-wrapper {
+    width: 61px;
+    height: 61px;
+  }
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .img-container .img-wrapper img {
+  width: 100%;
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .text-box {
+  width: 100%;
+  background: #202020;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .text-box .info h5 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.canaisPage .tab-alos .wrap-alos .alos .text-box .info p {
+  font-size: 11px;
+}
+
+.canaisPage .tab-host .wrap-host {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .tab-host .wrap-host {
+    width: calc(100% + 20px);
+    margin-left: -20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.canaisPage .tab-host .wrap-host .host-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .tab-host .wrap-host .host-box {
+    width: calc(50% - 20px);
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .canaisPage .tab-host .wrap-host .host-box {
+    width: calc(33.3% - 20px);
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .canaisPage .tab-host .wrap-host .host-box {
+    width: calc(25% - 20px);
+    margin-left: 20px;
+  }
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .thumb {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .thumb img {
+  width: 100%;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .text-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 10px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .text-info h5 {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .text-info p {
+  font-size: 14px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .header .btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 2px 16px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .content-info {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .content-info p {
+  font-size: 14px;
+  line-height: 17px;
+  color: #B2B2B2;
+  margin-bottom: 0;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .canais-info-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .canais-info-footer .canais {
+  width: calc(100% + 10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .canais-info-footer .canais a {
+  width: 54px;
+  height: 54px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.canaisPage .tab-host .wrap-host .host-box .canais-info-footer .canais img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

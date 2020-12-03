@@ -3,7 +3,14 @@
         this.classList.toggle('active');
         document.getElementById("ver-mais-cont").classList.toggle('open');
     }
-    document.querySelector('.cta-vermais').addEventListener('click', ver_maisToggle);
+    
+    // Select all the elements with example class.
+    var Toggleviewvermais = document.querySelectorAll('.cta-vermais');
+    // Loop through the elements.
+    for (var i = 0; i < Toggleviewvermais.length; i++) {
+    // Add the class margin to the individual elements.
+    Toggleviewvermais[i].addEventListener('click', ver_maisToggle);
+    }
 })();
 //------------------------ Toggle ver-mais hero
 

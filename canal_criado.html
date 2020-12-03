@@ -442,17 +442,49 @@
                         <img alt="Thumb canal" src="./assets/img/thum-criado.png">
                     </div>
                     <div class="container-text">
-                        <h2>Afrofuturo</h2>
-                        <div class="infos-container">
-                            <span class="inscritos">786 inscritos</span><span class="episodios">97 episódios</span>
-                        </div>
-                        <div class="intro">
-                            <p id="ver-mais-cont">O Afrofuturo é um podcast semanal que aborda temas variados relacionados à cultura africana, apresentando uma mistura leve de fatos históricos, conhecimentos teóricos e reflexões livres. Toda semana, Morena Mariah vai abordar nos programas temas como afrofuturismo, cultura da diáspora africana, literatura preta apresentados em linguagem acessível e descomplicada. Os temas são apresentados em dois formatos: Reflexão</p>
-                            <button class="ver-mais cta-vermais">
-                                <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path  d="M2.4519 0.399772L8.00716 5.70273L13.5624 0.399772C14.1208 -0.133257 15.0228 -0.133257 15.5812 0.399772C16.1396 0.932802 16.1396 1.79385 15.5812 2.32688L9.0094 8.60023C8.45101 9.13326 7.54899 9.13326 6.9906 8.60023L0.418792 2.32688C-0.139597 1.79385 -0.139597 0.932802 0.418792 0.399772C0.977181 -0.11959 1.89351 -0.133257 2.4519 0.399772Z" fill="white"/>
-                                </svg>
-                            </button>
+                        <div>
+                            <h2>Afrofuturo</h2>
+                            <div class="infos-container">
+                                <span class="inscritos">786 inscritos</span><span class="episodios">97 episódios</span>
+                            </div>
+                            <div class="intro">
+                                <p id="ver-mais-cont">O Afrofuturo é um podcast semanal que aborda temas variados relacionados à cultura africana, apresentando uma mistura leve de fatos históricos, conhecimentos teóricos e reflexões livres. Toda semana, Morena Mariah vai abordar nos programas temas como afrofuturismo, cultura da diáspora africana, literatura preta apresentados em linguagem acessível e descomplicada. Os temas são apresentados em dois formatos: Reflexão</p>
+                                <span class="ver-mais-text-cta cta-vermais">VER MAIS</span>
+                                <button class="ver-mais cta-vermais">
+                                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path  d="M2.4519 0.399772L8.00716 5.70273L13.5624 0.399772C14.1208 -0.133257 15.0228 -0.133257 15.5812 0.399772C16.1396 0.932802 16.1396 1.79385 15.5812 2.32688L9.0094 8.60023C8.45101 9.13326 7.54899 9.13326 6.9906 8.60023L0.418792 2.32688C-0.139597 1.79385 -0.139597 0.932802 0.418792 0.399772C0.977181 -0.11959 1.89351 -0.133257 2.4519 0.399772Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="host-intro">
+                                <div class="host-box">
+                                    <div class="thumb">
+                                        <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                    </div>
+                                    <div class="text-box">
+                                        <h5>Igor guimarães</h5>
+                                        <p>Apresentador e comediante</p>
+                                    </div>
+                                </div>
+                                <div class="host-box">
+                                    <div class="thumb">
+                                        <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                    </div>
+                                    <div class="text-box">
+                                        <h5>Igor guimarães</h5>
+                                        <p>Apresentador e comediante</p>
+                                    </div>
+                                </div>
+                                <div class="host-box">
+                                    <div class="thumb">
+                                        <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                    </div>
+                                    <div class="text-box">
+                                        <h5>Igor guimarães</h5>
+                                        <p>Apresentador e comediante</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="list-actions">
                             <ul>
@@ -507,11 +539,11 @@
             </section>
             <section class="tabnavbar scrollhere">
                 <ul>
-                    <li class="tablinks active" onclick="openTab(event, 'episodios_tab')" id="defaultOpen">episodios</li>
+                    <li class="tablinks active" onclick="openTab(event, 'episodios_tab')">episodios</li>
                     <li class="tablinks" onclick="openTab(event, 'sobre_tab')">Sobre</li>
                     <li class="tablinks" onclick="openTab(event, 'playlist_tab')">playlist</li>
-                    <li class="tablinks disabled" >Alos</li>
-                    <li class="tablinks disabled" >host</li>
+                    <li class="tablinks" onclick="openTab(event, 'alos_tab')">Alos</li>
+                    <li class="tablinks" onclick="openTab(event, 'host_tab')" id="defaultOpen">host</li>
                     <li class="tablinks" onclick="openTab(event, 'comentarios_tab')">Comentarios</li>
                 </ul>
             </section>
@@ -2146,10 +2178,398 @@
 
             </section>
             
-            <section id="alos_tab" class="tab_painel">
+            <section id="alos_tab" class="tab_painel tab-alos">
+                <div class="box-alos">
+                    <div class="module-title">
+                        <h3>Novos Alos</h3>
+                    </div>
+                    <div class="wrap-alos">
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap gray"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                    </div>
+                </div>
+                <div class="box-alos">
+                    <div class="module-title">
+                        <h3>Novos Alos</h3>
+                    </div>
+                    <div class="wrap-alos">
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap gray"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                        <article class="alos">
+    
+                            <div class="img-container">
+                                <canvas class="border-wrap gray"></canvas>
+                                <span class="img-wrapper">
+                                    <img class=" lazyloaded" alt="Foto do perfil" data-src="assets/img/ola-storie-1.jpg" src="assets/img/ola-storie-6.png">
+                                </span>
+                            </div>
+    
+                            <div class="text-box">
+                                <div class="info">
+                                    <h5>Nome do canal</h5>
+                                    <p>Publicado ha 20 minutos</p>
+                                </div>
+                                <div class="button">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                            fill="#A5A5A5" />
+                                    </svg>
+                                </div>
+                            </div>
+    
+                        </article>
+    
+                    </div>
+                </div>
             </section>
             
-            <section id="host_tab" class="tab_painel">
+            <section id="host_tab" class="tab_painel tab-host">
+                <div class="wrap-host">
+                    <article class="host-box">
+                        <div class="header">
+                            <div class="thumb">
+                                <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                            </div>
+                            <div class="text-info">
+                                <h5>Lorem, ipsum.</h5>
+                                <p>Convidado</p>
+                            </div>
+                            <a href="javascript:void(0)" class="btn">
+                                Seguir
+                            </a>
+                        </div>
+                        <div class="content-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="canais-info-footer">
+                            <h5>Canais</h5>
+                            <div class="canais">
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb1.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb2.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="host-box">
+                        <div class="header">
+                            <div class="thumb">
+                                <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                            </div>
+                            <div class="text-info">
+                                <h5>Lorem, ipsum.</h5>
+                                <p>Convidado</p>
+                            </div>
+                            <a href="javascript:void(0)" class="btn">
+                                Seguir
+                            </a>
+                        </div>
+                        <div class="content-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="canais-info-footer">
+                            <h5>Canais</h5>
+                            <div class="canais">
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb1.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb2.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="host-box">
+                        <div class="header">
+                            <div class="thumb">
+                                <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                            </div>
+                            <div class="text-info">
+                                <h5>Lorem, ipsum.</h5>
+                                <p>Convidado</p>
+                            </div>
+                            <a href="javascript:void(0)" class="btn">
+                                Seguir
+                            </a>
+                        </div>
+                        <div class="content-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="canais-info-footer">
+                            <h5>Canais</h5>
+                            <div class="canais">
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb1.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb2.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="host-box">
+                        <div class="header">
+                            <div class="thumb">
+                                <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                            </div>
+                            <div class="text-info">
+                                <h5>Lorem, ipsum.</h5>
+                                <p>Convidado</p>
+                            </div>
+                            <a href="javascript:void(0)" class="btn">
+                                Seguir
+                            </a>
+                        </div>
+                        <div class="content-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="canais-info-footer">
+                            <h5>Canais</h5>
+                            <div class="canais">
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb1.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb2.jpg">
+                                </a>
+                                <a href="javascript:void(0)">
+                                    <img alt="" src="./assets/img/mini-thumb3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
             
             <section id="comentarios_tab" class="tab_painel tab-comments">
