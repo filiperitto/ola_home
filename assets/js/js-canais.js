@@ -54,3 +54,23 @@ function openTab(evt, canalSwitch) {
     document.getElementById(canalSwitch).style.display = "block";
     evt.currentTarget.className += " active";
   }
+  
+$(function () {
+  $.contextMenu({
+      selector: '.cta-menu-epi',
+      trigger: 'left',
+      items: $.contextMenu.fromMenu($('#contextMenu-episode')),
+  });
+});
+$(function () {
+  $.contextMenu({
+      selector: '.cta-share',
+      trigger: 'left',
+      items: $.contextMenu.fromMenu($('#contextMenu-share')),
+  });
+  $('.context-menu-list').css({
+      top: y + 50,
+      left: x
+  });
+});
+//------------------------ ContextMenu
