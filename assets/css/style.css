@@ -7541,9 +7541,9 @@ body #novos-canais,
 .canaisPage .hero-canal .wrap-hero .container-text .infos-container .selo {
   background: #FF005A;
   color: #ffffff;
-  font-size: 8px;
+  font-size: 11px;
   font-weight: bold;
-  padding: 3px 6px 1px;
+  padding: 1px 8px 1px;
   border-radius: 20px;
   text-transform: uppercase;
   display: inline-block;
@@ -7551,6 +7551,11 @@ body #novos-canais,
   width: -moz-max-content;
   width: max-content;
   margin-right: 10px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .infos-container .selo svg {
+  width: 17px;
+  height: 8px;
 }
 
 .canaisPage .hero-canal .wrap-hero .container-text .infos-container .inscritos {
@@ -7567,6 +7572,54 @@ body #novos-canais,
 .canaisPage .hero-canal .wrap-hero .container-text .infos-container .episodios:before {
   content: '-';
   margin-right: 5px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box {
+  direction: rtl;
+  margin-right: 20px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box svg {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box svg path {
+  fill: #a5a5a5;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box svg.checked path {
+  fill: #FF005A;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box > svg:hover path,
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box > svg:hover ~ svg path {
+  fill: #FF005A;
+  stroke: #CF215E;
+  stroke-width: 0.5px;
+}
+
+.canaisPage .hero-canal .wrap-hero .container-text .avaliacoes-hero a {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 17px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .canaisPage .hero-canal .wrap-hero .container-text .intro {
@@ -7838,7 +7891,7 @@ body #novos-canais,
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../img/bg-canal-original-mobile.jpg) no-repeat top center;
+  background: url(../img/bg-canal-original-mobile.jpg) no-repeat center;
   background-size: cover;
   z-index: -1;
 }
@@ -7858,6 +7911,12 @@ body #novos-canais,
   top: 0;
   left: 0;
   background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 69.43%, #181818 90.31%);
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .hero-canal .bg-original .mask {
+    background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 40.43%, #181818 90.31%);
+  }
 }
 
 .canaisPage .tabnavbar {
@@ -9552,6 +9611,64 @@ body #novos-canais,
 @media only screen and (min-width: 750px) {
   .canaisPage.original .hero-canal {
     padding-top: 200px;
+  }
+}
+
+.canaisPage.original .hero-canal .thumb-container {
+  margin-bottom: 85px;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .hero-canal .thumb-container {
+    max-width: 166px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .canaisPage.original .hero-canal .thumb-container {
+    max-width: 177px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .hero-canal .container-text {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .hero-canal .container-text .title-canal {
+    font-size: 45px;
+  }
+}
+
+.canaisPage.original .hero-canal .container-text .infos-container .inscritos {
+  color: #FFFFFF;
+}
+
+.canaisPage.original .hero-canal .container-text .infos-container .episodios {
+  color: #FFFFFF;
+}
+
+.canaisPage.original .hero-canal .container-text .list-actions ul .avaliacoes,
+.canaisPage.original .hero-canal .container-text .list-actions ul .share {
+  margin-left: 4px;
+}
+
+.canaisPage.original .hero-canal .container-text .list-actions ul .avaliacoes svg path,
+.canaisPage.original .hero-canal .container-text .list-actions ul .share svg path {
+  fill: #FFFFFF;
+}
+
+.canaisPage.original .hero-canal .container-text .list-actions ul .avaliacoes span,
+.canaisPage.original .hero-canal .container-text .list-actions ul .share span {
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .hero-canal .container-text .list-actions ul li.btn-list .btn.first {
+    background: #214EE3;
   }
 }
 

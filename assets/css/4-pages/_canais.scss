@@ -47,14 +47,18 @@
                     .selo{
                         background: #FF005A;
                         color: #ffffff;
-                        font-size: 8px;
+                        font-size: 11px;
                         font-weight: bold;
-                        padding: 3px 6px 1px;
+                        padding: 1px 8px 1px;
                         border-radius: 20px;
                         text-transform: uppercase;
                         display: inline-block;
                         width: max-content;
                         margin-right: 10px;
+                        svg{
+                            width: 17px;
+                            height: 8px;
+                        }
                     }
                     .inscritos{
                         color: $text-primary;
@@ -68,6 +72,49 @@
                             content: '-';
                             margin-right: 5px;
                         }
+                    }
+                }
+                .avaliacoes-hero{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-bottom: 16px;
+                    .svg-box{
+                        direction: rtl;
+                        margin-right: 20px;
+                        svg{
+                            display: inline-block;
+                            cursor: pointer;
+                            path{
+                                fill: #a5a5a5;
+                            }
+                            
+                            &.checked{
+                                path{
+                                    fill: #FF005A;
+                                }
+                            }
+                        }
+                        & > svg{
+                            &:hover,
+                            &:hover ~ svg{
+                                path{
+                                    fill: #FF005A;
+                                    stroke: #CF215E;
+                                    stroke-width: 0.5px;
+                                }
+                            }
+                        }
+                    }
+                    a{
+                        color: $text-primary;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 17px;
+                        letter-spacing: 0px;
+                        text-align: left;
+                        
                     }
                 }
                 .intro{
@@ -270,7 +317,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background: url(../img/bg-canal-original-mobile.jpg) no-repeat top center;
+            background: url(../img/bg-canal-original-mobile.jpg) no-repeat center;
             background-size: cover;
             z-index: -1;
             @include respond-to-min(750){
@@ -285,6 +332,9 @@
                 top: 0;
                 left: 0;
                 background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 69.43%, #181818 90.31%);
+                @include respond-to-min(750){
+                    background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 40.43%, #181818 90.31%);
+                }
             }
         }
     }
@@ -1450,6 +1500,65 @@
         .hero-canal{
             @include respond-to-min(750){
                 padding-top: 200px;
+            }
+
+            .thumb-container{
+                margin-bottom: 85px;
+                @include respond-to-min(750){
+                    max-width: 166px;
+                    margin-bottom: 0;
+                }
+                @include respond-to-min(1100){
+                    max-width: 177px;
+                }
+            }
+            
+            .container-text{
+                @include respond-to-min(750){
+                    min-height: auto;
+                }
+                .title-canal{
+                    @include respond-to-min(750){
+                        font-size: 45px;
+                    }
+                }
+                .infos-container{
+                    .selos{
+    
+                    }
+                    .inscritos{
+                        color: $text-primary;
+                    }
+                    .episodios{
+                        color: $text-primary;
+                    }
+                }
+                .list-actions{
+                    ul{
+                        .avaliacoes,
+                        .share{
+                            margin-left: 4px;
+                            svg{
+                                path{
+                                    fill: $text-primary;
+                                }
+                            }
+                            span{
+                                display: none;
+                            }
+                        }
+                        li.btn-list{
+                            .btn{
+                                &.first{
+                                    @include respond-to-min(750){
+                                        background: #214EE3;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
             }
         }
         .wrap-hero{
