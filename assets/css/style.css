@@ -7834,13 +7834,21 @@ body #novos-canais,
 
 .canaisPage .hero-canal .bg-original {
   width: 100%;
-  height: 365px;
+  min-height: 365px;
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../img/bg-canal-original-mobile.jpg) no-repeat bottom center;
+  background: url(../img/bg-canal-original-mobile.jpg) no-repeat top center;
   background-size: cover;
   z-index: -1;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .hero-canal .bg-original {
+    min-height: 443px;
+    background: url(../img/bg-canal-original.jpg) no-repeat top right;
+    background-size: cover;
+  }
 }
 
 .canaisPage .hero-canal .bg-original .mask {
@@ -9541,7 +9549,19 @@ body #novos-canais,
   width: 100%;
 }
 
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .hero-canal {
+    padding-top: 200px;
+  }
+}
+
 .canaisPage.original .wrap-hero .thumb-container {
   opacity: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage.original .wrap-hero .thumb-container {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

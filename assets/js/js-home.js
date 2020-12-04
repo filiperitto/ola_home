@@ -1,3 +1,6 @@
+
+
+
 (function (){
     // Get a reference to the splash dialog
     var splash = document.querySelector(".preloader");
