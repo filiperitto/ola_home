@@ -1722,20 +1722,6 @@ iframe.wait-autoplay {
   display: block;
 }
 
-.light-mode .owl-carousel .owl-nav button.owl-prev.disabled, .light-mode .owl-carousel .owl-nav button.owl-next.disabled {
-  display: none;
-}
-
-.light-mode .owl-carousel .owl-nav button.owl-prev div, .light-mode .owl-carousel .owl-nav button.owl-next div {
-  background: #fff;
-  -webkit-box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
-          box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.309523);
-}
-
-.light-mode .owl-carousel .owl-nav button.owl-prev div svg path, .light-mode .owl-carousel .owl-nav button.owl-next div svg path {
-  fill: #030303;
-}
-
 .light-mode .glider-next,
 .light-mode .glider-prev {
   background: #fff;
@@ -2063,6 +2049,519 @@ iframe.wait-autoplay {
 
 .light-mode.single-post .recents-box .wrap-post-recent article .title-box h4 {
   color: #030303;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text h2 {
+  color: #030303 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .infos-container .inscritos {
+  color: #030303 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .infos-container .episodios {
+  color: #606060 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box svg.checked path {
+  fill: #FF005A !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box > svg:hover path,
+.light-mode .hero-canal .wrap-hero .container-text .avaliacoes-hero .svg-box > svg:hover ~ svg path {
+  fill: #FF005A !important;
+  stroke: #CF215E !important;
+  stroke-width: 0px !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .avaliacoes-hero a {
+  color: #030303 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .intro p {
+  color: #606060 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box h5 {
+  color: #030303 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .host-intro .host-box .text-box p {
+  color: #606060 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .list-actions ul li.btn-list .first {
+  color: #606060;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .list-actions ul li.avaliacoes svg path, .light-mode .hero-canal .wrap-hero .container-text .list-actions ul li.share svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .hero-canal .wrap-hero .container-text .list-actions ul li.avaliacoes a, .light-mode .hero-canal .wrap-hero .container-text .list-actions ul li.share a {
+  color: #606060 !important;
+}
+
+.light-mode .hero-canal .bg-original .mask {
+  background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 69.43%, #fafafa 90.31%) !important;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode .hero-canal .bg-original .mask {
+    background: linear-gradient(180.05deg, rgba(24, 24, 24, 0) 40.43%, #fafafa 90.31%) !important;
+  }
+}
+
+.light-mode .tabnavbar ul li {
+  color: #606060 !important;
+  border-bottom: 2px solid #DBDBDB !important;
+}
+
+.light-mode .tabnavbar ul li.active, .light-mode .tabnavbar ul li:hover {
+  border-color: #FF005A !important;
+  color: #030303 !important;
+}
+
+.light-mode .tabnavbar ul li.disabled {
+  color: #DBDBDB !important;
+}
+
+.light-mode .tabnavbar ul li.disabled:hover {
+  cursor: default;
+  color: #DBDBDB !important;
+  border-bottom: 2px solid #DBDBDB !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .text-cont h3 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .text-cont p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li.link {
+  color: #030303 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li.link a {
+  color: #030303 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li.link a:hover {
+  text-decoration: underline !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg rect {
+  fill: transparent;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button span {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active svg path, .light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active svg path {
+  fill: #59A6F8 !important;
+}
+
+.light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active span, .light-mode .tab-episodes .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active span {
+  color: #59A6F8 !important;
+}
+
+.light-mode .tab-episodes .last-epi .baixe-agora-widget .widget-box {
+  background: #DBDBDB !important;
+}
+
+.light-mode .tab-episodes .last-epi .baixe-agora-widget h5 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-episodes .last-epi .baixe-agora-widget p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container h3 {
+  color: #030303;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text] {
+  background: #FAFAFA !important;
+  -webkit-box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+          box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+  color: #030303 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]::-webkit-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]:-ms-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]::-ms-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]::placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form input[type=text]:focus::placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header form button svg path {
+  fill: #606060;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box button {
+  color: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box button svg rect,
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box button svg circle {
+  fill: #606060;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box .order ul li:after {
+  background: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box .order ul li button svg rect {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .nav-header .actions-box .order ul li button.active svg rect {
+  fill: #FF005A !important;
+}
+
+.light-mode .tab-episodes .list-epi-container .list-episodes .wrapper-episodios ul.list-view .item {
+  border-top: 1px solid #1f1f1f;
+}
+
+.light-mode .tab-episodes .list-epi-container .list-episodes .wrapper-episodios ul.list-view .item:hover {
+  background: #1F1F1F;
+}
+
+.light-mode .tab-overview .sobre-section .wrap-sobre .text-cont h3 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .sobre-section .wrap-sobre .text-cont p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .sobre-section .wrap-sobre .text-cont .actions .transp {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .sobre-section .wrap-sobre .text-cont .actions .infos span {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .sobre-section .wrap-sobre .text-cont .actions .infos span:last-child {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .text-cont h3 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .text-cont p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li.link {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li.link a {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active svg path, .light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active svg path {
+  fill: #59A6F8 !important;
+}
+
+.light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button.active span, .light-mode .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button:active span {
+  color: #59A6F8 !important;
+}
+
+.light-mode .tab-overview .last-epi .baixe-agora-widget .widget-box {
+  background: #DBDBDB !important;
+}
+
+.light-mode .tab-overview .last-epi .baixe-agora-widget h5 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .last-epi .baixe-agora-widget p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container h3 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text] {
+  background: #FAFAFA !important;
+  -webkit-box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+          box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+  color: #030303 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]::-webkit-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]:-ms-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]::-ms-input-placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]::placeholder {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form input[type=text]:focus::placeholder {
+  color: transparent;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header form button svg path {
+  fill: #606060;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box button {
+  color: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box button svg rect,
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box button svg circle {
+  fill: #606060;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box .order ul li:after {
+  background: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box .order ul li button svg rect {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .nav-header .actions-box .order ul li button.active svg rect {
+  fill: #FF005A !important;
+}
+
+.light-mode .tab-overview .list-epi-container .list-episodes .wrapper-episodios ul.list-view .item {
+  border-top: 1px solid #e2e2e2 !important;
+}
+
+.light-mode .tab-overview .list-epi-container .list-episodes .wrapper-episodios ul.list-view .item:hover {
+  background: #e2e2e2 !important;
+}
+
+.light-mode .tab-sobre .wrap-sobre .text-cont h3 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-sobre .wrap-sobre .text-cont p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-sobre .wrap-sobre .text-cont .actions .transp {
+  color: #030303 !important;
+}
+
+.light-mode .tab-sobre .wrap-sobre .text-cont .actions .infos span {
+  color: #030303 !important;
+}
+
+.light-mode .tab-sobre .wrap-sobre .text-cont .actions .infos span:last-child {
+  color: #606060 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes p {
+  color: #030303 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg {
+  cursor: pointer;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box svg.checked path {
+  fill: #473a3f !important;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box > svg:hover path,
+.light-mode .tab-comments .wrap-comments .field-comments .avaliacoes .svg-box > svg:hover ~ svg path {
+  fill: #FF005A !important;
+  stroke: #CF215E !important;
+  stroke-width: 0 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .field-comments form textarea {
+  color: #030303 !important;
+  background: #eaeaea !important;
+  -webkit-box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+          box-shadow: inset 0px 4px 21px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .header-comment .text-cont h5 {
+  color: #030303 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .header-comment .text-cont p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg {
+  cursor: pointer;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg path {
+  fill: #606060 !important;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .header-comment .avaliacoes .svg-box svg.checked path {
+  fill: #FF005A !important;
+}
+
+.light-mode .tab-comments .wrap-comments .comments-timeline article .text-comment p {
+  color: #606060 !important;
+}
+
+.light-mode .tab-alos .wrap-alos .alos .img-container .border-wrap {
+  border: 2px solid #E5813F;
+}
+
+.light-mode .tab-alos .wrap-alos .alos .img-container .border-wrap.gray {
+  border-color: #4A4A49;
+}
+
+.light-mode .tab-alos .wrap-alos .alos .text-box {
+  background: #e2e2e2 !important;
+}
+
+.light-mode .tab-host .wrap-host .host-box .content-info p {
+  color: #606060 !important;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .hero-canal {
+    padding-top: 313px;
+  }
+}
+
+.light-mode.original .hero-canal .thumb-container {
+  margin-bottom: 85px;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .hero-canal .thumb-container {
+    max-width: 166px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .light-mode.original .hero-canal .thumb-container {
+    max-width: 177px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .hero-canal .container-text {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .hero-canal .container-text .title-canal {
+    font-size: 45px;
+  }
+}
+
+.light-mode.original .hero-canal .container-text .infos-container .inscritos {
+  color: #030303;
+}
+
+.light-mode.original .hero-canal .container-text .infos-container .episodios {
+  color: #030303;
+}
+
+.light-mode.original .hero-canal .container-text .list-actions ul .avaliacoes,
+.light-mode.original .hero-canal .container-text .list-actions ul .share {
+  margin-left: 4px;
+}
+
+.light-mode.original .hero-canal .container-text .list-actions ul .avaliacoes svg path,
+.light-mode.original .hero-canal .container-text .list-actions ul .share svg path {
+  fill: #030303;
+}
+
+.light-mode.original .hero-canal .container-text .list-actions ul .avaliacoes span,
+.light-mode.original .hero-canal .container-text .list-actions ul .share span {
+  display: none;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .hero-canal .container-text .list-actions ul li.btn-list .btn.first {
+    background: #214EE3;
+  }
+}
+
+.light-mode.original .wrap-hero .thumb-container {
+  opacity: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .light-mode.original .wrap-hero .thumb-container {
+    opacity: 1;
+  }
 }
 
 body.light-mode {
@@ -8782,7 +9281,7 @@ body #novos-canais,
 
 @media only screen and (min-width: 750px) {
   .canaisPage .hero-canal .bg-original {
-    min-height: 443px;
+    min-height: 100%;
     background: url(../img/bg-canal-original.jpg) no-repeat top right;
     background-size: cover;
   }
@@ -9138,6 +9637,7 @@ body #novos-canais,
   .canaisPage .tab-episodes .last-epi .baixe-agora-widget {
     width: 35%;
     padding-left: 20px;
+    padding-top: 20px;
   }
 }
 
@@ -9652,6 +10152,16 @@ body #novos-canais,
   }
 }
 
+.canaisPage .tab-overview .sobre-section .wrap-host .module-title h3 {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 750px) {
+  .canaisPage .tab-overview .sobre-section .wrap-host .module-title h3 {
+    padding-top: 0;
+  }
+}
+
 .canaisPage .tab-overview .sobre-section .wrap-host .host-box {
   width: 100%;
   margin: 20px 0;
@@ -9944,6 +10454,10 @@ body #novos-canais,
           justify-content: center;
 }
 
+.canaisPage .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg rect {
+  fill: transparent;
+}
+
 .canaisPage .tab-overview .last-epi .epi-card .wrap-epi .container-infos .actions ul li button svg path {
   fill: #B2B2B2;
 }
@@ -9968,6 +10482,7 @@ body #novos-canais,
   .canaisPage .tab-overview .last-epi .baixe-agora-widget {
     width: 35%;
     padding-left: 20px;
+    padding-top: 20px;
     margin-right: 0;
   }
 }
@@ -10334,19 +10849,46 @@ body #novos-canais,
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .canaisPage .tab-sobre .wrap-sobre {
+    width: 80%;
+  }
+}
+
 .canaisPage .tab-sobre .wrap-sobre .thumb {
   width: 100%;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media only screen and (min-width: 900px) {
   .canaisPage .tab-sobre .wrap-sobre .thumb {
-    width: 30%;
-    max-width: 348px;
+    width: 50%;
   }
 }
 
 .canaisPage .tab-sobre .wrap-sobre .thumb img {
   width: 100%;
+}
+
+.canaisPage .tab-sobre .wrap-sobre .thumb .player {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.canaisPage .tab-sobre .wrap-sobre .thumb .player img {
+  width: auto;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .canaisPage .tab-sobre .wrap-sobre .text-cont {
@@ -10356,8 +10898,7 @@ body #novos-canais,
 
 @media only screen and (min-width: 900px) {
   .canaisPage .tab-sobre .wrap-sobre .text-cont {
-    width: 70%;
-    max-width: 580px;
+    width: 50%;
     margin-top: 0;
     padding-left: 20px;
     display: -webkit-box;
@@ -10379,6 +10920,9 @@ body #novos-canais,
 
 .canaisPage .tab-sobre .wrap-sobre .text-cont p {
   color: #B2B2B2;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 .canaisPage .tab-sobre .wrap-sobre .text-cont .actions {
@@ -11333,7 +11877,7 @@ body #novos-canais,
 
 @media only screen and (min-width: 750px) {
   .canaisPage.original .hero-canal {
-    padding-top: 200px;
+    padding-top: 313px;
   }
 }
 

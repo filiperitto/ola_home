@@ -321,7 +321,7 @@
             background-size: cover;
             z-index: -1;
             @include respond-to-min(750){
-                min-height: 443px;
+                min-height: 100%;
                 background: url(../img/bg-canal-original.jpg) no-repeat top right;
                 background-size: cover;
             }
@@ -381,6 +381,7 @@
             }
         }
     }
+    // fade effect
     .tab_painel{
         display: none;
         animation: fadeEffect 1s;
@@ -571,6 +572,7 @@
                 @include respond-to-min(1000){
                     width: 35%;
                     padding-left: 20px;
+                    padding-top: 20px;
                 }
                 .widget-box{
                     background: #1F1F1F;
@@ -891,6 +893,14 @@
                     width: 35%;
                     padding-left: 20px;
                 }
+                .module-title{
+                    h3{
+                        margin-bottom: 0;
+                        @include respond-to-min(750){
+                            padding-top: 0;
+                        }
+                    }
+                }
                 .host-box{
                     width: 100%;
                     margin: 20px 0;
@@ -1076,6 +1086,9 @@
                                         align-items: center;
                                         justify-content: center;
                                         svg{
+                                            rect{
+                                                fill: transparent;
+                                            }
                                             path{
                                                 fill: $text-secondary;
                                             }
@@ -1108,6 +1121,7 @@
                 @include respond-to-min(1000){
                     width: 35%;
                     padding-left: 20px;
+                    padding-top: 20px;
                     margin-right: 0;
                 }
                 .widget-box{
@@ -1340,22 +1354,44 @@
             @include respond-to-min(900){
                 flex-direction: row;
             }
+            @include respond-to-min(1400){
+                width: 80%;
+            }
             .thumb{
                 width: 100%;
+                position: relative;
+                height: fit-content;
                 @include respond-to-min(900){
-                    width: 30%;
-                    max-width: 348px;
+                    width: 50%;
+                    //max-width: 348px;
                 }
                 img{
                     width: 100%;
+                }
+                
+                .player{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    img{
+                        width: auto;
+                        margin: auto;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
                 }
             }
             .text-cont{
                 width: 100%;
                 margin-top: 30px;
                 @include respond-to-min(900){
-                    width: 70%;
-                    max-width: 580px;
+                    width: 50%;
+                    //max-width: 580px;
                     margin-top: 0;
                     padding-left: 20px;
                     display: flex;
@@ -1368,6 +1404,7 @@
                 }
                 p{
                     color: $text-secondary;
+                    flex: auto;
                 }
                 .actions{
                     width: 100%;
@@ -2046,7 +2083,7 @@
     &.original{
         .hero-canal{
             @include respond-to-min(750){
-                padding-top: 200px;
+                padding-top: 313px;
             }
 
             .thumb-container{

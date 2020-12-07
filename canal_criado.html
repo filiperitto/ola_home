@@ -1231,7 +1231,10 @@
             
             <section id="sobre_tab" class="tab_painel tab-sobre">
                 <div class="wrap-sobre">
-                    <div class="thumb">
+                    <div class="thumb player-video">
+                        <a  href="https://www.youtube.com/watch?v=99y4DG-nQu0&t=22s" class="glightbox4 player">
+                            <img alt="" src="./assets/img/play-thumb.png">
+                        </a>
                         <img alt="" src="./assets/img/afro-sobre.png">
                     </div>
                     <div class="text-cont">
@@ -3919,9 +3922,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script> <!-- https://swisnl.github.io/jQuery-contextMenu/ -->
 
+    <script src="assets/js/glightbox.min.js"></script><!-- https://biati-digital.github.io/glightbox/ -->
     <script src="assets/js/lazysizes.min.js" async=""></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/js-canais.js"></script>
+
+    <script>
+        //== Lightbox About-2
+        // https://biati-digital.github.io/glightbox/
+        (function(){
+        var lightboxInlineIframe = GLightbox({
+            'selector': '.glightbox4'
+        });
+        })();
+        //======================== /Lightbox Sobre
+    </script>
 </body>
 
 </html>
