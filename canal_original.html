@@ -519,8 +519,8 @@
             </section>
             <section class="tabnavbar scrollhere">
                 <ul>
-                    <li class="tablinks active" onclick="openTab(event, 'episodios_tab')" id="defaultOpen">Overview</li>
-                    <li class="tablinks" onclick="openTab(event, 'sobre_tab')">Sobre</li>
+                    <li class="tablinks active" onclick="openTab(event, 'overview_tab')" id="defaultOpen">Overview</li>
+                    <li class="tablinks" onclick="openTab(event, 'episodios_tab')">Episodios</li>
                     <li class="tablinks" onclick="openTab(event, 'playlist_tab')">playlist</li>
                     <li class="tablinks" onclick="openTab(event, 'alos_tab')">Alos</li>
                     <li class="tablinks" onclick="openTab(event, 'host_tab')">host</li>
@@ -528,24 +528,91 @@
                 </ul>
             </section>
             
-            <section id="episodios_tab" class="tab_painel tab-episodes">
+            <section id="overview_tab" class="tab_painel tab-overview">
+                <div class="sobre-section">
+                    <div class="wrap-sobre">
+                        <div class="thumb player-video">
+                            <a  href="https://www.youtube.com/watch?v=MLVQU95WnSg" class="glightbox4 player">
+                                <img alt="" src="./assets/img/play-thumb.png">
+                            </a>
+                            <img alt="" src="./assets/img/thumb-original/thumb-sobre.png">
+                        </div>
+                        <div class="text-cont">
+                            <h3>Sobre o canal</h3>
+                            <p>Papos pra lá de supimpas sobre Cinema e Carros, tudo o que o brasileiro mais gosta!
+                                Críticas e notícias de filmes e automóveis mais recentes, debates sobre clássicos da 7a
+                                arte e dos carangos. Apresentado malucamente por Igor Guimarães (Pânico), Tomas Kenedi
+                                (Libera o Badaró) e Fábio Moreno (Tava Vindo pra Cá)</p>
+                            <div class="actions">
+                                <a href="javascript:void(0)" class="btn transp">Inscreva-se</a>
+                                <div class="infos"><span>786 inscritos</span><span>97 episódios</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-host">
+                        
+                        <article class="host-box">
+                            <div class="header">
+                                <div class="thumb">
+                                    <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                </div>
+                                <div class="text-info">
+                                    <h5>Lorem, ipsum.</h5>
+                                    <p>Convidado</p>
+                                </div>
+                                <a href="javascript:void(0)" class="btn">
+                                    Seguir
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="host-box">
+                            <div class="header">
+                                <div class="thumb">
+                                    <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                </div>
+                                <div class="text-info">
+                                    <h5>Lorem, ipsum.</h5>
+                                    <p>Convidado</p>
+                                </div>
+                                <a href="javascript:void(0)" class="btn">
+                                    Seguir
+                                </a>
+                            </div>
+                        </article>
+                        
+                        <article class="host-box">
+                            <div class="header">
+                                <div class="thumb">
+                                    <img alt="" src="./assets/img/thumb-placeholder-host1.png">
+                                </div>
+                                <div class="text-info">
+                                    <h5>Lorem, ipsum.</h5>
+                                    <p>Convidado</p>
+                                </div>
+                                <a href="javascript:void(0)" class="btn">
+                                    Seguir
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
                 <div class="last-epi">
                     <div class="epi-card">
                         <div class="module-title">
-                            <h3>Ultimo Episódio - Apresentação do canal</h3>
+                            <h3>Ultimo Episódio</h3>
                         </div>
                         <div class="wrap-epi">
                             <div class="thumb-epi">
-                                <img alt="epi-thumb" src="./assets/img/thumb-afro.png">
+                                <img alt="epi-thumb" src="./assets/img/thumb-original/thumb-original1.png">
                             </div>
                             <div class="container-infos">
                                 <div class="text-cont">
-                                    <h3>A República de Palmares</h3>
-                                    <p>Morena Mariah apresenta uma análise sobre a República de Palmares, o primeiro
-                                        território negro livre das Américas. A partir de uma extensa pesquisa, o
-                                        episódio narra diversos detalhes sobre os modos de vida, a economia, a língua e
-                                        a organização familiar em Palmares, desconstruindo a narrativa colonial do
-                                        quilombo como um território de atraso e desorganização. </p>
+                                    <h3>#42 - Sobre Woody Allen!</h3>
+                                    <p>Bem vindos ao podcast amigo do antílope adestrado! Hoje nossos exploradores de NY
+                                        e Paris batem um papo sobre o incrível universo de Woody Allen.</p>
                                 </div>
                                 <div class="actions">
                                     <ul>
@@ -1209,26 +1276,679 @@
                 </div>
             </section>
             
-            <section id="sobre_tab" class="tab_painel tab-sobre">
-                <div class="wrap-sobre">
-                    <div class="thumb">
-                        <img alt="" src="./assets/img/afro-sobre.png">
+            <section id="episodios_tab" class="tab_painel tab-episodes">
+                <div class="last-epi">
+                    <div class="epi-card">
+                        <div class="module-title">
+                            <h3>Ultimo Episódio</h3>
+                        </div>
+                        <div class="wrap-epi">
+                            <div class="thumb-epi">
+                                <img alt="epi-thumb" src="./assets/img/thumb-original/thumb-original1.png">
+                            </div>
+                            <div class="container-infos">
+                                <div class="text-cont">
+                                    <h3>#42 - Sobre Woody Allen!</h3>
+                                    <p>Bem vindos ao podcast amigo do antílope adestrado! Hoje nossos exploradores de NY
+                                        e Paris batem um papo sobre o incrível universo de Woody Allen.</p>
+                                </div>
+                                <div class="actions">
+                                    <ul>
+                                        <li class="link">Produção: OLA Podcasts</li>
+                                        <li style="margin-left: 0;">
+                                            <button>
+                                                <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M17.472 0.000200795C21.07 0.0180319 23.9825 2.98261 24 6.6451C24 13.3551 12 20 12 20C12 20 0 13.2574 0 6.6451C0 2.97526 2.92266 0.000200795 6.52802 0.000200795C8.73498 -0.0173186 10.7982 1.11259 12 2.99689C13.21 1.12175 15.268 -0.00522336 17.472 0.000200795Z" fill="#A5A5A5"/>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="active">
+                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="20.8697" height="20" fill="#181818"/>
+                                                    <path d="M2.17391 8.69562C0.975657 8.69562 0 9.67128 0 10.8695V17.8261C0 19.0244 0.975657 20 2.17391 20H4.78262C5.2722 20 5.72261 19.8348 6.08697 19.56V8.69562H2.17391Z" fill="#59A6F8"/>
+                                                    <path d="M20.8701 11.9566C20.8701 11.434 20.6632 10.947 20.304 10.5879C20.7101 10.1435 20.9171 9.54783 20.8606 8.92786C20.7588 7.82262 19.7631 6.95653 18.5927 6.95653H13.2214C13.4875 6.14868 13.9136 4.66784 13.9136 3.47826C13.9136 1.59217 12.311 0 11.3049 0C10.4014 0 9.75613 0.508698 9.72834 0.529568C9.62574 0.61219 9.56574 0.737409 9.56574 0.869556V3.81825L7.06138 9.24351L6.95703 9.29654V18.6166C7.66485 18.9505 8.56049 19.1305 9.13094 19.1305H17.1127C18.0597 19.1305 18.8884 18.4922 19.0832 17.6114C19.1832 17.1583 19.1249 16.7018 18.9258 16.3053C19.5684 15.9818 20.0006 15.32 20.0006 14.5653C20.0006 14.2574 19.9301 13.9627 19.7962 13.6957C20.4388 13.3722 20.8701 12.7105 20.8701 11.9566Z" fill="#59A6F8"/>
+                                                </svg>
+                                                <span>3k</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="20.8697" height="20" transform="translate(21.8691 20) rotate(-180)" fill="#181818"/>
+                                                    <path d="M19.6952 11.3044C20.8935 11.3044 21.8691 10.3287 21.8691 9.13047L21.8691 2.1739C21.8691 0.975649 20.8935 -8.66836e-06 19.6952 -8.77312e-06L17.0865 -9.00118e-06C16.5969 -9.04398e-06 16.1465 0.165196 15.7822 0.440008L15.7822 11.3044L19.6952 11.3044Z" fill="#A5A5A5"/>
+                                                    <path d="M0.999012 8.04343C0.999012 8.56603 1.20596 9.053 1.5651 9.41215C1.159 9.85649 0.952055 10.4522 1.00859 11.0721C1.11033 12.1774 2.106 13.0435 3.27641 13.0435L8.64775 13.0435C8.38166 13.8513 7.95558 15.3322 7.95558 16.5217C7.95558 18.4078 9.55818 20 10.5643 20C11.4678 20 12.113 19.4913 12.1408 19.4704C12.2434 19.3878 12.3034 19.2626 12.3034 19.1304L12.3034 16.1817L14.8078 10.7565L14.9121 10.7035L14.9121 1.3834C14.2043 1.04949 13.3087 0.869486 12.7382 0.869486L4.75641 0.869485C3.80945 0.869485 2.98074 1.50776 2.78598 2.38861C2.68599 2.84167 2.74424 3.29819 2.94336 3.69472C2.30076 4.0182 1.86857 4.67995 1.86857 5.43472C1.86857 5.74255 1.939 6.03734 2.0729 6.30428C1.43031 6.62776 0.999012 7.28952 0.999012 8.04343Z" fill="#A5A5A5"/>
+                                                </svg>
+                                                <span>763</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button>
+                                                <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.45 2.85714H15.95C16.7556 2.85714 17.4 2.22222 17.4 1.42857C17.4 0.634921 16.7556 0 15.95 0H1.45C0.644444 0 0 0.634921 0 1.42857C0 2.22222 0.644444 2.85714 1.45 2.85714Z" fill="#A5A5A5"/>
+                                                    <path d="M1.45 8.57144H15.95C16.7556 8.57144 17.4 7.93652 17.4 7.14287C17.4 6.34922 16.7556 5.71429 15.95 5.71429H1.45C0.644444 5.71429 0 6.34922 0 7.14287C0 7.93652 0.644444 8.57144 1.45 8.57144Z" fill="#A5A5A5"/>
+                                                    <path d="M27.55 11.4286H23.2V7.14287C23.2 6.34922 22.5556 5.71429 21.75 5.71429C20.9444 5.71429 20.3 6.34922 20.3 7.14287V11.4286H15.95C15.1444 11.4286 14.5 12.0635 14.5 12.8572C14.5 13.6508 15.1444 14.2857 15.95 14.2857H20.3V18.5714C20.3 19.3651 20.9444 20 21.75 20C22.5556 20 23.2 19.3651 23.2 18.5714V14.2857H27.55C28.3556 14.2857 29 13.6508 29 12.8572C29 12.0635 28.3556 11.4286 27.55 11.4286Z" fill="#A5A5A5"/>
+                                                    <path d="M10.15 11.4286H1.45C0.644444 11.4286 0 12.0635 0 12.8572C0 13.6508 0.644444 14.2857 1.45 14.2857H10.15C10.9556 14.2857 11.6 13.6508 11.6 12.8572C11.6 12.0635 10.9556 11.4286 10.15 11.4286Z" fill="#A5A5A5"/>
+                                                </svg>
+                                            </button>
+                                        </li>
+                                        <li class="menu-button-li">
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-cont">
-                        <h3>Sobre o canal</h3>
-                        <p>O Afrofuturo é um podcast semanal que aborda temas variados relacionados à cultura africana,
-                            apresentando uma mistura leve de fatos históricos, conhecimentos teóricos e reflexões
-                            livres. Toda semana, Morena Mariah vai abordar nos programas temas como afrofuturismo,
-                            cultura da diáspora africana, literatura preta apresentados em linguagem acessível e
-                            descomplicada.<br>
-                            <br>
-                            Os temas são apresentados em dois formatos: Reflexão, trazendo provocações e apontamentos
-                            sobre o tema da semana, e Entrevista, contando com convidados especiais para trazer novos
-                            olhares sobre os mais diversos assuntos. O Afrofuturo convida os ouvintes para uma viagem
-                            fora do tempo através de conteúdos poderosos e inspiradores.</p>
-                        <div class="actions">
-                            <a href="javascript:void(0)" class="btn transp">Inscreva-se</a>
-                            <div class="infos"><span>786 inscritos</span><span>97 episódios</span></div>
+                    <div class="baixe-agora-widget">
+                        <div class="widget-box">
+                            <h5>Baixe Agora!</h5>
+                            <p>Comece a ouvir podcasts no seu celular agora mesmo com o aplicativo móvel gratuito da OLA
+                                Podcasts. Suas assinaturas, favoritos e listas de reprodução serão sincronizados com
+                                aplicativos da Web e móveis.</p>
+                            <div class="btn-box">
+                                <a href="#"><img alt="" data-src="assets/img/btn-google-play2.png" class="lazyload"></a>
+                                <a href="#"><img alt="" data-src="assets/img/btn-app-store2.png" class="lazyload"></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="list-epi-container">
+                    <h3>Todos os episódios</h3>
+                    <div class="nav-header">
+                        <form>
+                            <input type="text" placeholder="Buscar episódio">
+                            <button>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6247 14.8999C17.0995 13.3175 18 11.2052 18 8.88536C18 3.97811 13.9706 0 9 0C4.02944 0 0 3.97811 0 8.88536C0 13.7926 4.02944 17.7707 9 17.7707C10.8988 17.7707 12.6603 17.1902 14.1122 16.1991L15.6434 17.7108C16.034 18.0964 16.6671 18.0964 17.0577 17.7108C17.4482 17.3253 17.4482 16.7002 17.0577 16.3146L15.6247 14.8999ZM9 15.7962C5.13401 15.7962 2 12.7021 2 8.88536C2 5.06861 5.13401 1.97452 9 1.97452C12.866 1.97452 16 5.06861 16 8.88536C16 12.7021 12.866 15.7962 9 15.7962Z" fill="#A5A5A5"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="actions-box">
+                            <button>
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" width="2" height="19" rx="1" fill="#A5A5A5"/>
+                                    <rect x="9" width="2" height="19" rx="1" fill="#A5A5A5"/>
+                                    <circle cx="3" cy="6" r="3" fill="#A5A5A5"/>
+                                    <rect x="16" width="2" height="19" rx="1" fill="#A5A5A5"/>
+                                    <circle cx="17" cy="6" r="3" fill="#A5A5A5"/>
+                                    <circle cx="10" cy="13" r="3" fill="#A5A5A5"/>
+                                </svg>
+                                Filtrar
+                            </button>
+                            <div class="order">
+                                <span>Ordenar por</span>
+                                <ul>
+                                    <li>
+                                        <button id="view-square" class="cta-view active">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="8" height="8" fill="#FF005A"/>
+                                                <rect y="10" width="8" height="8" fill="#FF005A"/>
+                                                <rect x="10" width="8" height="8" fill="#FF005A"/>
+                                                <rect x="10" y="10" width="8" height="8" fill="#FF005A"/>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button id="view-list" class="cta-view">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="18" height="3" fill="#C4C4C4"/>
+                                                <rect y="5" width="18" height="3" fill="#C4C4C4"/>
+                                                <rect y="10" width="18" height="3" fill="#C4C4C4"/>
+                                                <rect y="15" width="18" height="3" fill="#C4C4C4"/>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-episodes modulo-episodios">
+                        <div class="wrapper-episodios">
+                            <ul id="view-listID">
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-13.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Sucesso - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-12.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        "Aqualtune: rainha-mãe de Palmares”
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-11.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-10.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-9.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-8.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-7.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-6.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-5.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-4.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-3.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-2.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="cta-player">
+                                        <div class="thumb-wrapper">
+                                            <div class="player">
+        
+                                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.96 23.63L22.899 17.68C23.358 17.34 23.358 16.66 22.899 16.32L14.96 10.37C14.399 9.945 13.6 10.353 13.6 11.05V22.95C13.6 23.647 14.399 24.055 14.96 23.63ZM17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0ZM17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6Z"
+                                                        fill="white" />
+                                                </svg>
+        
+                                            </div>
+                                            <img alt="" src="assets/img/thumb-afro/thumb-1.png" class="lazyload">
+                                        </div>
+                                    </a>
+                                    <h5 class="text-wrapper">
+                                        Trabalho - Ft. Luciene Nascimento
+                                    </h5>
+                                    <div class="footer-episodio">
+                                        <div class="little-thumb">
+                                            <img alt="" src="assets/img/thum-criado.png" class="lazyload">
+                                        </div>
+                                        <div class="title">
+                                            <a href="canal_criado.html"><p>Afrofuturo</p></a>
+                                        </div>
+                                        <div class="menu-button-wrap cta-menu-epi">
+        
+                                            <button class="menu-button">
+                                                <svg width="4" height="18" viewBox="0 0 4 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="7" width="4" height="4" rx="2" fill="#606060" />
+                                                    <rect y="14" width="4" height="4" rx="2" fill="#606060" />
+                                                </svg>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+        
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -3899,6 +4619,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script> <!-- https://swisnl.github.io/jQuery-contextMenu/ -->
 
+    <script src="assets/js/glightbox.min.js"></script><!-- https://biati-digital.github.io/glightbox/ -->
     <script src="assets/js/lazysizes.min.js" async=""></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/js-canais.js"></script>
