@@ -10166,6 +10166,7 @@ body #novos-canais,
 .canaisPage .tab-overview .sobre-section .wrap-host .host-box {
   width: 100%;
   margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 .canaisPage .tab-overview .sobre-section .wrap-host .host-box .header {
