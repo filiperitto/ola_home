@@ -9061,6 +9061,7 @@ body #novos-canais,
 }
 
 .canaisPage .hero-canal .wrap-hero .container-text .intro .ver-mais-text-cta {
+  font-size: 14px;
   text-align: right;
   cursor: pointer;
   margin: 5px 0;
