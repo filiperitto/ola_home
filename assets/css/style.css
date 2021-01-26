@@ -11369,10 +11369,6 @@ body #novos-canais,
           justify-content: space-between;
 }
 
-.canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper p {
-  height: 30px;
-}
-
 .canaisPage .tab-playlist .recomendados .wrapper-canais .wrap-epis ul li .title-canal .text-wrapper span {
   opacity: 0;
   visibility: hidden;
